@@ -3,7 +3,9 @@ import { ImageSource, Sound, Resource, Loader } from 'excalibur'
 // voeg hier jouw eigen resources toe
 const Resources = {
     Character: new ImageSource('images/character-placeholder.png'),
-    BackgroundClass: new ImageSource('images/background-classroom.png')
+    BackgroundClass: new ImageSource('images/background-classroom.png'),
+    Textbox: new ImageSource('images/textbox.png'),
+    BackgroundTopDown: new ImageSource('images/background-topdown.png')
 }
 
 

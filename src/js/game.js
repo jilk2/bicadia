@@ -1,8 +1,11 @@
 import '../css/style.css'
-import { Actor, Engine, Vector, DisplayMode } from "excalibur"
+import { Actor, Engine, Vector, DisplayMode, Keys } from "excalibur"
 import { Resources, ResourceLoader } from './resources.js'
 import { Character } from './classes/character.js'
 import { BackgroundClass } from './classes/backgrounds/backgroundclass.js'
+import { Textbox } from './classes/textbox.js'
+import { scene1Demo } from './classes/scenes/scene1demo.js'
+import { scene2Demo } from './classes/scenes/scene2demo.js'
 
 export class Game extends Engine {
 
@@ -18,10 +21,9 @@ export class Game extends Engine {
 
     startGame() {
         console.log("start de game!")
-        const backgroundclass = new BackgroundClass()
-        this.add(backgroundclass)
-        const character = new Character()
-        this.add(character)
+        this.addScene("demo1", new scene1Demo())
+        this.addScene("demo2", new scene2Demo())
+        this.goToScene("demo1")
     }
 }
 

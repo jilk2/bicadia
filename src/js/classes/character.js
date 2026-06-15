@@ -3,16 +3,24 @@ import { Resources } from "../resources"
 
 export class Character extends Actor{
 
-    constructor(){
+    constructor(scale, pos, canMove){
         super({width:Resources.Character.width, height:Resources.Character.height})
+
+        this.scale = scale
+        this.pos = pos
+        this.canMove = canMove
 
         this.sprite = Resources.Character.toSprite()
         this.graphics.use(this.sprite)
-
-        this.pos = new Vector(300,300)
     }
 
     onPreUpdate(engine) {
+
+        if (!this.canMove){
+            this.vel = new Vector(0,0)
+            return
+        }
+
         let xspeed = 0
         let yspeed = 0
         if (engine.input.keyboard.isHeld(Keys.A)) {
