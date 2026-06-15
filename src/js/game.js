@@ -2,6 +2,7 @@ import '../css/style.css'
 import { Actor, Engine, Vector, DisplayMode } from "excalibur"
 import { Resources, ResourceLoader } from './resources.js'
 import { Character } from './classes/character.js'
+import { BackgroundClass } from './classes/backgrounds/backgroundclass.js'
 
 export class Game extends Engine {
 
@@ -17,6 +18,8 @@ export class Game extends Engine {
 
     startGame() {
         console.log("start de game!")
+        const backgroundclass = new BackgroundClass()
+        this.add(backgroundclass)
         const character = new Character()
         this.add(character)
     }
