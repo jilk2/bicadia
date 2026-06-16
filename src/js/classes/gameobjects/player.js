@@ -2,20 +2,24 @@ import { Actor, Keys, SpriteSheet, Vector, range, Animation} from "excalibur";
 import { Resources } from "../../resources";
 
 export class Player extends Actor {
-  constructor() {
-    super();
+  constructor(x,y) {
+    super({x,y});
 
     const playersheet = SpriteSheet.fromImageSource({
       image: Resources.PlayerSheet,
-      grid: { rows: 2, columns: 4, spriteWidth: 16, spriteHeight: 30}
+      grid: { rows: 2, columns: 5, spriteWidth: 16, spriteHeight: 30}
     })
 
-    const idle = playersheet.sprites[4]
-    const walk = Animation.fromSpriteSheet(playersheet, range(5,8), 150)
+    const idle = playersheet.sprites[5]
+    const walkingSide = Animation.fromSpriteSheet(playersheet, range(6,8), 150)
+    const walkingFront = Animation.fromSpriteSheet(playersheet, range(0,1), 150)
+    const walkingBack = Animation.fromSpriteSheet(playersheet, range(3,4), 150)
     this.graphics.add("idle", idle)
-    this.graphics.add("walking", walk)
+    this.graphics.add("walkingSide", walkingSide)
+    this.graphics.add("walkingFront", walkingFront)
+    this.graphics.add("walkingBack", walkingBack)
     this.graphics.use(idle);
-    this.scale = new Vector(3,3)
+    this.scale = new Vector(5.5,5.5)
   }
 
 
@@ -28,19 +32,21 @@ export class Player extends Actor {
     this.graphics.use("idle")
 
     if (engine.input.keyboard.isHeld(Keys.A)) {
-      this.graphics.use("walking")
+      this.graphics.use("walkingSide")
       this.graphics.flipHorizontal = true
       xspeed = -300;
     }
     if (engine.input.keyboard.isHeld(Keys.D)) {
       xspeed = 300;
-      this.graphics.use("walking")
+      this.graphics.use("walkingSide")
       this.graphics.flipHorizontal = false
     }
     if (engine.input.keyboard.isHeld(Keys.W)) {
+      this.graphics.use("walkingBack")
       yspeed = -300;
     }
     if (engine.input.keyboard.isHeld(Keys.S)) {
+      this.graphics.use("walkingFront")
       yspeed = 300;
     }
     this.vel = new Vector(xspeed, yspeed);
