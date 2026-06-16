@@ -1,5 +1,6 @@
-import { Actor, Color, Label, Vector } from "excalibur";
+import { Actor, Color, Keys, Label, Vector } from "excalibur";
 import { Resources } from "../../resources";
+import { Choices } from "./choices";
 
 export class Textbox extends Actor{
 
@@ -26,5 +27,13 @@ export class Textbox extends Actor{
             scale: new Vector(2,2)
         })
         this.addChild(continueLabel)
+    }
+
+    onPreUpdate(engine){
+        let choices = this.actors.filter(act => act instanceof Choices)
+        if(engine.input.keyboard.wasPressed(Keys.Space) || choices.length === 0){
+            // this.loadDialogue(this.currentDialogue.next)
+            //dit is voor als we de json hebben met dialogue daarin
+        }
     }
 }
