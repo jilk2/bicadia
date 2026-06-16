@@ -2,8 +2,8 @@ import { Actor, Keys, SpriteSheet, Vector, range, Animation} from "excalibur";
 import { Resources } from "../../resources";
 
 export class Player extends Actor {
-  constructor() {
-    super();
+  constructor(x,y) {
+    super({x,y});
 
     const playersheet = SpriteSheet.fromImageSource({
       image: Resources.PlayerSheet,
