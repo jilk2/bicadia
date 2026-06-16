@@ -1,9 +1,12 @@
-import { Actor, Keys, SpriteSheet, Vector, range, Animation} from "excalibur";
+import { Actor, Keys, SpriteSheet, Vector, range, Animation, CollisionType, Shape} from "excalibur";
 import { Resources } from "../../resources";
 
 export class Player extends Actor {
   constructor(x,y) {
-    super({x,y});
+    super({x,y, width: 16, height: 10, collisionType: CollisionType.Active, collider: Shape.Box(
+      16,10,
+      new Vector(0.5,-0.45),
+    )});
 
     const playersheet = SpriteSheet.fromImageSource({
       image: Resources.PlayerSheet,
