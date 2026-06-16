@@ -1,12 +1,19 @@
-import { ImageSource, Sound, Resource, Loader } from "excalibur";
+import { Engine, Actor, Vector, ImageSource, Sprite } from "excalibur";
+import { Resources, ResourceLoader } from "../../resources.js";
 
-const Resources = {
-  Classroom: new ImageSource("background-classroom.png")
-};
+export class Background extends Actor {
+  sprite;
+  background;
 
-const ResourceLoader = new Loader();
-for (let res of Object.values(Resources)) {
-  ResourceLoader.addResource(res);
+  constructor(image) {
+    super();
+    this.background = image;
+  }
+  onInitialize(engine) {
+    this.sprite = new Sprite({
+      image: this.background,
+    });
+    this.anchor = Vector.Zero;
+    this.graphics.use(this.sprite);
+  }
 }
-
-export { Resources, ResourceLoader };

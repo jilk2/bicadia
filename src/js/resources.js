@@ -1,19 +1,16 @@
-import { ImageSource, Sound, Resource, Loader } from 'excalibur'
+import { ImageSource, Sound, Resource, Loader } from "excalibur";
 
 // voeg hier jouw eigen resources toe
 const Resources = {
-    Character: new ImageSource('images/character-placeholder.png'),
-    BackgroundClass: new ImageSource('images/background-classroom.png'),
-    Textbox: new ImageSource('images/textbox.png'),
-    BackgroundTopDown: new ImageSource('images/background-topdown.png')
-}
+  BackgroundTopDown: new ImageSource("images/background-topdown.png"),
+  Bedroom: new ImageSource("images/background-classroom.png"),
+  PlayerSheet: new ImageSource("images/playersheet.png"),
+  Textbox: new ImageSource("images/textbox.png"),
+};
 
-
-
-
-const ResourceLoader = new Loader()
+const ResourceLoader = new Loader();
 for (let res of Object.values(Resources)) {
-    ResourceLoader.addResource(res)
+  ResourceLoader.addResource(res);
 }
 
-export { Resources, ResourceLoader }
+export { Resources, ResourceLoader };
