@@ -1,5 +1,5 @@
 import { Actor, Keys, Vector } from "excalibur"
-import { Resources } from "../resources"
+import { Resources } from "../../resources"
 
 export class Character extends Actor{
 
