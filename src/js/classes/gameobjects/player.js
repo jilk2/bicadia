@@ -19,7 +19,7 @@ export class Player extends Actor {
     this.graphics.add("walkingFront", walkingFront)
     this.graphics.add("walkingBack", walkingBack)
     this.graphics.use(idle);
-    this.scale = new Vector(3,3)
+    this.scale = new Vector(5.5,5.5)
   }
 
 
