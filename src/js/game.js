@@ -2,6 +2,7 @@ import "../css/style.css";
 import { Actor, Engine, Vector, DisplayMode, Keys } from "excalibur";
 import { Resources, ResourceLoader } from "./resources.js";
 import { Bedroom } from "./classes/scenes/bedroom.js";
+import { CharacterCreation } from "./classes/scenes/characterCreation.js";
 
 export class Game extends Engine {
   constructor() {
@@ -16,6 +17,7 @@ export class Game extends Engine {
 
   startGame() {
     this.addScene("bedroom", new Bedroom());
+    this.addScene("creation", new CharacterCreation());
     this.goToScene("bedroom");
   }
 }
