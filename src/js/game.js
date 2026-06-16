@@ -15,7 +15,6 @@ export class Game extends Engine {
   }
 
   startGame() {
-    console.log("start de game!");
     this.addScene("bedroom", new Bedroom());
     this.goToScene("bedroom");
   }

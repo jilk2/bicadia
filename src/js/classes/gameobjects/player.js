@@ -1,4 +1,4 @@
-import { Actor, Keys, SpriteSheet, Vector } from "excalibur";
+import { Actor, Keys, SpriteSheet, Vector, range, Animation} from "excalibur";
 import { Resources } from "../../resources";
 
 export class Player extends Actor {
@@ -11,7 +11,9 @@ export class Player extends Actor {
     })
 
     const idle = playersheet.sprites[4]
+    const walk = Animation.fromSpriteSheet(playersheet, range(5,8), 150)
     this.graphics.add("idle", idle)
+    this.graphics.add("walking", walk)
     this.graphics.use(idle);
     this.scale = new Vector(3,3)
   }
@@ -23,11 +25,17 @@ export class Player extends Actor {
   onPreUpdate(engine) {
     let xspeed = 0;
     let yspeed = 0;
+    this.graphics.use("idle")
+
     if (engine.input.keyboard.isHeld(Keys.A)) {
+      this.graphics.use("walking")
+      this.graphics.flipHorizontal = true
       xspeed = -300;
     }
     if (engine.input.keyboard.isHeld(Keys.D)) {
       xspeed = 300;
+      this.graphics.use("walking")
+      this.graphics.flipHorizontal = false
     }
     if (engine.input.keyboard.isHeld(Keys.W)) {
       yspeed = -300;
