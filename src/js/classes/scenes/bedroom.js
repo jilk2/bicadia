@@ -5,6 +5,7 @@ import { Player } from "../gameobjects/player.js";
 import { Wardrobe } from "../gameobjects/wardrobe.js";
 import { Bed } from "../gameobjects/bed.js";
 import { Backpack } from "../gameobjects/backpack.js";
+import { Door } from "../gameobjects/door.js"
 
 export class Bedroom extends Scene {
   onInitialize(engine) {
@@ -14,6 +15,7 @@ export class Bedroom extends Scene {
     this.add(new Wardrobe(1000, 200))
     this.add(new Bed(715, 300))
     this.add(new Backpack(500, 500))
+    this.add(new Door(470, 180))
 
 
     this.player = new Player(1000, 360)
