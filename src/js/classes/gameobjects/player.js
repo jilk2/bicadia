@@ -51,6 +51,35 @@ export class Player extends Actor {
     this.scale = new Vector(5.5, 5.5);
   }
 
+  onInitialize(){
+    this.currentInteractable = null
+  }
+
+  onCollisionStart(self, other) {
+    console.log("collision")
+    if (!other || !other.owner) {
+      return 
+    }
+    
+    console.log("collided with", other.owner)
+
+    if (other.owner.interactable) {
+      console.log("interactable found")
+      this.currentInteractable = other.owner
+    }
+  }
+
+  onCollisionEnd(self, other) {
+    if (!other || !other.owner) {
+      return
+    }
+
+    if (this.currentInteractable === other.owner) {
+      this.currentInteractable = null
+    }
+  }
+
+
   onPreUpdate(engine) {
     let xspeed = 0;
     let yspeed = 0;
@@ -95,5 +124,8 @@ export class Player extends Actor {
       DialogueHandler.activateHomeDialogue(engine, "backpackDialogueEnd");
     }
     this.vel = new Vector(xspeed, yspeed);
+    if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
+      this.currentInteractable.interaction(engine)
+    }
   }
 }

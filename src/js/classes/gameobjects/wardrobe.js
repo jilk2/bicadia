@@ -6,6 +6,7 @@ export class Wardrobe extends Actor {
     constructor(x, y) {
         super({ x, y, width: Resources.Wardrobe.width, height: Resources.Wardrobe.height }) // collision box! 
         this.pos = new Vector(x,y)
+        this.interactable = true
 
     }
     

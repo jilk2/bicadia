@@ -4,11 +4,10 @@ import { Background } from "../gameobjects/background.js";
 import { InvisibleWall } from "../gameobjects/invisible-wall.js"
 import { Player } from "../gameobjects/player.js";
 import { Door } from "../gameobjects/door.js"
-import { TVKast } from "../gameobjects/tvkast.js";
 
-export class Livingroom extends Scene {
+export class Classroom extends Scene {
     onInitialize(engine) {
-        const background = new Background(Resources.Livingroom);
+        const background = new Background(Resources.Classroom);
         this.add(background);
 
         //borders
@@ -21,7 +20,6 @@ export class Livingroom extends Scene {
 
 
         this.add(new Door(1150, 180, "bedroom"))
-        this.add(new TVKast(158, 250))
 
         this.player = new Player(690, 360)
         this.add(this.player)
