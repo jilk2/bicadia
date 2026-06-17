@@ -16,7 +16,12 @@ const Resources = {
   //bedroom objects
   Wardrobe: new ImageSource("images/wardrobe.png"),
   Bed: new ImageSource("images/bed.png"),
-  Backpack: new ImageSource("images/backpack.png")
+  Backpack: new ImageSource("images/backpack.png"),
+  Plant: new ImageSource("images/plant.png"),
+
+  //classroom objects
+  ClassroomTable: new ImageSource("images/classroom-table.png"),
+  ClassroomDesk: new ImageSource("images/classroom-desk.png"),
 };
 
 const ResourceLoader = new Loader();
