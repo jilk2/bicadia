@@ -7,6 +7,7 @@ const Resources = {
   Livingroom: new ImageSource("images/SizedLivingRoomHome.png"),
   PlayerSheet: new ImageSource("images/playersheet.png"),
   Textbox: new ImageSource("images/textbox.png"),
+  InvisibleWall: new ImageSource("images/invis.png"),
 
   //livingroom objects
   Door: new ImageSource("images/Door.png"),
