@@ -34,21 +34,21 @@ export class Player extends Actor {
     let yspeed = 0;
     this.graphics.use("idle")
 
-    if (engine.input.keyboard.isHeld(Keys.A)) {
+    if (engine.input.keyboard.isHeld(Keys.A) || engine.input.keyboard.isHeld(Keys.ArrowLeft)) {
       this.graphics.use("walkingSide")
       this.graphics.flipHorizontal = true
       xspeed = -300;
     }
-    if (engine.input.keyboard.isHeld(Keys.D)) {
+    if (engine.input.keyboard.isHeld(Keys.D) || engine.input.keyboard.isHeld(Keys.ArrowRight)) {
       xspeed = 300;
       this.graphics.use("walkingSide")
       this.graphics.flipHorizontal = false
     }
-    if (engine.input.keyboard.isHeld(Keys.W)) {
+    if (engine.input.keyboard.isHeld(Keys.W) || engine.input.keyboard.isHeld(Keys.ArrowUp)) {
       this.graphics.use("walkingBack")
       yspeed = -300;
     }
-    if (engine.input.keyboard.isHeld(Keys.S)) {
+    if (engine.input.keyboard.isHeld(Keys.S) || engine.input.keyboard.isHeld(Keys.ArrowDown)) {
       this.graphics.use("walkingFront")
       yspeed = 300;
     }

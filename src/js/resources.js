@@ -3,9 +3,18 @@ import { ImageSource, Sound, Resource, Loader } from "excalibur";
 // voeg hier jouw eigen resources toe
 const Resources = {
   BackgroundTopDown: new ImageSource("images/background-topdown.png"),
-  Bedroom: new ImageSource("images/BedRoomMC.png"),
+  Bedroom: new ImageSource("images/background-bedroom.png"),
+  Livingroom: new ImageSource("images/SizedLivingRoomHome.png"),
   PlayerSheet: new ImageSource("images/playersheet.png"),
   Textbox: new ImageSource("images/textbox.png"),
+
+  //livingroom objects
+  Door: new ImageSource("images/Door.png"),
+
+  //bedroom objects
+  Wardrobe: new ImageSource("images/wardrobe.png"),
+  Bed: new ImageSource("images/bed.png"),
+  Backpack: new ImageSource("images/backpack.png")
 };
 
 const ResourceLoader = new Loader();
