@@ -6,6 +6,9 @@ const Resources = {
   Bedroom: new ImageSource("images/BedRoomMC.png"),
   PlayerSheet: new ImageSource("images/playersheet.png"),
   Textbox: new ImageSource("images/textbox.png"),
+
+  //bedroom objects
+  Wardrobe: new ImageSource("images/wardrobe.png")
 };
 
 const ResourceLoader = new Loader();
