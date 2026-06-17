@@ -17,6 +17,8 @@ export class Backpack extends Actor {
         this.scale = new Vector(0.125 , 0.125)
     }
 
-
+    interaction(engine){
+        this.kill()
+    }
     
 }
