@@ -9,7 +9,8 @@ const Resources = {
   ShirtRed: new ImageSource("images/shirt-red.png"),
   PantsBlue: new ImageSource("images/pants-blue.png"),
   ArrowLeft: new ImageSource("images/Chevron-Arrow-Left.png"),
-  ArrowRight: new ImageSource("image/Chevron-Arrow-Right.png")
+  ArrowRight: new ImageSource("images/Chevron-Arrow-Right.png"),
+  LongSleevedRed: new ImageSource("images/longsleeve-red.png")
 };
 
 const ResourceLoader = new Loader();

@@ -3,6 +3,8 @@ import { Resources } from "../../resources";
 
 export class Player extends Actor {
   inCutscene
+  bodyparts
+
   constructor(x, y, inCutscene) {
     super({ x, y });
     this.inCutscene = inCutscene
@@ -24,8 +26,27 @@ export class Player extends Actor {
 
   }
 
+  onInitialize(engine) {
+    this.pant = new Actor()
+    this.pant.graphics.use(Resources.PantsBlue.toSprite())
+    this.pant.pos.y += 7
+    this.addChild(this.pant)
+
+    this.shirt = new Actor()
+    this.shirt.graphics.use(Resources.ShirtRed.toSprite())
+    this.addChild(this.shirt)
+  }
 
 
+
+  updateGraphics() {
+    console.log("I received new bodyparts")
+    console.log(this.scene.engine.bodyparts)
+    this.pant.graphics.use(Resources.PantsBlue.toSprite())
+    this.shirt.graphics.use(Resources.ShirtRed.toSprite())
+
+
+  }
 
 
   onPreUpdate(engine) {
