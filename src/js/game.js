@@ -18,7 +18,7 @@ export class Game extends Engine {
   startGame() {
     this.addScene("bedroom", new Bedroom());
     this.addScene("creation", new CharacterCreation());
-    this.goToScene("bedroom");
+    this.goToScene("creation");
   }
 }
 
