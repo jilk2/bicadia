@@ -1,26 +1,11 @@
 {
-  "home": [
-    {
-      "bedroom_backpack_0": {
-        "char": "player",
-        "line": "I need to find my backback"
-      },
-      "bedroom_backpack_1": {
-        "char": "player",
-        "line": "i found my backpack, now i need to hurry to school"
-      }
-    }
+  "home_room_1": [
+    { "id": "bedroom_backpack_0", "char":"player", "line":"I need to find my backpack", "targetScene": "bedroom" }
   ],
-  "school_0": [
-    {
-      "outside_school_0": {
-        "char": "player",
-        "line": "I need to find my classroom"
-      },
-      "bedroom_backpack_1": {
-        "char": "teacher",
-        "line": "something something happy"
-      }
-    }
-  ]
+  "home_room_2": [{ "id": "bedroom_backpack_1", "char":"player", "line":"I found my backpack, now I need to hurry to school",
+      "choices":[
+        {"text":"Go to school", "targetId":"school_0"},
+        {"text":"Look around", "targetId":"bedroom_search_0"}
+      ]
+    }]
 }
