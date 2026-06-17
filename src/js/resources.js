@@ -4,7 +4,7 @@ import { ImageSource, Sound, Resource, Loader } from "excalibur";
 const Resources = {
   BackgroundTopDown: new ImageSource("images/background-topdown.png"),
   Bedroom: new ImageSource("images/background-bedroom.png"),
-  Livingroom: new ImageSource("images/SizedLivingRoomHome.png"),
+  Livingroom: new ImageSource("images/background-livingroom.png"),
   PlayerSheet: new ImageSource("images/playersheet.png"),
   Textbox: new ImageSource("images/textbox.png"),
   InvisibleWall: new ImageSource("images/invis.png"),
