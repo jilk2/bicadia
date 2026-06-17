@@ -11,7 +11,7 @@ export class Livingroom extends Scene {
         this.add(background);
 
         this.add(new Door(1150, 180))
-        this.add(new TVKast(200, 180))
+        this.add(new TVKast(158, 250))
 
         this.player = new Player(690, 360)
         this.add(this.player)
