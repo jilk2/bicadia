@@ -38,7 +38,6 @@ export class Player extends Actor {
     this.pant.pos.y += 7
     this.addChild(this.pant)
 
-
     this.shirt = new Actor()
     this.shirt.graphics.use(Resources.ShirtRed.toSprite())
     this.addChild(this.shirt)

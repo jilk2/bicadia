@@ -35,10 +35,10 @@ export class CharacterCreation extends Scene {
         // console.log(`bodypart ${bodypart} moet richting ${direction}`)
         this.engine.bodyparts[bodypart] = this.engine.bodyparts[bodypart] + direction
         this.player.updateGraphics()
-        if (this.engine.bodyparts > [0, 3, 3, 2, 0]) {
+        if (this.engine.bodyparts > [1, 3, 3, 2, 1] || this.engine.bodyparts < [0, 0, 0, 0, 0]) {
 
             this.engine.bodyparts = [0, 0, 0, 0, 0]
-            console.log("I reset the body parts")
+            console.log(`I reset the body parts`)
         }
     }
 
