@@ -29,29 +29,27 @@ export class Player extends Actor {
     this.currentInteractable = null
   }
 
-  onCollisionStart(event){
-
-    if (!event.other || !event.other.owner) {
-      return
+  onCollisionStart(self, other) {
+    console.log("collision")
+    if (!other || !other.owner) {
+      return 
     }
+    
+    console.log("collided with", other.owner)
 
-    const other = event.other.owner
-
-    if (other.interactable) {
-        this.currentInteractable = other
+    if (other.owner.interactable) {
+      console.log("interactable found")
+      this.currentInteractable = other.owner
     }
   }
 
-  onCollisionEnd(event){
-
-    if (!event.other || !event.other.owner) {
+  onCollisionEnd(self, other) {
+    if (!other || !other.owner) {
       return
     }
-    
-    const other = event.other.owner
 
-    if (this.currentInteractable === other) {
-        this.currentInteractable = null
+    if (this.currentInteractable === other.owner) {
+      this.currentInteractable = null
     }
   }
 
