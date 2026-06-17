@@ -79,7 +79,7 @@ export class Player extends Actor {
     }
     this.vel = new Vector(xspeed, yspeed);
     if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
-      console.log(`e is pressed`)
+      this.currentInteractable.interaction(engine)
     }
   }
 }
