@@ -3,6 +3,7 @@ import { Actor, Engine, Vector, DisplayMode, Keys } from "excalibur";
 import { Resources, ResourceLoader } from "./resources.js";
 import { Bedroom } from "./classes/scenes/bedroom.js";
 import { Livingroom } from "./classes/scenes/livingroom.js";
+import { Classroom } from "./classes/scenes/classroom.js";
 
 export class Game extends Engine {
   constructor() {
@@ -18,6 +19,7 @@ export class Game extends Engine {
   startGame() {
     this.addScene("bedroom", new Bedroom());
     this.addScene("livingroom", new Livingroom());
+    this.addScene("classroom", new Classroom());
     this.goToScene("bedroom");
   }
 }

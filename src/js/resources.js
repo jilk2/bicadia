@@ -8,6 +8,10 @@ const Resources = {
   PlayerSheet: new ImageSource("images/playersheet.png"),
   Textbox: new ImageSource("images/textbox.png"),
   InvisibleWall: new ImageSource("images/invis.png"),
+  Classroom: new ImageSource("images/ClassroomTakeOne.png"),
+
+  //classroom objects
+
 
   //livingroom objects
   Door: new ImageSource("images/Door.png"),
