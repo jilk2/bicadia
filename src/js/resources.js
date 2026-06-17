@@ -10,6 +10,7 @@ const Resources = {
 
   //livingroom objects
   Door: new ImageSource("images/Door.png"),
+  TVKast: new ImageSource("images/TVKast.png"),
 
   //bedroom objects
   Wardrobe: new ImageSource("images/wardrobe.png"),
