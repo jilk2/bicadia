@@ -1,17 +1,17 @@
 import { CollisionType, Actor, Vector } from 'excalibur'
 import { Resources } from "../../resources";
 
-export class Wardrobe extends Actor {
+export class Backpack extends Actor {
 
     constructor(x, y) {
-        super({ x, y, width: Resources.Wardrobe.width, height: Resources.Wardrobe.height }) // collision box! 
+        super({ x, y, width: Resources.Backpack.width, height: Resources.Backpack.height }) // collision box! 
         this.pos = new Vector(x,y)
 
     }
     
     onInitialize(engine) {
-        this.graphics.use(Resources.Wardrobe.toSprite())
+        this.graphics.use(Resources.Backpack.toSprite())
         this.body.collisionType = CollisionType.Fixed
-        this.scale = new Vector(3.7 , 3.7)
+        this.scale = new Vector(0.125 , 0.125)
     }
 }

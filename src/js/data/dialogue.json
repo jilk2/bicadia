@@ -1,0 +1,26 @@
+{
+  "home": [
+    {
+      "bedroom_backpack_0": {
+        "char": "player",
+        "line": "I need to find my backback"
+      },
+      "bedroom_backpack_1": {
+        "char": "player",
+        "line": "i found my backpack, now i need to hurry to school"
+      }
+    }
+  ],
+  "school_0": [
+    {
+      "outside_school_0": {
+        "char": "player",
+        "line": "I need to find my classroom"
+      },
+      "bedroom_backpack_1": {
+        "char": "teacher",
+        "line": "something something happy"
+      }
+    }
+  ]
+}
