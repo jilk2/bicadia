@@ -5,6 +5,7 @@ import { Bedroom } from "./classes/scenes/bedroom.js";
 import { Livingroom } from "./classes/scenes/livingroom.js";
 import { Dialogue } from "./classes/scenes/dialogue.js";
 import { Classroom } from "./classes/scenes/classroom.js";
+import { DialogueHandler } from "./classes/dialogueHandler.js";
 
 export class Game extends Engine {
   constructor() {
@@ -21,7 +22,8 @@ export class Game extends Engine {
     this.addScene("bedroom", new Bedroom());
     this.addScene("livingroom", new Livingroom());
     this.addScene("classroom", new Classroom());
-    this.goToScene("bedroom");
+    DialogueHandler.activateHomeDialogue(this, "backpackDialogueStart");
+    // this.goToScene("bedroom");
   }
 }
 

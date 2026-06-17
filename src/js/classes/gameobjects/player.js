@@ -116,9 +116,6 @@ export class Player extends Actor {
       yspeed = 300;
     }
 
-    if (engine.input.keyboard.isHeld(Keys.Enter)) {
-      DialogueHandler.activateHomeDialogue(engine, "backpackDialogueStart");
-    }
 
         if (engine.input.keyboard.isHeld(Keys.P)) {
       DialogueHandler.activateHomeDialogue(engine, "backpackDialogueEnd");
