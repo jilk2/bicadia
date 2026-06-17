@@ -1,5 +1,6 @@
 import { CollisionType, Actor, Vector } from 'excalibur'
 import { Resources } from "../../resources";
+import { Player } from './player';
 
 export class Backpack extends Actor {
 
@@ -15,4 +16,7 @@ export class Backpack extends Actor {
         this.body.collisionType = CollisionType.Fixed
         this.scale = new Vector(0.125 , 0.125)
     }
+
+
+    
 }
