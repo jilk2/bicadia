@@ -27,14 +27,23 @@ export class Player extends Actor {
   }
 
   onInitialize(engine) {
+
+    this.shoes = new Actor()
+    this.shoes.graphics.use(Resources.GreyShoes.toSprite())
+    this.shoes.pos.y += 1
+    this.addChild(this.shoes)
+
     this.pant = new Actor()
     this.pant.graphics.use(Resources.PantsBlue.toSprite())
     this.pant.pos.y += 7
     this.addChild(this.pant)
 
+
     this.shirt = new Actor()
     this.shirt.graphics.use(Resources.ShirtRed.toSprite())
     this.addChild(this.shirt)
+
+
   }
 
 
@@ -44,7 +53,7 @@ export class Player extends Actor {
     console.log(this.scene.engine.bodyparts)
     this.pant.graphics.use(Resources.PantsBlue.toSprite())
     this.shirt.graphics.use(Resources.ShirtRed.toSprite())
-
+    this.shoes.graphics.use(Resources.GreyShoes.toSprite())
 
   }
 

@@ -14,14 +14,11 @@ export class CharacterCreation extends Scene {
 
     onInitialize(engine) {
 
-        // hair, face, shirt, pants, shoes
-        // this.bodyparts = [0, 0, 0, 0, 0]
-
         this.player = new Player(690, 360, false)
         this.add(this.player)
 
 
-
+        // Creates and tags the arrows required for character creation. 
         for (let i = 0; i < 5; i++) {
             this.add(new ArrowLeft(i))
         }
@@ -31,19 +28,18 @@ export class CharacterCreation extends Scene {
 
         }
 
-
-        //hier maak je de screenelement aan
-        //die plaats je aan de kanten van de player
-        //terwijl je die aan maakt 
-        //geef jij er een pointer event aan die dan naar die functie toe gaat om +1 of -1 
-
     }
 
     updateCharacter(bodypart, direction) {
+        // Updates the bodyparts array 
         // console.log(`bodypart ${bodypart} moet richting ${direction}`)
         this.engine.bodyparts[bodypart] = this.engine.bodyparts[bodypart] + direction
         this.player.updateGraphics()
+        if (this.engine.bodyparts > [0, 3, 3, 2, 0]) {
 
+            this.engine.bodyparts = [0, 0, 0, 0, 0]
+            console.log("I reset the body parts")
+        }
     }
 
 
