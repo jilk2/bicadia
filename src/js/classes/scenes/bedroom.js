@@ -16,11 +16,11 @@ export class Bedroom extends Scene {
     this.add(background);
 
     //borders
-    this.add(new InvisibleWall(0, 300, 10, 1000))         // links
-    this.add(new InvisibleWall(1280, 300, 10, 1000))      // rechts
-    this.add(new InvisibleWall(1030, 240, 1020, 40))      // boven (rechts van deur)
-    this.add(new InvisibleWall(0, 240, 840, 40))          // boven (rechts van deur)
-    this.add(new InvisibleWall(800, 730, 1900, 40))      // onder
+    this.add(new InvisibleWall(0, 300, 30, 1000))         // links
+    this.add(new InvisibleWall(1280, 300, 30, 1000))      // rechts
+    this.add(new InvisibleWall(1030, 220, 1020, 100))      // boven (rechts van deur)
+    this.add(new InvisibleWall(0, 220, 840, 100))          // boven (rechts van deur)
+    this.add(new InvisibleWall(800, 740, 1900, 80))      // onder
 
     //decoration
     this.add(new Wardrobe(1000, 200))
