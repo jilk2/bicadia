@@ -14,7 +14,11 @@ const Resources = {
   //bedroom objects
   Wardrobe: new ImageSource("images/wardrobe.png"),
   Bed: new ImageSource("images/bed.png"),
-  Backpack: new ImageSource("images/backpack.png")
+  Backpack: new ImageSource("images/backpack.png"),
+
+  //dialogue scenes
+  DialogueRoom: new ImageSource("images/background-bedroom.png"),
+  DialogueSchool: new ImageSource("images/background-classroom.png")
 };
 
 const ResourceLoader = new Loader();

@@ -1,4 +1,4 @@
-import { Actor, Color, Label } from "excalibur";
+import { Actor, Color, Label, Vector } from "excalibur";
 
 export class Dialogue extends Actor{
 

@@ -3,6 +3,7 @@ import { Actor, Engine, Vector, DisplayMode, Keys } from "excalibur";
 import { Resources, ResourceLoader } from "./resources.js";
 import { Bedroom } from "./classes/scenes/bedroom.js";
 import { Livingroom } from "./classes/scenes/livingroom.js";
+import { Dialogue } from "./classes/scenes/dialogue.js";
 
 export class Game extends Engine {
   constructor() {
