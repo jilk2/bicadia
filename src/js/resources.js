@@ -8,7 +8,7 @@ const Resources = {
   PlayerSheet: new ImageSource("images/playersheet.png"),
   Textbox: new ImageSource("images/textbox.png"),
   InvisibleWall: new ImageSource("images/invis.png"),
-  Classroom: new ImageSource("images/ClassroomTakeOne.png"),
+  Classroom: new ImageSource("images/background-classroomsprites.png"),
 
   //classroom objects
 
