@@ -25,8 +25,25 @@ export class Player extends Actor {
     this.scale = new Vector(5.5,5.5)
   }
 
+  onInitialize(){
+    this.currentInteractable = null
+  }
 
+  onCollisionStart(event){
+    const other = event.other.owner
 
+    if (other.interactable) {
+        this.currentInteractable = other
+    }
+  }
+
+  onCollisionEnd(event){
+    const other = event.other.owner
+
+    if (this.currentInteractable === other) {
+        this.currentInteractable = null
+    }
+  }
 
 
   onPreUpdate(engine) {
@@ -53,8 +70,8 @@ export class Player extends Actor {
       yspeed = 300;
     }
     this.vel = new Vector(xspeed, yspeed);
-    if(engine.input.keyboard.wasPressed(Keys.E)){
-      //interaction
+    if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
+      this.currentInteractable.interaction(this)
     }
   }
 }
