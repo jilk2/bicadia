@@ -30,6 +30,11 @@ export class Player extends Actor {
   }
 
   onCollisionStart(event){
+
+    if (!event.other || !event.other.owner) {
+      return
+    }
+
     const other = event.other.owner
 
     if (other.interactable) {
@@ -38,6 +43,11 @@ export class Player extends Actor {
   }
 
   onCollisionEnd(event){
+
+    if (!event.other || !event.other.owner) {
+      return
+    }
+    
     const other = event.other.owner
 
     if (this.currentInteractable === other) {
@@ -71,7 +81,7 @@ export class Player extends Actor {
     }
     this.vel = new Vector(xspeed, yspeed);
     if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
-      this.currentInteractable.interaction(this)
+      console.log(`e is pressed`)
     }
   }
 }

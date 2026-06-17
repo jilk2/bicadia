@@ -8,5 +8,6 @@ export class InvisibleWall extends Actor {
             height,
             collisionType: CollisionType.Fixed
         })
+        this.interactable = false
     }
 }
