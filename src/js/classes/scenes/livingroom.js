@@ -12,11 +12,11 @@ export class Livingroom extends Scene {
         this.add(background);
 
         //borders
-        this.add(new InvisibleWall(0, 300, 10, 1000))         // links
-        this.add(new InvisibleWall(1280, 300, 10, 1000))      // rechts
-        this.add(new InvisibleWall(1280, 240, 150, 40))      // boven (rechts van deur)
-        this.add(new InvisibleWall(0, 240, 2187, 40))          // boven (links van deur)
-        this.add(new InvisibleWall(800, 730, 1900, 40))      // onder
+        this.add(new InvisibleWall(-40, 300, 100, 1000))         // links
+        this.add(new InvisibleWall(1300, 300, 100, 1000))      // rechts
+        this.add(new InvisibleWall(1280, 210, 150, 100))      // boven (rechts van deur)
+        this.add(new InvisibleWall(0, 210, 2187, 100))          // boven (links van deur)
+        this.add(new InvisibleWall(800, 750, 1900, 100))      // onder
 
 
 
