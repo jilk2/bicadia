@@ -44,12 +44,12 @@ export class Classroom extends Scene {
 
         this.add(new Door(1150, 85, "bedroom"))
 
-        this.player = new Player(1150, 100)
-        this.add(this.player)
-
         this.add(new InteractableNpc(800, 570))
 
         this.add(new Teacher(500, 150))
+
+        this.player = new Player(1150, 100)
+        this.add(this.player)
 
         this.thinkBubble = new ThinkBubble();
         this.add(this.thinkBubble);
