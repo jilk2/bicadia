@@ -17,6 +17,6 @@ export class Door extends Actor {
     }
 
     interaction(engine){
-        engine.goToScene(this.targetScene)
+        engine.goToScene(engine.goToScene("classroom"))
     }
 }
