@@ -1,11 +1,79 @@
 {
   "home_room_1": [
-    { "id": "bedroom_backpack_0", "char":"player", "line":"I need to find my backpack", "targetScene": "bedroom" }
+    {
+      "id": "bedroom_backpack_0",
+      "char": "player",
+      "line": "Well, we are finally here. I didn't get a lot of sleep",
+      "targetScene": "bedroom"
+    },
+    {
+      "id": "bedroom_backpack_0",
+      "char": "player",
+      "line": "however. Moving all those boxes took a lot of energy and I didn't sleep very well because ",
+      "targetScene": "bedroom"
+    },
+    {
+      "id": "bedroom_backpack_0",
+      "char": "player",
+      "line": "well…everything really.",
+      "targetScene": "bedroom"
+    },
+    {
+      "id": "bedroom_backpack_0",
+      "char": "player",
+      "line": "I should get ready for my first day of school. Now, where did I leave my bag...",
+      "targetScene": "bedroom"
+    }
   ],
-  "home_room_2": [{ "id": "bedroom_backpack_1", "char":"player", "line":"I found my backpack, now I need to hurry to school",
-      "choices":[
-        {"text":"Go to school", "targetId":"school_0"},
-        {"text":"Look around", "targetId":"bedroom_search_0"}
-      ]
-    }]
+  "home_room_2": [
+    {
+      "id": "bedroom_backpack_1",
+      "char": "player",
+      "line": "I hope I have not forgotten anything. I don't want to make a fool of myself."
+    },
+    {
+      "id": "bedroom_backpack_1",
+      "char": "player",
+      "line": "Ah! — look at the time. Time to go downstairs and head to school."
+    }
+  ],
+  "entering_school": [
+    {
+      "id": "entering_school",
+      "char": "player",
+      "line": "So much noise... I wish I could go home already. "
+    },
+    {
+      "id": "entering_school",
+      "char": "player",
+      "line": "But I can't miss school on the first day."
+    }
+  ],
+  "school_emiel": [
+    {
+      "id": "talking_to_emiel",
+      "char": "player",
+      "line": "I - Sorry, excuse me. C—Could I borrow a pen? I...forgot mine."
+    },
+    {
+      "id": "talking_to_emiel",
+      "char": "Emiel",
+      "line": "Hmmm? Oh! Yeah, of course. Wait, give me a moment."
+    },
+    {
+      "id": "talking_to_emiel",
+      "char": "Emiel",
+      "line": "`Hands the player character a vibrant looking pen`"
+    },
+    {
+      "id": "talking_to_emiel",
+      "char": "Emiel",
+      "line": "Here you go. You can keep it. See it as a welcome gift!"
+    },
+    {
+      "id": "talking_to_emiel",
+      "char": "Emiel",
+      "line": "Thanks, I appreciate that. Are you sure I can have this?"
+    }
+  ]
 }
