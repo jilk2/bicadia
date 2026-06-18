@@ -1,5 +1,6 @@
 import { Actor, CollisionType, Shape, SpriteSheet, Vector } from "excalibur";
 import { Resources } from "../../resources";
+import { DialogueHandler } from "../dialogueHandler";
 
 export class InteractableNpc extends Actor{
 
@@ -25,7 +26,7 @@ export class InteractableNpc extends Actor{
 
     interaction(engine){
         //interaction begint en dialoog start
-        this.kill()
+        DialogueHandler.activateHomeDialogue(engine, "EmielDialogueStart");
         
     }
 

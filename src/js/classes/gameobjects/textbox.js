@@ -12,7 +12,7 @@ export class Textbox extends Actor {
       x: -300,
       y: -50,
       text: initialText,
-      scale: new Vector(5, 5),
+      scale: new Vector(2,2),
     });
     this.addChild(this.textLabel);
 

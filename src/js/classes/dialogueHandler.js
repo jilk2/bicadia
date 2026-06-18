@@ -27,4 +27,12 @@ export class DialogueHandler {
   static backpackDialogueEnd() {
       return { nodes: jsonData.home_room_2, targetScene: "bedroom" };
   }
+
+    static enterSchool() {
+      return { nodes: jsonData.entering_school, targetScene: "classroom" };
+  }
+
+static EmielDialogueStart() {
+      return { nodes: jsonData.school_emiel, targetScene: "classroom"};
+  }
 }
