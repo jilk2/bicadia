@@ -6,20 +6,20 @@ export class InteractableNpc extends Actor{
 
     constructor(x, y) {
 
-        super({ 
-            x, 
+        const sprite = Resources.Emiely.toSprite()
+
+        super({
+            x,
             y,
             collisionType: CollisionType.Fixed,
-            collider: Shape.Box(16, 10, new Vector(0.5, -0.45))
+            collider: Shape.Box(
+                sprite.width * 0.5,
+                sprite.height * 0.35,
+                new Vector(0.5, -0.5)
+            )
         })
-
-        const playersheet = SpriteSheet.fromImageSource({
-            image: Resources.PlayerSheet,
-            grid: { rows: 2, columns: 5, spriteWidth: 16, spriteHeight: 30 },
-        })
-
-        this.graphics.use(playersheet.sprites[5])
-        this.scale = new Vector(5.5, 5.5)
+        this.graphics.use(sprite)
+        this.scale = new Vector(0.15, 0.15)
         this.interactable = true
 
     }
@@ -29,6 +29,5 @@ export class InteractableNpc extends Actor{
         DialogueHandler.activateHomeDialogue(engine, "EmielDialogueStart");
         
     }
-
 
 }

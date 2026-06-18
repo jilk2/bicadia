@@ -9,6 +9,8 @@ const Resources = {
   Textbox: new ImageSource("images/textbox.png"),
   InvisibleWall: new ImageSource("images/invis.png"),
   Classroom: new ImageSource("images/background-classroomsprites.png"),
+  Silhouette: new ImageSource("images/silhouet.png"),
+  Emiely: new ImageSource("images/emily.png"),
 
   //classroom objects
 

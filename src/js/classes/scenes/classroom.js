@@ -6,6 +6,7 @@ import { Player } from "../gameobjects/player.js";
 import { Door } from "../gameobjects/door.js"
 import { InteractableNpc } from "../gameobjects/interactable-npc.js";
 import { ClassroomTable } from "../gameobjects/classroom-table.js";
+import { Silhouette } from "../gameobjects/silhouette.js";
 
 export class Classroom extends Scene {
     onInitialize(engine) {
@@ -30,11 +31,21 @@ export class Classroom extends Scene {
             this.add(new ClassroomTable(x, y))
         }
 
+        for (let i = 0; i < 8; i++) {
+            const row = Math.floor(i / 5)
+            const col = i % 5
+
+            const x = 350 + col * 150
+            const y = 420 + row * 150
+
+            this.add(new Silhouette(x, y))
+        }
+
         this.add(new Door(1150, 85, "bedroom"))
 
         this.player = new Player(1150, 100)
         this.add(this.player)
 
-        this.add(new InteractableNpc(550, 200))
+        this.add(new InteractableNpc(800, 570))
     }
 }
