@@ -2,6 +2,7 @@ import { CollisionType, Actor, Vector } from "excalibur";
 import { Resources } from "../../resources";
 import { Player } from "./player";
 import { DialogueHandler } from "../dialogueHandler";
+import { ThinkBubble } from "./think-bubble";
 
 export class Backpack extends Actor {
   constructor(x, y) {

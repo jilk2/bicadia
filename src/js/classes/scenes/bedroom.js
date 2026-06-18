@@ -9,6 +9,7 @@ import { Backpack } from "../gameobjects/backpack.js";
 import { Door } from "../gameobjects/door.js"
 import { Plant } from "../gameobjects/plant.js";
 import { Livingroom } from "./livingroom.js";
+import { ThinkBubble } from "../gameobjects/think-bubble.js";
 
 export class Bedroom extends Scene {
   onInitialize(engine) {
@@ -21,15 +22,16 @@ export class Bedroom extends Scene {
     this.add(new InvisibleWall(1030, 220, 1020, 100))      // boven (rechts van deur)
     this.add(new InvisibleWall(0, 220, 840, 100))          // boven (rechts van deur)
     this.add(new InvisibleWall(800, 740, 1900, 80))      // onder
-
+    
     //decoration
     this.add(new Wardrobe(1000, 200))
     this.add(new Bed(715, 300))
     this.add(new Backpack(500, 500))
     this.add(new Door(470, 180, "livingroom"))
     this.add(new Plant(1075, 120))
-
-
+    this.thinkBubble = new ThinkBubble()
+    this.add(this.thinkBubble)
+    
     this.player = new Player(1000, 360)
     this.add(this.player)
 

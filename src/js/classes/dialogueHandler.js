@@ -25,7 +25,7 @@ export class DialogueHandler {
   }
 
   static backpackDialogueEnd() {
-      return { nodes: jsonData.home_room_2, targetScene: "bedroom" };
+    return { nodes: jsonData.home_room_2, targetScene: "bedroom" };    
   }
 
     static enterSchool() {

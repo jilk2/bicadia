@@ -32,6 +32,7 @@ const Resources = {
   //classroom objects
   ClassroomTable: new ImageSource("images/classroom-table.png"),
   ClassroomDesk: new ImageSource("images/classroom-desk.png"),
+  thinkBubble: new ImageSource("images/think-bubble.png")
 };
 
 const ResourceLoader = new Loader();
