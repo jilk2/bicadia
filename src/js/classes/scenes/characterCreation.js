@@ -81,6 +81,7 @@ export class CharacterCreation extends Scene {
         }
 
 
+
         this.player.updateGraphics()
     }
 
