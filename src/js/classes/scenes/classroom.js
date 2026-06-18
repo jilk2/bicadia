@@ -4,6 +4,7 @@ import { Background } from "../gameobjects/background.js";
 import { InvisibleWall } from "../gameobjects/invisible-wall.js"
 import { Player } from "../gameobjects/player.js";
 import { Door } from "../gameobjects/door.js"
+import { InteractableNpc } from "../gameobjects/interactable-npc.js";
 
 export class Classroom extends Scene {
     onInitialize(engine) {
@@ -23,5 +24,7 @@ export class Classroom extends Scene {
 
         this.player = new Player(690, 360)
         this.add(this.player)
+
+        this.add(new InteractableNpc(600, 400))
     }
 }
