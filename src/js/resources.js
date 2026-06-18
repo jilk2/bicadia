@@ -11,6 +11,7 @@ const Resources = {
   Classroom: new ImageSource("images/background-classroomsprites.png"),
   Silhouette: new ImageSource("images/silhouet.png"),
   Emiely: new ImageSource("images/emily.png"),
+  Teacher: new ImageSource("images/Jürgen.png"),
 
   //classroom objects
 

@@ -8,6 +8,7 @@ import { InteractableNpc } from "../gameobjects/interactable-npc.js";
 import { ThinkBubble } from "../gameobjects/think-bubble.js";
 import { ClassroomTable } from "../gameobjects/classroom-table.js";
 import { Silhouette } from "../gameobjects/silhouette.js";
+import { Teacher } from "../gameobjects/teacher.js";
 
 export class Classroom extends Scene {
     onInitialize(engine) {
@@ -47,6 +48,8 @@ export class Classroom extends Scene {
         this.add(this.player)
 
         this.add(new InteractableNpc(800, 570))
+
+        this.add(new Teacher(500, 150))
 
         this.thinkBubble = new ThinkBubble();
         this.add(this.thinkBubble);

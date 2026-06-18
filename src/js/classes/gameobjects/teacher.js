@@ -1,0 +1,29 @@
+import { Actor, CollisionType, Shape, Vector } from "excalibur";
+import { Resources } from "../../resources";
+
+export class Teacher extends Actor{
+
+    constructor(x, y) {
+
+        const sprite = Resources.Teacher.toSprite()
+
+        super({
+            x,
+            y,
+            collisionType: CollisionType.Fixed,
+            collider: Shape.Box(
+                sprite.width * 0.5,
+                sprite.height * 0.35,
+                new Vector(0.5, -0.5)
+            )
+        })
+        this.graphics.use(sprite)
+        this.scale = new Vector(0.2, 0.2)
+        this.interactable = true
+
+    }
+
+    interaction(engine){
+        //jurgen
+    }
+}
