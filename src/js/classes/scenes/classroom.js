@@ -19,7 +19,7 @@ export class Classroom extends Scene {
         this.add(new InvisibleWall(1280, 300, 10, 1000)); // rechts
         this.add(new InvisibleWall(1280, 130, 150, 100)); // boven (rechts van deur)
         this.add(new InvisibleWall(0, 130, 2187, 100)); // boven (links van deur)
-        this.add(new InvisibleWall(800, 730, 1900, 40)); // onder
+        this.add(new InvisibleWall(800, 760, 1900, 100)); // onder
 
         for (let i = 0; i < 10; i++) {
             const row = Math.floor(i / 5);
