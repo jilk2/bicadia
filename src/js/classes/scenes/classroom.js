@@ -10,23 +10,23 @@ import { ClassroomTable } from "../gameobjects/classroom-table.js";
 import { Silhouette } from "../gameobjects/silhouette.js";
 
 export class Classroom extends Scene {
-  onInitialize(engine) {
-    const background = new Background(Resources.Classroom);
-    this.add(background);
+    onInitialize(engine) {
+        const background = new Background(Resources.Classroom);
+        this.add(background);
 
-    //borders
-    this.add(new InvisibleWall(0, 300, 10, 1000)); // links
-    this.add(new InvisibleWall(1280, 300, 10, 1000)); // rechts
-    this.add(new InvisibleWall(1280, 150, 150, 40)); // boven (rechts van deur)
-    this.add(new InvisibleWall(0, 150, 2187, 40)); // boven (links van deur)
-    this.add(new InvisibleWall(800, 730, 1900, 40)); // onder
+        //borders
+        this.add(new InvisibleWall(0, 300, 10, 1000)); // links
+        this.add(new InvisibleWall(1280, 300, 10, 1000)); // rechts
+        this.add(new InvisibleWall(1280, 130, 150, 100)); // boven (rechts van deur)
+        this.add(new InvisibleWall(0, 130, 2187, 100)); // boven (links van deur)
+        this.add(new InvisibleWall(800, 730, 1900, 40)); // onder
 
-    for (let i = 0; i < 10; i++) {
-      const row = Math.floor(i / 5);
-      const col = i % 5;
+        for (let i = 0; i < 10; i++) {
+            const row = Math.floor(i / 5);
+            const col = i % 5;
 
-      const x = 350 + col * 150;
-      const y = 400 + row * 150;
+            const x = 350 + col * 150;
+            const y = 400 + row * 150;
 
             this.add(new ClassroomTable(x, y))
         }
@@ -51,6 +51,6 @@ export class Classroom extends Scene {
         this.thinkBubble = new ThinkBubble();
         this.add(this.thinkBubble);
         this.thinkBubble.loadNextGoal("I need to ask someone for a pen");
-    
+
     }
 }
