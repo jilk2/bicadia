@@ -8,5 +8,12 @@
     "id": "bedroom_backpack_1",
     "question": "I really need to go to school",
     "loadScene": "bedroom"
+  },
+    {
+    "id": "school_classroom_0",
+    "question": "I need to find a pen",
+    "loadScene": "classroom"
   }
 ]
+
+
