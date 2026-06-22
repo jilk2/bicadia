@@ -1,6 +1,6 @@
 import { Actor, CollisionType, Shape, SpriteSheet, Vector, Events } from "excalibur";
 import { Resources } from "../../resources";
-import { DialogueHandler } from "../dialogueHandler";
+import { Dialogue } from "../scenes/dialogue";
 import { Player } from "./player";
 
 export class Insecurity extends Actor {

@@ -30,9 +30,6 @@ export class Game extends Engine {
     this.addScene("minigame", new Minigame())
     // this.addScene("livingroom", new Livingroom());
     // this.addScene("classroom", new Classroom());
-    // this.dialogue = new Dialogue("bedroom_backpack_0");
-    // this.addScene("dialogue", this.dialogue);
-    // this.goToScene("dialogue");
     // this.goToScene("bedroom");
     this.goToScene("startmenu")
   }
