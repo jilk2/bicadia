@@ -1,9 +1,9 @@
-import jsonData from "../data/dialogue.json";
-import { Engine, ScreenElement } from "excalibur"
+import dialogueData from "../data/dialogue.json";
+import { Engine, ScreenElement } from "excalibur";
 import { Resources } from "../resources.js";
 import { Dialogue } from "./scenes/dialogue.js";
 
-export class DialogueHandler{
+export class DialogueHandler {
   //   static activateHomeDialogue(engine, dialogueMethodName) {
   //     const { nodes, targetScene } = this[dialogueMethodName]();
   //     const sceneName = `dialogue_${dialogueMethodName}`;
@@ -18,12 +18,11 @@ export class DialogueHandler{
   //       return { nodes: jsonData.home_room_2, targetScene: "bedroom" };
   //   }
 
-  static getDialogue(sceneName = "home_room_1") {
+  static getDialogue(id, engine) {
     // console.log(jsonData);
-    engine.addScene(sceneName, new Dialogue(Resources.DialogueSchool));
-    engine.goToScene(sceneName);
-    let room = jsonData.find((scene) => scene.name === "home_room_1");
-    dlg.placeDialogue(room.char, room.line);
+    const dialogue = dialogueData.find((dialogue) => dialogue.id === id)
+    console.log(dialogue.question)
+    engine.goToScene("bedroom")
     // if (room.dialogtree != "") {
     //   for (let dialog of room.dialogtree) {
     //     console.log(`dialog id is ${dialog.id}`);

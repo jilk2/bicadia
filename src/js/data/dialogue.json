@@ -1,58 +1,7 @@
 [
   {
-    "name": "home_room_1",
     "id": "bedroom_backpack_0",
-    "char": "player",
-    "line": "I need to find my backpack",
-    "targetScene": "bedroom",
-    "dialogtree": []
-  },
-  {
-    "name": "home_room_2",
-    "id": "bedroom_backpack_1",
-    "char": "player",
-    "line": "I found my backpack, now I need to hurry to school",
-    "targetScene": "bedroom",
-    "dialogtree": [
-      {
-        "id": "dialog-one",
-        "choices": [
-          {
-            "text": "Go to school",
-            "targetId": "dialog-two"
-          },
-          {
-            "text": "Go Home",
-            "targetId": "dialog-three"
-          }
-        ]
-      },
-      {
-        "id": "dialog-two",
-        "choices": [
-          {
-            "text": "You are at school, do you study",
-            "targetId": "school_study"
-          },
-          {
-            "text": "You are at school, take a break",
-            "targetId": "school_break"
-          }
-        ]
-      },
-      {
-        "id": "dialog-three",
-        "choices": [
-          {
-            "text": "You are at home, do you sleep",
-            "targetId": "home-sleep"
-          },
-          {
-            "text": "You are at home, oh no i forgot something",
-            "targetId": "dialog-home"
-          }
-        ]
-      }
-    ]
+    "question": "I need to find my backpack",
+    "loadScene": "bedroom"
   }
 ]
