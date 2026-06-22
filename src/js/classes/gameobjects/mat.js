@@ -11,7 +11,7 @@ export class Mat extends Actor {
 
     onInitialize(engine) {
         this.graphics.use(Resources.Mat.toSprite())
-        this.body.collisionType = CollisionType.Fixed
+        this.body.collisionType = CollisionType.Passive
         this.scale = new Vector(3.6, 3.6)
     }
 }
