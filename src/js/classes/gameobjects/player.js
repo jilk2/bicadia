@@ -114,10 +114,6 @@ export class Player extends Actor {
       this.graphics.use("walkingFront");
       yspeed = 300;
     }
-
-
-        if (engine.input.keyboard.isHeld(Keys.P)) {
-    }
     this.vel = new Vector(xspeed, yspeed);
     if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
       this.currentInteractable.interaction(engine)
