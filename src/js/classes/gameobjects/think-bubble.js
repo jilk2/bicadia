@@ -14,7 +14,7 @@ export class ThinkBubble extends Actor {
       x: -80,
       y: -15,
       text: "i need to find my backpack",
-      scale: new Vector(1.3,1.5)
+      scale: new Vector(1.3, 1.5)
       // scale: new Vector(-5, -5),
     });
     this.addChild(this.textLabel);
