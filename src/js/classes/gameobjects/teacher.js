@@ -14,7 +14,7 @@ export class Teacher extends Actor{
             collider: Shape.Box(
                 sprite.width * 0.5,
                 sprite.height * 0.35,
-                new Vector(0.5, -0.5)
+                new Vector(0.5, -0.35)
             )
         })
         this.graphics.use(sprite)

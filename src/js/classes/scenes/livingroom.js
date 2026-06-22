@@ -29,7 +29,7 @@ export class Livingroom extends Scene {
         this.add(new Door(1150, 180, "bedroom"))
         this.add(new TVKast(158, 250))
         this.add(new Bank(300, 467))
-        this.add(new Doormat(1276, 645))
+        this.add(new Doormat(1200, 645, "classroom"))
         this.add(new Klok(775, 90))
         this.add(new Lamp(1035, 205))
         this.add(new Mat(302, 600))

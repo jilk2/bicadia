@@ -29,7 +29,7 @@ export class Bedroom extends Scene {
     this.add(new Wardrobe(1000, 200))
     this.add(new Bed(715, 300))
     this.add(new Backpack(500, 500))
-    this.add(new Door(470, 180, "classroom"))
+    this.add(new Door(470, 180, "livingroom"))
     this.add(new Plant(1075, 120))
     this.add(new Desk(1230, 605))
     this.add(new Deskchair(1152, 630))
