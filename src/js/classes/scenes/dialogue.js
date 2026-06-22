@@ -1,11 +1,22 @@
-import { Actor, Color, Label, Vector, Scene, Font, FontUnit, Keys } from "excalibur";
+import {
+  Actor,
+  Color,
+  Label,
+  Vector,
+  Scene,
+  Font,
+  FontUnit,
+  Keys,
+} from "excalibur";
 import { Resources } from "../../resources";
 import dialogueData from "../../data/dialogue.json";
 
 export class Dialogue extends Scene {
   dialogue;
+  _hasReachEnd = false;
   constructor(scene) {
     super();
+    this._hasReachEnd = false;
     this.questionLabel = new Label({
       color: Color.Black,
       x: 525,
@@ -30,25 +41,28 @@ export class Dialogue extends Scene {
       height: 120,
     });
     bg.graphics.use(Resources.Textbox.toSprite());
-    bg.z = -1
+    bg.z = -1;
     this.add(bg);
-    
+
     this.add(this.questionLabel);
-    this.add(this.continueLabel)
+    this.add(this.continueLabel);
     this.showQuestion(this.dialogue);
   }
 
   showQuestion(id) {
-
     this.dialog = dialogueData.find((d) => d.id === id);
     this.questionLabel.text = this.dialog.question;
   }
 
-  onPreUpdate(engine){
-    if(engine.input.keyboard.isHeld(Keys.Space)){
-      if(this.dialog.loadScene != null)
-      engine.goToScene(this.dialog.loadScene)
+  onPreUpdate(engine) {
+    if (!engine.input.keyboard.wasPressed(Keys.Space)) return;
+    if (this.dialog.targetConvo != null) {
+      this.showQuestion(this.dialog.targetConvo);
+    } else {
+      this._hasReachEnd = true;
     }
-    //doe hetzelfde voor de keuzes check
+    if (this.dialog.loadScene != null && this._hasReachEnd == true){
+      engine.goToScene(this.dialog.loadScene);
+    }
   }
 }

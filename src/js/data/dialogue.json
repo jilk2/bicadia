@@ -8,6 +8,7 @@
   {
     "id": "bedroom_backpack_1",
     "question": "I really need to go to school, but.....",
+    "loadScene": "bedroom",
     "choices": [
       {
         "text": "pick up and go to school",
