@@ -9,7 +9,7 @@ export class Silhouette extends Actor{
             x, 
             y,
             collisionType: CollisionType.Fixed,
-            collider: Shape.Box(16, 15, new Vector(0.5, 0.15))
+            collider: Shape.Box(16, 15, new Vector(0.5, 0,15))
         })
 
         this.graphics.use(Resources.Silhouette.toSprite());

@@ -1,0 +1,46 @@
+import { Color, Label, Scene, Vector } from "excalibur";
+import { Resources } from "../../resources";
+import { Background } from "../gameobjects/background";
+import { DialogueHandler } from "../dialogueHandler";
+
+export class StartMenu extends Scene{
+
+    onInitialize(engine){
+        const background = new Background(Resources.StartMenu);
+        this.add(background);
+
+        const gameStart = new Label({
+            color: Color.Black,
+            x: 50,
+            y: engine.drawHeight / 2,
+            text: "Start Game",
+            scale: new Vector(3,3)
+        })
+        this.add(gameStart)
+        gameStart.on("pointerdown", () => this.gameStartClickHandler(engine))
+        const howToPlay = new Label({
+            color: Color.Black,
+            x: 50,
+            y: engine.drawHeight / 2 + 70,
+            text: "How to Play",
+            scale: new Vector(3,3)
+        })
+        this.add(howToPlay)
+        howToPlay.on("pointerdown", () => this.howToPlayClickHandler())
+         const copyright = new Label({
+            color: Color.Black,
+            x: 10,
+            y: engine.drawHeight / 2 + 320,
+            text: "© 2026, team 13",
+            scale: new Vector(2,2)
+        })
+        this.add(copyright)
+    }
+
+    gameStartClickHandler(engine){
+        DialogueHandler.activateHomeDialogue(engine, "backpackDialogueStart");
+    }
+    howToPlayClickHandler(){
+        this.engine.goToScene("howtoplay")
+    }
+}
