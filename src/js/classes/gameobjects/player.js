@@ -24,7 +24,7 @@ export class Player extends Actor {
 
     const playersheet = SpriteSheet.fromImageSource({
       image: Resources.PlayerSheet,
-      grid: { rows: 2, columns: 5, spriteWidth: 16, spriteHeight: 30 },
+      grid: { rows: 2, columns: 5, spriteWidth: 16, spriteHeight: 31 },
     });
 
     const idle = playersheet.sprites[5];
