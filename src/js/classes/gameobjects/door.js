@@ -21,6 +21,10 @@ export class Door extends Actor {
   }
 
   interaction(engine) {
-    engine.goToScene(engine.goToScene("classroom"));
+    engine.goToScene(engine.goToScene(this.targetScene));
+  }
+
+  firstSchool(engine) {
+        DialogueHandler.activateschoolBeginningDialogue(engine, "enterSchool");
   }
 }

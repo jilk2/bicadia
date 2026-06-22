@@ -18,6 +18,15 @@ export class DialogueHandler {
     engine.goToScene(sceneName);
   }
 
+  //     static activateschoolBeginningDialogue(engine, dialogueMethodName) {
+  //   const { nodes, targetScene } = this[dialogueMethodName]();
+  //   const sceneName = `dialogue_${dialogueMethodName}`;
+  //   engine.addScene(sceneName, new Dialogue(Resources.DialogueSchool, nodes, targetScene));
+  //   engine.goToScene(sceneName);
+  // }
+
+  // activateschoolBeginningDialogue
+
   
 
   static backpackDialogueStart() {
@@ -28,7 +37,7 @@ export class DialogueHandler {
     return { nodes: jsonData.home_room_2, targetScene: "bedroom" };    
   }
 
-    static enterSchool() {
+static enterSchool() {
       return { nodes: jsonData.entering_school, targetScene: "classroom" };
   }
 
