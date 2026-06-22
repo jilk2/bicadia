@@ -1,4 +1,4 @@
-import { Actor, Color, Label, Vector, Scene, Font, FontUnit } from "excalibur";
+import { Actor, Color, Label, Vector, Scene, Font, FontUnit, Keys } from "excalibur";
 import { Resources } from "../../resources";
 import dialogueData from "../../data/dialogue.json";
 
@@ -39,7 +39,16 @@ export class Dialogue extends Scene {
   }
 
   showQuestion(id) {
-    const dialog = dialogueData.find((d) => d.id === id);
-    this.questionLabel.text = dialog.question;
+
+    this.dialog = dialogueData.find((d) => d.id === id);
+    this.questionLabel.text = this.dialog.question;
+  }
+
+  onPreUpdate(engine){
+    if(engine.input.keyboard.isHeld(Keys.Space)){
+      if(this.dialog.loadScene != null)
+      engine.goToScene(this.dialog.loadScene)
+    }
+    //doe hetzelfde voor de keuzes check
   }
 }
