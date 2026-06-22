@@ -2,6 +2,22 @@
   {
     "id": "bedroom_backpack_0",
     "question": "I need to find my backpack",
+    "targetConvo": "bedroom_backpack_1",
     "loadScene": "bedroom"
+  },
+  {
+    "id": "bedroom_backpack_1",
+    "question": "I really need to go to school, but.....",
+    "choices": [
+      {
+        "text": "pick up and go to school",
+        "targetConvo": ""
+      },
+      {
+        "text": "explore your room",
+        "targetConvo": "",
+        "loadScene": ""
+      }
+    ]
   }
 ]

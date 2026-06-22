@@ -1,30 +1,45 @@
-import { Scene, Keys } from "excalibur";
-import { Background } from "../gameobjects/background.js";
-import { Textbox } from "../gameobjects/textbox.js";
+import { Actor, Color, Label, Vector, Scene, Font, FontUnit } from "excalibur";
+import { Resources } from "../../resources";
+import dialogueData from "../../data/dialogue.json";
 
 export class Dialogue extends Scene {
-  constructor(background) {
+  dialogue;
+  constructor(scene) {
     super();
-    this.add(new Background(background));
+    this.questionLabel = new Label({
+      color: Color.Black,
+      x: 525,
+      y: 600,
+      scale: new Vector(2.5, 2.5),
+    });
+
+    this.continueLabel = new Label({
+      color: Color.Black,
+      text: `press space to continue`,
+      x: 590,
+      y: 675,
+      scale: new Vector(1.5, 1.5),
+    });
+    this.dialogue = scene;
   }
 
-  placeDialogue(char, line) {
-    this.textbox = new Textbox(line);
-    this.add(this.textbox);
+  onInitialize(engine) {
+    const bg = new Actor({
+      pos: new Vector(675, 600),
+      width: 600,
+      height: 120,
+    });
+    bg.graphics.use(Resources.Textbox.toSprite());
+    bg.z = -1
+    this.add(bg);
+    
+    this.add(this.questionLabel);
+    this.add(this.continueLabel)
+    this.showQuestion(this.dialogue);
   }
 
-  // onPreUpdate(engine) {
-  //   if (engine.input.keyboard.wasPressed(Keys.Space)) {
-  //     this.currentIndex++;
-  //     if (this.currentIndex < this.nodes.length) {
-  //       this.textbox.loadNextDialogue(this.nodes[this.currentIndex].line);
-  //     } else {
-  //       if (this.targetScene) {
-  //         engine.goToScene(this.targetScene);
-  //       } else {
-  //         console.log("Dialogue finished");
-  //       }
-  //     }
-  //   }
-  // }
+  showQuestion(id) {
+    const dialog = dialogueData.find((d) => d.id === id);
+    this.questionLabel.text = dialog.question;
+  }
 }

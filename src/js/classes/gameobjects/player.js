@@ -9,7 +9,6 @@ import {
   Shape,
 } from "excalibur";
 import { Resources } from "../../resources";
-import { DialogueHandler } from "../dialogueHandler";
 
 export class Player extends Actor {
   constructor(x, y) {
@@ -118,7 +117,6 @@ export class Player extends Actor {
 
 
         if (engine.input.keyboard.isHeld(Keys.P)) {
-      DialogueHandler.activateHomeDialogue(engine, "backpackDialogueEnd");
     }
     this.vel = new Vector(xspeed, yspeed);
     if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
