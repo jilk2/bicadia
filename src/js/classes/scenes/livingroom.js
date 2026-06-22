@@ -5,6 +5,12 @@ import { InvisibleWall } from "../gameobjects/invisible-wall.js"
 import { Player } from "../gameobjects/player.js";
 import { Door } from "../gameobjects/door.js"
 import { TVKast } from "../gameobjects/tvkast.js";
+import { Bank } from "../gameobjects/bank.js";
+import { Doormat } from "../gameobjects/doormat.js";
+import { Klok } from "../gameobjects/klok.js";
+import { Lamp } from "../gameobjects/lamp.js";
+import { Mat } from "../gameobjects/mat.js";
+import { Sidebank } from "../gameobjects/sidebank.js";
 
 export class Livingroom extends Scene {
     onInitialize(engine) {
@@ -22,6 +28,17 @@ export class Livingroom extends Scene {
 
         this.add(new Door(1150, 180, "bedroom"))
         this.add(new TVKast(158, 250))
+        this.add(new Bank(300, 467))
+        this.add(new Doormat(1276, 645))
+        this.add(new Klok(775, 90))
+        this.add(new Lamp(1035, 205))
+        this.add(new Mat(302, 600))
+        this.add(new Sidebank(145, 600))
+
+
+
+
+
 
         this.player = new Player(690, 360)
         this.add(this.player)
