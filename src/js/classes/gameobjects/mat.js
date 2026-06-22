@@ -1,0 +1,17 @@
+import { CollisionType, Actor, Vector } from 'excalibur'
+import { Resources } from "../../resources";
+
+export class Mat extends Actor {
+
+    constructor(x, y) {
+        super({ x, y, width: Resources.Mat.width, height: Resources.Mat.height }) // collision box! 
+        this.pos = new Vector(x, y)
+
+    }
+
+    onInitialize(engine) {
+        this.graphics.use(Resources.Mat.toSprite())
+        this.body.collisionType = CollisionType.Fixed
+        this.scale = new Vector(3.6, 3.6)
+    }
+}

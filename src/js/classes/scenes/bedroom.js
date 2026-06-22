@@ -11,7 +11,7 @@ import { Plant } from "../gameobjects/plant.js";
 import { Livingroom } from "./livingroom.js";
 import { ThinkBubble } from "../gameobjects/think-bubble.js";
 import { Desk } from "../gameobjects/desk.js";
-import { Deskchair} from "../gameobjects/deskchair.js";
+import { Deskchair } from "../gameobjects/deskchair.js";
 
 export class Bedroom extends Scene {
   onInitialize(engine) {
@@ -32,7 +32,7 @@ export class Bedroom extends Scene {
     this.add(new Door(470, 180, "classroom"))
     this.add(new Plant(1075, 120))
     this.add(new Desk(1230, 605))
-    this.add(new Deskchair(1210, 630))
+    this.add(new Deskchair(1152, 630))
     this.thinkBubble = new ThinkBubble()
     this.add(this.thinkBubble)
 

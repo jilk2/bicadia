@@ -12,6 +12,7 @@ const Resources = {
   Silhouette: new ImageSource("images/silhouet.png"),
   Emiely: new ImageSource("images/emily.png"),
   Teacher: new ImageSource("images/Jürgen.png"),
+  StartMenu: new ImageSource("images/background-menu.png"),
 
   //classroom objects
 
@@ -19,13 +20,19 @@ const Resources = {
   //livingroom objects
   Door: new ImageSource("images/Door.png"),
   TVKast: new ImageSource("images/TVkast.png"),
+  Bank: new ImageSource("images/bank.png"),
+  DoorMat: new ImageSource("images/DoorMat.png"),
+  Klok: new ImageSource("images/klok.png"),
+  Lamp: new ImageSource("images/Lamp.png"),
+  Mat: new ImageSource("images/mat.png"),
+  Sidebank: new ImageSource("images/sidebank.png"),
 
   //bedroom objects
   Wardrobe: new ImageSource("images/wardrobe.png"),
   Bed: new ImageSource("images/bed.png"),
   Backpack: new ImageSource("images/backpack.png"),
   Desk: new ImageSource("images/Desk.png"),
-  Deskchair: new ImageSource("image/Deskchair.png"),
+  Deskchair: new ImageSource("images/Deskchair.png"),
 
   //dialogue scenes
   DialogueRoom: new ImageSource("images/background-bedroom.png"),
