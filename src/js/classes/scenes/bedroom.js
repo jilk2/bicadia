@@ -11,7 +11,7 @@ import { Plant } from "../gameobjects/plant.js";
 import { Livingroom } from "./livingroom.js";
 import { ThinkBubble } from "../gameobjects/think-bubble.js";
 import { Desk } from "../gameobjects/desk.js";
-import { Deskchair, DeskChair } from "../gameobjects/deskchair.js";
+import { Deskchair} from "../gameobjects/deskchair.js";
 
 export class Bedroom extends Scene {
   onInitialize(engine) {

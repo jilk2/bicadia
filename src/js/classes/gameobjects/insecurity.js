@@ -1,4 +1,4 @@
-import { Actor, CollisionType, Shape, SpriteSheet, Vector, Event } from "excalibur";
+import { Actor, CollisionType, Shape, SpriteSheet, Vector, Events } from "excalibur";
 import { Resources } from "../../resources";
 import { DialogueHandler } from "../dialogueHandler";
 import { Player } from "./player";

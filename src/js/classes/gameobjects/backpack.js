@@ -1,7 +1,7 @@
 import { CollisionType, Actor, Vector } from "excalibur";
 import { Resources } from "../../resources";
 import { Player } from "./player";
-import { DialogueHandler } from "../dialogueHandler";
+import { Dialogue } from "../scenes/dialogue";
 import { ThinkBubble } from "./think-bubble";
 
 export class Backpack extends Actor {
@@ -24,6 +24,9 @@ export class Backpack extends Actor {
 
   interaction(engine) {
     this.kill();
-    DialogueHandler.activateHomeEndDialogue(engine, "backpackDialogueEnd");
+    engine.remove("dialogue");
+    this.dialogue = new Dialogue("bedroom_backpack_1");
+    engine.addScene("dialogue", this.dialogue);
+    engine.goToScene("dialogue")
   }
 }
