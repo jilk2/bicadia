@@ -1,46 +1,116 @@
 import { Actor, Keys, SpriteSheet, Vector, range, Animation } from "excalibur";
 import { Resources } from "../../resources";
+import { CharacterOptions } from "./characterOptions";
 
 export class Player extends Actor {
   inCutscene
   bodyparts
 
+  skinTone
+  hair
+
+
   constructor(x, y, inCutscene) {
     super({ x, y });
     this.inCutscene = inCutscene
-    const playersheet = SpriteSheet.fromImageSource({
-      image: Resources.PlayerSheet,
-      grid: { rows: 2, columns: 5, spriteWidth: 16, spriteHeight: 30 }
-    })
+    // const playersheet = SpriteSheet.fromImageSource({
+    //   image: Resources.PlayerSheet,
+    //   grid: { rows: 2, columns: 5, spriteWidth: 16, spriteHeight: 30 }
+    // })
 
-    const idle = playersheet.sprites[5]
-    const walkingSide = Animation.fromSpriteSheet(playersheet, range(6, 8), 150)
-    const walkingFront = Animation.fromSpriteSheet(playersheet, range(0, 1), 150)
-    const walkingBack = Animation.fromSpriteSheet(playersheet, range(3, 4), 150)
-    this.graphics.add("idle", idle)
-    this.graphics.add("walkingSide", walkingSide)
-    this.graphics.add("walkingFront", walkingFront)
-    this.graphics.add("walkingBack", walkingBack)
-    this.graphics.use(idle);
+    // const idle = playersheet.sprites[5]
+    // const walkingSide = Animation.fromSpriteSheet(playersheet, range(6, 8), 150)
+    // const walkingFront = Animation.fromSpriteSheet(playersheet, range(0, 1), 150)
+    // const walkingBack = Animation.fromSpriteSheet(playersheet, range(3, 4), 150)
+    // this.graphics.add("idle", idle)
+    // this.graphics.add("walkingSide", walkingSide)
+    // this.graphics.add("walkingFront", walkingFront)
+    // this.graphics.add("walkingBack", walkingBack)
+    // this.graphics.use(idle);
     this.scale = new Vector(5.5, 5.5)
 
   }
 
   onInitialize(engine) {
 
-    this.shoes = new Actor()
-    this.shoes.graphics.use(Resources.GreyShoes.toSprite())
-    this.shoes.pos.y += 1
-    this.addChild(this.shoes)
+    let characterOptions = localStorage.getItem("characterOptions")
 
-    this.pant = new Actor()
-    this.pant.graphics.use(Resources.PantsBlue.toSprite())
-    this.pant.pos.y += 7
-    this.addChild(this.pant)
+    if (!characterOptions) {
+      // set default sprites and then save the default to local storage
 
-    this.shirt = new Actor()
-    this.shirt.graphics.use(Resources.ShirtRed.toSprite())
-    this.addChild(this.shirt)
+      const defaultCharacterOptions = {
+        hair: "shortBlondHair",
+        skintone: "skintoneOne",
+        shirt: "shirtRedTwo",
+        pants: "pantsBlue",
+        shoes: "shoesGrey",
+
+      }
+      localStorage.setItem("characterOptions", JSON.stringify(defaultCharacterOptions))
+      characterOptions = defaultCharacterOptions
+    }
+
+    this.addChild(new CharacterOptions(Resources.ShortBlondHairSheet, 0));
+
+    // switch (characterOptions.hair) {
+    //   case "shortBlondHair":
+    //     this.hair = new CharacterOptions(Resources.ShortBlondHairSheet, 0)
+    //     break;
+
+    // }
+
+    // switch (characterOptions.skintone) {
+    //   case "skintoneOne":
+    //     this.skinTone = new CharacterOptions(Resources.skintoneOne, 0)
+    //     break;
+
+    // }
+
+    // switch (characterOptions.shirt) {
+    //   case "shirtRedTwo":
+    //     this.shirt = new CharacterOptions(Resources.ShirtRedTwoSheet, 0)
+    //     break;
+
+    // }
+
+    // switch (characterOptions.pants) {
+    //   case "pantsBlue":
+    //     this.pants = new CharacterOptions(Resources.PantsBlueSheet, 0)
+    //     break;
+
+    // }
+
+    // switch (characterOptions.shoes) {
+    //   case "shoesGrey":
+    //     this.shoes = new CharacterOptions(Resources.ShoesGreySheet, 0)
+    //     break;
+
+    // }
+
+
+    // get the clothing options from local storage
+
+    // let pantsImage
+    // if (localstorage.pants == "pants-1"){
+    // pantsImage = Resources.Pants1
+    // }
+    // this.shoes = new Clothing(pantsImage, 1)
+
+
+
+    // this.shoes = new Actor()
+    // this.shoes.graphics.use(Resources.GreyShoes.toSprite())
+    // this.shoes.pos.y += 1
+    // this.addChild(this.shoes)
+
+    // this.pant = new Actor()
+    // this.pant.graphics.use(Resources.PantsBlue.toSprite())
+    // this.pant.pos.y += 7
+    // this.addChild(this.pant)
+
+    // this.shirt = new Actor()
+    // this.shirt.graphics.use(Resources.ShirtRed.toSprite())
+    // this.addChild(this.shirt)
 
 
   }
@@ -48,11 +118,22 @@ export class Player extends Actor {
 
 
   updateGraphics() {
-    console.log("I received new bodyparts")
-    console.log(this.scene.engine.bodyparts)
-    this.pant.graphics.use(Resources.PantsBlue.toSprite())
-    this.shirt.graphics.use(Resources.ShirtRed.toSprite())
-    this.shoes.graphics.use(Resources.GreyShoes.toSprite())
+    // updateGraphics(shirt, pants, shoes) {
+    // console.log("I received new bodyparts")
+    // console.log(this.scene.engine.bodyparts)
+    // const settings = this.scene.engine.bodyparts
+
+    // if(shirt ===  "shirt-1") {
+    // this.shirt.image = Resources.shirt1
+    // }
+
+    // Je maakt een glothing class, waar je een image aan door geeft
+
+    // this.pant.graphics.use(Resources.PantsBlue.toSprite())
+    // this.shirt.graphics.use(Resources.ShirtRed.toSprite())
+    // this.shoes.graphics.use(Resources.GreyShoes.toSprite())
+
+    // save to localstorage
 
   }
 
@@ -60,7 +141,7 @@ export class Player extends Actor {
   onPreUpdate(engine) {
     let xspeed = 0;
     let yspeed = 0;
-    this.graphics.use("idle")
+    // this.graphics.use("idle")
     if (!this.inCutscene) {
 
     } else {
@@ -68,6 +149,9 @@ export class Player extends Actor {
       if (engine.input.keyboard.isHeld(Keys.A)) {
         this.graphics.use("walkingSide")
         this.graphics.flipHorizontal = true
+
+        // this.pants.graphics.use("walkingSide")
+        // this.pants.graphics.flipHorizontal = true
         xspeed = -300;
       }
       if (engine.input.keyboard.isHeld(Keys.D)) {

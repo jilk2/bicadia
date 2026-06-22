@@ -18,7 +18,7 @@ export class Game extends Engine {
 
   startGame() {
     // hair, face, shirt, pants, shoes
-    this.bodyparts = [0, 0, 0, 0, 0]
+    // this.bodyparts = [0, 0, 0, 0, 0]
 
     this.addScene("bedroom", new Bedroom());
     this.addScene("creation", new CharacterCreation());

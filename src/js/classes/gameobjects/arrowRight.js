@@ -12,6 +12,5 @@ export class ArrowRight extends Actor {
         //  this.on("pointerdown", (event) => this.CharacterShirtAddIdHandler(event))
         this.on("pointerdown", (event) => this.scene.updateCharacter(this.index, 1))
         this.pos = new Vector(900, 240 + (i * 60))
-
     }
 }
