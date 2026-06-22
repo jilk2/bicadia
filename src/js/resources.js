@@ -25,6 +25,8 @@ const Resources = {
   Wardrobe: new ImageSource("images/wardrobe.png"),
   Bed: new ImageSource("images/bed.png"),
   Backpack: new ImageSource("images/backpack.png"),
+  Desk: new ImageSource("images/Desk.png"),
+  Deskchair: new ImageSource("images/Deskchair.png"),
 
   //dialogue scenes
   DialogueRoom: new ImageSource("images/background-bedroom.png"),
