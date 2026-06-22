@@ -10,6 +10,7 @@ import { HowToPlay } from "./classes/scenes/howtoplay.js";
 import { Minigame } from "./classes/scenes/minigame.js";
 
 export class Game extends Engine {
+  bravePoints = 0;
   constructor() {
     super({
       width: 1280,
