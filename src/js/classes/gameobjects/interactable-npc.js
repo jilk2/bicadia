@@ -1,6 +1,7 @@
 import { Actor, CollisionType, Shape, SpriteSheet, Vector } from "excalibur";
 import { Resources } from "../../resources";
 import { Dialogue } from "../scenes/dialogue";
+import { ThinkBubble } from "./think-bubble";
 
 export class InteractableNpc extends Actor{
 
@@ -25,9 +26,10 @@ export class InteractableNpc extends Actor{
     }
 
     interaction(engine){
-        //interaction begint en dialoog start
-        // DialogueHandler.activateHomeDialogue(engine, "EmielDialogueStart");
-        
+    engine.remove("dialogue");
+    this.dialogue = new Dialogue("school_classroom_npc_0");
+    engine.addScene("dialogue", this.dialogue);
+    engine.goToScene("dialogue")
     }
 
 }
