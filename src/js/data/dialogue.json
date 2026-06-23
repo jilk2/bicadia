@@ -1,9 +1,46 @@
 [
-  {
-    "id": "bedroom_backpack_0",
-    "question": "I need to find my backpack",
-    "loadScene": "bedroom"
-  },
+  
+{
+  "id": "bedroom_backpack_0",
+  "question": "There is just so much on my mind.",
+  "targetConvo": "bedroom_backpack_0b"
+},
+{
+  "id": "bedroom_backpack_0b",
+  "question": "A new school...",
+  "targetConvo": "bedroom_backpack_0c"
+},
+{
+  "id": "bedroom_backpack_0c",
+  "question": "The move...",
+  "targetConvo": "bedroom_backpack_0d"
+},
+{
+  "id": "bedroom_backpack_0d",
+  "question": "Everything that happened...",
+  "targetConvo": "bedroom_backpack_0e"
+},
+{
+  "id": "bedroom_backpack_0e",
+  "question": "The exhaustion really isn't helping my nerves.",
+  "targetConvo": "bedroom_backpack_0f"
+},
+{
+  "id": "bedroom_backpack_0f",
+  "question": "My legs are so sore...",
+  "targetConvo": "bedroom_backpack_0g"
+},
+{
+  "id": "bedroom_backpack_0g",
+  "question": "What did mom always say... stretch before you think?",
+  "targetConvo": "bedroom_backpack_0h"
+},
+{
+  "id": "bedroom_backpack_0h",
+  "question": "Something like that." ,
+  "loadScene": "bedroom"
+},
+
   {
     "id": "bedroom_backpack_1",
     "question": "I really need to go to school",
@@ -17,17 +54,21 @@
     {
     "id": "school_classroom_npc_0",
     "question": "[npc_name]: heyyy",
-    "loadScene": "classroom",
-    "choises": [
+    "choices": [
       {
       "text" : "hey! could i borrow a pen maybe?",
-      "target" : "classroom",
+      "link":"pen-conversation",
       "bravePoints" : 10
       },
         {
       "text" : "nvm",
-      "target" : "classroom",
+      "loadScene": "classroom",
       "bravePoints" : -10
+      },
+      {
+        "id":"pen-conversation",
+        "question":"ofc",
+        "loadScene": "classroom"
       }
     ]
   }
