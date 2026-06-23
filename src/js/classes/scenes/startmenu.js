@@ -10,19 +10,19 @@ export class StartMenu extends Scene {
 
     const gameStart = new Label({
       color: Color.Black,
-      x: engine.drawWidth / 2 - 150,
-      y: engine.drawHeight / 2 + 50,
+      x: engine.drawWidth / 2 - 140,
+      y: engine.drawHeight / 2 + 60,
       text: "Start Game",
-      scale: new Vector(3, 3),
+      scale: new Vector(2.7, 2.7),
     });
     this.add(gameStart);
     gameStart.on("pointerdown", () => this.gameStartClickHandler(engine));
     const howToPlay = new Label({
       color: Color.Black,
-      x: engine.drawWidth / 2 - 150,
-      y: engine.drawHeight / 2 + 120,
+      x: engine.drawWidth / 2 - 140,
+      y: engine.drawHeight / 2 + 146,
       text: "How to Play",
-      scale: new Vector(3, 3)
+      scale: new Vector(2.7, 2.7)
     });
     this.add(howToPlay);
     howToPlay.on("pointerdown", () => this.howToPlayClickHandler());
