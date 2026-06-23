@@ -7,6 +7,8 @@ import {
   Animation,
   CollisionType,
   Shape,
+  Axes,
+  Buttons,
 } from "excalibur";
 import { Resources } from "../../resources";
 
@@ -80,43 +82,62 @@ export class Player extends Actor {
 
 
   onPreUpdate(engine) {
-    let xspeed = 0;
-    let yspeed = 0;
     this.graphics.use("idle");
-
-    if (
-      engine.input.keyboard.isHeld(Keys.A) ||
-      engine.input.keyboard.isHeld(Keys.ArrowLeft)
-    ) {
-      this.graphics.use("walkingSide");
-      this.graphics.flipHorizontal = true;
-      xspeed = -300;
-    }
-    if (
-      engine.input.keyboard.isHeld(Keys.D) ||
-      engine.input.keyboard.isHeld(Keys.ArrowRight)
-    ) {
-      xspeed = 300;
-      this.graphics.use("walkingSide");
-      this.graphics.flipHorizontal = false;
-    }
-    if (
-      engine.input.keyboard.isHeld(Keys.W) ||
-      engine.input.keyboard.isHeld(Keys.ArrowUp)
-    ) {
-      this.graphics.use("walkingBack");
-      yspeed = -300;
-    }
-    if (
-      engine.input.keyboard.isHeld(Keys.S) ||
-      engine.input.keyboard.isHeld(Keys.ArrowDown)
-    ) {
-      this.graphics.use("walkingFront");
-      yspeed = 300;
-    }
-    this.vel = new Vector(xspeed, yspeed);
-    if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
-      this.currentInteractable.interaction(engine)
+    if (!engine.mygamepad) { 
+      let xspeed = 0;
+      let yspeed = 0;
+      if (
+        engine.input.keyboard.isHeld(Keys.A) ||
+        engine.input.keyboard.isHeld(Keys.ArrowLeft)
+      ) {
+        this.graphics.use("walkingSide");
+        this.graphics.flipHorizontal = true;
+        xspeed = -300;
+      }
+      if (
+        engine.input.keyboard.isHeld(Keys.D) ||
+        engine.input.keyboard.isHeld(Keys.ArrowRight)
+      ) {
+        xspeed = 300;
+        this.graphics.use("walkingSide");
+        this.graphics.flipHorizontal = false;
+      }
+      if (
+        engine.input.keyboard.isHeld(Keys.W) ||
+        engine.input.keyboard.isHeld(Keys.ArrowUp)
+      ) {
+        this.graphics.use("walkingBack");
+        yspeed = -300;
+      }
+      if (
+        engine.input.keyboard.isHeld(Keys.S) ||
+        engine.input.keyboard.isHeld(Keys.ArrowDown)
+      ) {
+        this.graphics.use("walkingFront");
+        yspeed = 300;
+      }
+      this.vel = new Vector(xspeed, yspeed);
+      if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
+        this.currentInteractable.interaction(engine)
+      }
+    } else {
+      const xspeed = engine.mygamepad.getAxes(Axes.LeftStickX)
+      const yspeed = engine.mygamepad.getAxes(Axes.LeftStickY)
+      this.vel = new Vector(xspeed * 300, yspeed * 300)
+      if (xspeed < 0){
+        this.graphics.use("walkingSide");
+        this.graphics.flipHorizontal = true;
+      } else if (xspeed > 0){
+        this.graphics.use("walkingSide");
+        this.graphics.flipHorizontal = false;
+      } else if (yspeed < 0){
+        this.graphics.use("walkingBack");
+      } else if (yspeed > 0){
+        this.graphics.use("walkingFront");
+      }
+      if (engine.mygamepad.isButtonPressed(Buttons.Face3) && this.currentInteractable) {
+        this.currentInteractable.interaction(engine)
+      }
     }
   }
 }

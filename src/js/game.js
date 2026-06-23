@@ -11,6 +11,7 @@ import { Minigame } from "./classes/scenes/minigame.js";
 
 export class Game extends Engine {
   bravePoints = 0;
+  mygamepad
   constructor() {
     super({
       width: 1280,
@@ -22,6 +23,12 @@ export class Game extends Engine {
   }
 
   startGame() {
+
+    this.input.gamepads.enabled = true
+    this.input.gamepads.on('connect', (connectevent) => {
+      console.log("gamepad detected")
+      this.mygamepad = connectevent.gamepad
+    })
 
     this.addScene("bedroom", new Bedroom());
     this.addScene("livingroom", new Livingroom());

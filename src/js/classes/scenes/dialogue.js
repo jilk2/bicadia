@@ -7,6 +7,7 @@ import {
   Font,
   FontUnit,
   Keys,
+  Buttons,
 } from "excalibur";
 import { Resources } from "../../resources";
 import dialogueData from "../../data/dialogue.json";
@@ -55,7 +56,11 @@ export class Dialogue extends Scene {
   }
 
   onPreUpdate(engine) {
-    if (!engine.input.keyboard.wasPressed(Keys.Space)) return;
+    const spacePressed = engine.input.keyboard.wasPressed(Keys.Space)
+    const face3Pressed = engine.mygamepad?.isButtonPressed(Buttons.Face1)
+
+    if (!spacePressed && !face3Pressed) return
+
     if (this.dialog.targetConvo != null) {
       this.showQuestion(this.dialog.targetConvo);
     } else {
