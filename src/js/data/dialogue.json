@@ -13,6 +13,23 @@
     "id": "school_classroom_0",
     "question": "I need to find a pen",
     "loadScene": "classroom"
+  },
+    {
+    "id": "school_classroom_npc_0",
+    "question": "[npc_name]: heyyy",
+    "loadScene": "classroom",
+    "choises": [
+      {
+      "text" : "hey! could i borrow a pen maybe?",
+      "target" : "classroom",
+      "bravePoints" : 10
+      },
+        {
+      "text" : "nvm",
+      "target" : "classroom",
+      "bravePoints" : -10
+      }
+    ]
   }
 ]
 
