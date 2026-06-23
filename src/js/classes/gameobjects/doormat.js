@@ -1,5 +1,7 @@
 import { CollisionType, Actor, Vector } from 'excalibur'
 import { Resources } from "../../resources";
+import { Dialogue } from "../scenes/dialogue";
+import { ThinkBubble } from "./think-bubble";
 
 export class Doormat extends Actor {
 
@@ -18,6 +20,10 @@ export class Doormat extends Actor {
 
     interaction(engine) {
         engine.goToScene(engine.goToScene(this.targetScene));
+            engine.remove("dialogue");
+            this.dialogue = new Dialogue("livingroom_doormat_0");
+            engine.addScene("dialogue", this.dialogue);
+            engine.goToScene("dialogue")
     }
     
 }
