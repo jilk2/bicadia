@@ -20,7 +20,7 @@ export class Dialogue extends Scene {
     this._hasReachEnd = false;
     this.questionLabel = new Label({
       color: Color.Black,
-      x: 525,
+      x: 350,
       y: 600,
       scale: new Vector(2.5, 2.5),
     });
@@ -33,6 +33,8 @@ export class Dialogue extends Scene {
       scale: new Vector(1.5, 1.5),
     });
     this.dialogue = scene;
+
+    //maak hier 1 standaar formaat voor de keuzes en voeg deze pas bij de functie aan
   }
 
   onInitialize(engine) {
@@ -53,6 +55,8 @@ export class Dialogue extends Scene {
   showQuestion(id) {
     this.dialog = dialogueData.find((d) => d.id === id);
     this.questionLabel.text = this.dialog.question;
+    //als je keuze vind ga naar de functie die de keuzes toevoegt aan de scene (vergeet niet er een event op te gooien)
+      
   }
 
   onPreUpdate(engine) {
