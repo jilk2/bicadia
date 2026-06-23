@@ -10,8 +10,8 @@ export class StartMenu extends Scene {
 
     const gameStart = new Label({
       color: Color.Black,
-      x: 50,
-      y: engine.drawHeight / 2,
+      x: engine.drawWidth / 2 - 150,
+      y: engine.drawHeight / 2 + 50,
       text: "Start Game",
       scale: new Vector(3, 3),
     });
@@ -19,15 +19,15 @@ export class StartMenu extends Scene {
     gameStart.on("pointerdown", () => this.gameStartClickHandler(engine));
     const howToPlay = new Label({
       color: Color.Black,
-      x: 50,
-      y: engine.drawHeight / 2 + 70,
+      x: engine.drawWidth / 2 - 150,
+      y: engine.drawHeight / 2 + 120,
       text: "How to Play",
-      scale: new Vector(3, 3),
+      scale: new Vector(3, 3)
     });
     this.add(howToPlay);
     howToPlay.on("pointerdown", () => this.howToPlayClickHandler());
     const copyright = new Label({
-      color: Color.Black,
+      color: Color.White,
       x: 10,
       y: engine.drawHeight / 2 + 320,
       text: "© 2026, team 13",
