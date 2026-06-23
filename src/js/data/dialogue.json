@@ -41,11 +41,26 @@
   "loadScene": "bedroom"
 },
 
+
+
   {
     "id": "bedroom_backpack_1",
-    "question": "I really need to go to school",
+    "question": "It's heavier than I remember...",
+    "targetConvo": "bedroom_backpack_1b"
+  },
+  {
+    "id": "bedroom_backpack_1b",
+    "question": "The bus should be coming soon.",
+    "targetConvo": "bedroom_backpack_1c"
+  },
+  {
+    "id": "bedroom_backpack_1c",
+    "question": "My legs feel so heavy. I wish I didn't have to go downstairs.",
     "loadScene": "bedroom"
   },
+
+
+
     {
     "id": "school_classroom_0",
     "question": "I need to find a pen",
