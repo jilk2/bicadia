@@ -3,16 +3,15 @@ import { Resources } from "../../resources";
 import { CharacterOptions } from "./characterOptions";
 
 export class Player extends Actor {
-  inCutscene
-  bodyparts
+  inCutscene;
+  bodyparts;
 
-  skinTone
-  hair
-
+  skinTone;
+  hair;
 
   constructor(x, y, inCutscene) {
     super({ x, y });
-    this.inCutscene = inCutscene
+    this.inCutscene = inCutscene;
     // const playersheet = SpriteSheet.fromImageSource({
     //   image: Resources.PlayerSheet,
     //   grid: { rows: 2, columns: 5, spriteWidth: 16, spriteHeight: 30 }
@@ -27,30 +26,27 @@ export class Player extends Actor {
     // this.graphics.add("walkingFront", walkingFront)
     // this.graphics.add("walkingBack", walkingBack)
     // this.graphics.use(idle);
-    this.scale = new Vector(5.5, 5.5)
-
+    this.scale = new Vector(5.5, 5.5);
   }
 
   onInitialize(engine) {
+    // later: verwijder alle gemarkeerde children
 
-    let characterOptions = localStorage.getItem("characterOptions")
-
-    if (!characterOptions) {
-      // set default sprites and then save the default to local storage
-
-      const defaultCharacterOptions = {
-        hair: "shortBlondHair",
-        skintone: "skintoneOne",
-        shirt: "shirtRedTwo",
-        pants: "pantsBlue",
-        shoes: "shoesGrey",
-
-      }
-      localStorage.setItem("characterOptions", JSON.stringify(defaultCharacterOptions))
-      characterOptions = defaultCharacterOptions
-    }
-
-    this.addChild(new CharacterOptions(Resources.ShortBlondHairSheet, 0));
+    let characterOptionsJSON = localStorage.getItem("characterOptions");
+    let characterOptions = JSON.parse(characterOptionsJSON);
+    let hair = Resources[characterOptions.hair];
+    let skintone = Resources[characterOptions.skintone];
+    let shirt = Resources[characterOptions.shirt];
+    let pants = Resources[characterOptions.pants];
+    let shoes = Resources[characterOptions.shoes];
+    // this.hairsprite = `Resources.${}`
+    console.log(hair);
+    this.addChild(new CharacterOptions(skintone, 200, 325, 0, 25));
+    // this.addChild(new CharacterOptions(hair, 150, 150, 40, 0));
+    this.addChild(new CharacterOptions(shirt, 200, 325, 0, 25));
+    this.addChild(new CharacterOptions(pants, 200, 300, 0, 25));
+    this.addChild(new CharacterOptions(shoes, 200, 300, 0, 25));
+    // this.addChild(new CharacterOptions(shirt, 150, 150));
 
     // switch (characterOptions.hair) {
     //   case "shortBlondHair":
@@ -87,7 +83,6 @@ export class Player extends Actor {
 
     // }
 
-
     // get the clothing options from local storage
 
     // let pantsImage
@@ -95,8 +90,6 @@ export class Player extends Actor {
     // pantsImage = Resources.Pants1
     // }
     // this.shoes = new Clothing(pantsImage, 1)
-
-
 
     // this.shoes = new Actor()
     // this.shoes.graphics.use(Resources.GreyShoes.toSprite())
@@ -111,44 +104,32 @@ export class Player extends Actor {
     // this.shirt = new Actor()
     // this.shirt.graphics.use(Resources.ShirtRed.toSprite())
     // this.addChild(this.shirt)
-
-
   }
-
-
 
   updateGraphics() {
     // updateGraphics(shirt, pants, shoes) {
     // console.log("I received new bodyparts")
     // console.log(this.scene.engine.bodyparts)
     // const settings = this.scene.engine.bodyparts
-
     // if(shirt ===  "shirt-1") {
     // this.shirt.image = Resources.shirt1
     // }
-
     // Je maakt een glothing class, waar je een image aan door geeft
-
     // this.pant.graphics.use(Resources.PantsBlue.toSprite())
     // this.shirt.graphics.use(Resources.ShirtRed.toSprite())
     // this.shoes.graphics.use(Resources.GreyShoes.toSprite())
-
     // save to localstorage
-
   }
-
 
   onPreUpdate(engine) {
     let xspeed = 0;
     let yspeed = 0;
     // this.graphics.use("idle")
     if (!this.inCutscene) {
-
     } else {
-
       if (engine.input.keyboard.isHeld(Keys.A)) {
-        this.graphics.use("walkingSide")
-        this.graphics.flipHorizontal = true
+        this.graphics.use("walkingSide");
+        this.graphics.flipHorizontal = true;
 
         // this.pants.graphics.use("walkingSide")
         // this.pants.graphics.flipHorizontal = true
@@ -156,15 +137,15 @@ export class Player extends Actor {
       }
       if (engine.input.keyboard.isHeld(Keys.D)) {
         xspeed = 300;
-        this.graphics.use("walkingSide")
-        this.graphics.flipHorizontal = false
+        this.graphics.use("walkingSide");
+        this.graphics.flipHorizontal = false;
       }
       if (engine.input.keyboard.isHeld(Keys.W)) {
-        this.graphics.use("walkingBack")
+        this.graphics.use("walkingBack");
         yspeed = -300;
       }
       if (engine.input.keyboard.isHeld(Keys.S)) {
-        this.graphics.use("walkingFront")
+        this.graphics.use("walkingFront");
         yspeed = 300;
       }
       this.vel = new Vector(xspeed, yspeed);

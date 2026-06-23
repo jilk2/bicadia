@@ -10,19 +10,19 @@ export class CharacterCreation extends Scene {
   // let shirtOptions = ["red-shirt", "blue-shirt"]
   //  let selectedShirt
   // Array with hair options for local storage
-  hairOptions = { 0: "ShortBlondHairSheet", 1: "" };
+  hairOptions = { 0: "ShortBlackHairSheet", 1: "LongBlackHairSheet" };
   selectedHair = 0;
   // Array with skintone options for local storage
-  skintoneOptions = { 0: "skintoneOne", 1: "skintoneTwo", 2: "skintoneThree" };
+  skintoneOptions = { 0: "SkintoneTwo", 1: "SkintoneTwo", 2: "skintoneOne" };
   selectedSkintone = 0;
   // Array with shirt options for local storage
-  shirtOptions = { 0: "longsleeveBlue", 1: "shirtRedTwo" };
+  shirtOptions = { 0: "LongSleevedRed", 1: "" };
   selectedShirt = 0;
   // Array with pants/skirt options for local storage
-  pantOptions = { 0: "pantsBlue" };
+  pantOptions = { 0: "PantsBlue", 1: "PantsBlack" };
   selectedPants = 0;
   // Array with shoe options for local storage
-  shoeOptions = { 0: "shoesGrey" };
+  shoeOptions = { 0: "ShoesGreySheet" };
   selectedShoes = 0;
 
   characterOptions = {
@@ -40,9 +40,6 @@ export class CharacterCreation extends Scene {
     //  zet de heuidige opties als selected
     // selectedShirt = optie
 
-    this.player = new Player(690, 360, false);
-    this.add(this.player);
-
     // Creates and tags the arrows required for character creation.
     for (let i = 0; i < 5; i++) {
       this.add(new ArrowLeft(i));
@@ -53,6 +50,9 @@ export class CharacterCreation extends Scene {
     }
 
     LocalStorageHandler.saveCharacterOptions(JSON.stringify(this.characterOptions))
+
+    this.player = new Player(690, 360, false);
+    this.add(this.player);
   }
 
   updateCharacter(options, direction) {
@@ -91,7 +91,18 @@ export class CharacterCreation extends Scene {
       console.log(this.shoeOptions[this.selectedShoes]);
       this.characterOptions.shoes = this.shoeOptions[this.selectedShoes];
     }
+    
     console.log(this.characterOptions);
+    
+    if (this.player) {
+  this.remove(this.player);
+  this.player = null;
+}
+
+    LocalStorageHandler.saveCharacterOptions(JSON.stringify(this.characterOptions))
+    this.player = new Player(690, 360, false);
+    this.remove(this.player)
+    this.add(this.player);
     // Updates the bodyparts array
     // this.engine.bodyparts[bodypart] = this.engine.bodyparts[bodypart] + direction
     // console.log(this.engine.bodyparts[bodypart]);
@@ -120,28 +131,28 @@ export class CharacterCreation extends Scene {
     //     }
     // }
     // // Ensures that the array cannot go past the number of available clothes.
-    for (let i = 0; i < 5; i++) {
-      if (options[i] > 1) {
-        options[i] = 0;
-        console.log(`I reset the hair`);
-      }
-      if (options[i] > 3) {
-        options[i] = 0;
-        console.log(`I reset the skin color`);
-      }
-      if (options[i] > 2) {
-        options[i] = 0;
-        console.log(`I reset the shirt`);
-      }
-      if (options[i] > 1) {
-        options[i] = 0;
-        console.log(`I reset the pants`);
-      }
-      if (options[i] > 1) {
-        options[i] = 0;
-        console.log(`I reset the shoes`);
-      }
-    }
+    // for (let i = 0; i < 5; i++) {
+    //   if (options[i] > 1) {
+    //     options[i] = 0;
+    //     console.log(`I reset the hair`);
+    //   }
+    //   if (options[i] > 3) {
+    //     options[i] = 0;
+    //     console.log(`I reset the skin color`);
+    //   }
+    //   if (options[i] > 2) {
+    //     options[i] = 0;
+    //     console.log(`I reset the shirt`);
+    //   }
+    //   if (options[i] > 1) {
+    //     options[i] = 0;
+    //     console.log(`I reset the pants`);
+    //   }
+    //   if (options[i] > 1) {
+    //     options[i] = 0;
+    //     console.log(`I reset the shoes`);
+    //   }
+    // }
     // this.player.updateGraphics()
     // this.player.updateGraphics(selectedHair, selectedSkintone, selectedShirt, selectedPants, selectedShoes)
   }
