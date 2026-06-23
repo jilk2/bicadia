@@ -13,7 +13,7 @@ export class ThinkBubble extends Actor {
       color: Color.Black,
       x: -480,
       y: -15,
-      text: "i need to find my backpack",
+      text: "walk around using wasd",
       scale: new Vector(7, 7)
       // scale: new Vector(-5, -5),
     });
