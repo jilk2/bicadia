@@ -16,10 +16,11 @@ export class Minigame extends Scene {
         //borders
         this.add(new InvisibleWall(-40, 300, 100, 1000))      // links
         this.add(new InvisibleWall(1300, 300, 100, 1000))     // rechts
-        this.add(new InvisibleWall(1280, 10, 2560, 100))      // boven (rechts van deur)
+        this.add(new InvisibleWall(1280, 10, 2560, 260))      // boven (rechts van deur)
         this.add(new InvisibleWall(800, 750, 1900, 100))      // onder
 
         for (let i = 0; i < 20; i++) {
+            7
             this.confidenceOrb = new ConfidenceOrb(Math.random() * 1200 + 40, Math.random() * 680 + 20)
             this.add(this.confidenceOrb)
         }
