@@ -60,7 +60,6 @@ export class Player extends Actor {
     if (this.inCutscene) {
     } else {
       if (engine.input.keyboard.isHeld(Keys.A)) {
-        // console.log(this.chosenPants)
         this.children.forEach((c) => c.graphics.use("walkingSide"));
         this.children.forEach((c) => (c.graphics.flipHorizontal = true));
 

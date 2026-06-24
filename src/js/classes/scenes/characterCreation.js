@@ -7,21 +7,19 @@ import { ArrowRight } from "../gameobjects/arrowRight.js";
 import { LocalStorageHandler } from "../../localstorageHandler.js";
 
 export class CharacterCreation extends Scene {
-  // let shirtOptions = ["red-shirt", "blue-shirt"]
-  //  let selectedShirt
-  // Array with hair options for local storage
+
   hairOptions = { 0: "ShortBlackHairSheet", 1: "LongBlackHairSheet" };
   selectedHair = 0;
-  // Array with skintone options for local storage
+
   skintoneOptions = { 0: "SkintoneTwo", 1: "SkintoneTwo", 2: "skintoneOne" };
   selectedSkintone = 0;
-  // Array with shirt options for local storage
+
   shirtOptions = { 0: "LongSleevedRed", 1: "" };
   selectedShirt = 0;
-  // Array with pants/skirt options for local storage
+
   pantOptions = { 0: "PantsBlue", 1: "PantsBlack" };
   selectedPants = 0;
-  // Array with shoe options for local storage
+
   shoeOptions = { 0: "GreyShoesSheet" };
   selectedShoes = 0;
 
