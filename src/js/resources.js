@@ -68,9 +68,9 @@ const Resources = {
   ShortBlondHairSheet: new ImageSource("images/BlondShortHair.png"),
   LongBlackHairSheet: new ImageSource("images/BlackLongHair.png"),
   ShortBlackHairSheet: new ImageSource("images/BlackShortHair.png"),
-  SkintoneTwo: new ImageSource("images/skintonetwo.png"),
-  SkintoneThree: new ImageSource(
-    "images/CropedFullCompleteCharacterSprite2.png",
+  skintoneTwo: new ImageSource("images/skintonetwo.png"),
+  skintoneThree: new ImageSource(
+    "images/skintonethree.png",
   ),
 };
 
