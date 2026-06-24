@@ -61,6 +61,51 @@
 
 
 
+   {
+    "id": "livingroom_doormat_0",
+    "question": "We've been here a few days now, and I still miss our old home.",
+    "targetConvo": "livingroom_doormat_0b"
+  },
+    {
+    "id": "livingroom_doormat_0b",
+    "question": "I get why we had to move. And part of me is glad we did.",
+    "targetConvo": "livingroom_doormat_0c"
+  },
+    {
+    "id": "livingroom_doormat_0c",
+    "question": "I just miss that familiarity...",
+    "targetConvo": "livingroom_doormat_0d"
+  },
+    {
+    "id": "livingroom_doormat_0d",
+    "question": "Now I have to get used to everything again...",
+    "targetConvo": "livingroom_doormat_0e"
+  },
+    {
+    "id": "livingroom_doormat_0e",
+    "question": "To a new house, a new school, a new life",
+    "targetConvo": "livingroom_doormat_0f"
+  },
+    {
+    "id": "livingroom_doormat_0f",
+    "question": "It makes my head hurt",
+    "targetConvo": "livingroom_doormat_0g"
+  },
+    {
+    "id": "livingroom_doormat_0g",
+    "question": "Do I really have to go?",
+    "targetConvo": "livingroom_doormat_0h"
+  },
+    {
+    "id": "livingroom_doormat_0h",
+    "question": "I don't want to go... I really don't want to go...",
+    "loadScene": "classroom"
+  },
+
+
+
+
+
     {
     "id": "school_classroom_0",
     "question": "I need to find a pen",
