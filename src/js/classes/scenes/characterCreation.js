@@ -11,7 +11,7 @@ export class CharacterCreation extends Scene {
   hairOptions = { 0: "ShortBlackHairSheet", 1: "LongBlackHairSheet" };
   selectedHair = 0;
 
-  skintoneOptions = { 0: "SkintoneTwo", 1: "skintoneOne" };
+  skintoneOptions = { 0: "skintoneOne", 1: "skintoneTwo", 2: "skintoneThree" };
   selectedSkintone = 0;
 
   shirtOptions = { 0: "LongSleevedRed" };
