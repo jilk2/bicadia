@@ -12,7 +12,7 @@ const Resources = {
   ArrowLeft: new ImageSource("images/Chevron-Arrow-Left.png"),
   ArrowRight: new ImageSource("images/Chevron-Arrow-Right.png"),
   LongSleevedRed: new ImageSource("images/longsleeve-red.png"),
-  GreyShoes: new ImageSource("images/shoes-grey.png"),
+  GreyShoesSheet: new ImageSource("images/shoes-grey.png"),
   LongsleeveBlueSheet: new ImageSource("images/complete-longsleeve-blue.png"),
   PantsBlueSheet: new ImageSource("images/complete-pants-blue.png"),
   ShirtRedTwoSheet: new ImageSource("images/complete-shirt-red2.png"),
