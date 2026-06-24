@@ -8,7 +8,7 @@ export class Bedroom extends Scene {
     const background = new Background(Resources.Bedroom);
     this.add(background);
 
-    this.player = new Player(690, 360, true)
+    this.player = new Player(690, 360, false)
     this.add(this.player)
   }
 }

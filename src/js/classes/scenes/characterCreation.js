@@ -46,7 +46,7 @@ export class CharacterCreation extends Scene {
       JSON.stringify(this.characterOptions),
     );
 
-    this.player = new Player(690, 360, false);
+    this.player = new Player(690, 360, true);
     this.add(this.player);
   }
 
@@ -94,7 +94,7 @@ export class CharacterCreation extends Scene {
     LocalStorageHandler.saveCharacterOptions(
       JSON.stringify(this.characterOptions),
     );
-    this.player = new Player(690, 360, false);
+    this.player = new Player(690, 360, true);
     this.remove(this.player);
     this.add(this.player);
   }
@@ -104,7 +104,7 @@ export class CharacterCreation extends Scene {
       LocalStorageHandler.saveChosenOptions(
         JSON.stringify(this.characterOptions),
       );
-      engine.goToScene("bedroom")
+      engine.goToScene("bedroom");
     }
   }
 }
