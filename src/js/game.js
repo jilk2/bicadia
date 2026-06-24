@@ -8,10 +8,11 @@ import { Classroom } from "./classes/scenes/classroom.js";
 import { StartMenu } from "./classes/scenes/startmenu.js";
 import { HowToPlay } from "./classes/scenes/howtoplay.js";
 import { Minigame } from "./classes/scenes/minigame.js";
+import { CharacterCreation } from "./classes/scenes/characterCreation.js";
 
 export class Game extends Engine {
   bravePoints = 0;
-  mygamepad
+  mygamepad;
   constructor() {
     super({
       width: 1280,
@@ -23,23 +24,23 @@ export class Game extends Engine {
   }
 
   startGame() {
-
-    this.input.gamepads.enabled = true
-    this.input.gamepads.on('connect', (connectevent) => {
-      console.log("gamepad detected")
-      this.mygamepad = connectevent.gamepad
-    })
+    this.input.gamepads.enabled = true;
+    this.input.gamepads.on("connect", (connectevent) => {
+      console.log("gamepad detected");
+      this.mygamepad = connectevent.gamepad;
+    });
 
     this.addScene("bedroom", new Bedroom());
     this.addScene("livingroom", new Livingroom());
     this.addScene("classroom", new Classroom());
     this.addScene("startmenu", new StartMenu());
-    this.addScene("howtoplay", new HowToPlay())
-    this.addScene("minigame", new Minigame())
+    this.addScene("howtoplay", new HowToPlay());
+    this.addScene("minigame", new Minigame());
+    this.addScene("creation", new CharacterCreation());
     // this.addScene("livingroom", new Livingroom());
     // this.addScene("classroom", new Classroom());
     // this.goToScene("bedroom");
-    this.goToScene("startmenu")
+    this.goToScene("startmenu");
   }
 }
 

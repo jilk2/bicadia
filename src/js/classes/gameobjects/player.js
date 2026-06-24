@@ -11,9 +11,19 @@ import {
   Buttons,
 } from "excalibur";
 import { Resources } from "../../resources";
+import { CharacterOptions } from "./characterOptions";
 
 export class Player extends Actor {
-  constructor(x, y) {
+  inCutscene;
+  bodyparts;
+
+  chosenHair;
+  chosenSkintone;
+  chosenShirt;
+  chosenPants;
+  chosenShoes;
+
+  constructor(x,y, inCutscene) {
     super({
       x,
       y,
@@ -22,37 +32,43 @@ export class Player extends Actor {
       collisionType: CollisionType.Active,
       collider: Shape.Box(16, 10, new Vector(0.5, -0.45)),
     });
-
-    const playersheet = SpriteSheet.fromImageSource({
-      image: Resources.PlayerSheet,
-      grid: { rows: 2, columns: 5, spriteWidth: 16, spriteHeight: 31 },
-    });
-
-    const idle = playersheet.sprites[5];
-    const walkingSide = Animation.fromSpriteSheet(
-      playersheet,
-      range(6, 8),
-      150,
-    );
-    const walkingFront = Animation.fromSpriteSheet(
-      playersheet,
-      range(0, 1),
-      150,
-    );
-    const walkingBack = Animation.fromSpriteSheet(
-      playersheet,
-      range(3, 4),
-      150,
-    );
-    this.graphics.add("idle", idle);
-    this.graphics.add("walkingSide", walkingSide);
-    this.graphics.add("walkingFront", walkingFront);
-    this.graphics.add("walkingBack", walkingBack);
-    this.graphics.use(idle);
-    this.scale = new Vector(5.5, 5.5);
+    this.inCutscene = inCutscene;
   }
 
   onInitialize(){
+    if (localStorage.getItem("chosenCharacterOptions") == null) {
+      let characterOptionsJSON = localStorage.getItem("characterOptions");
+      let characterOptions = JSON.parse(characterOptionsJSON);
+      this.hair = Resources[characterOptions.hair];
+      this.skintone = Resources[characterOptions.skintone];
+      this.shirt = Resources[characterOptions.shirt];
+      this.pants = Resources[characterOptions.pants];
+      this.shoes = Resources[characterOptions.shoes];
+
+      console.log(this.hair);
+      this.addChild(new CharacterOptions(this.skintone, 0));
+      this.addChild(new CharacterOptions(this.hair, 0));
+      this.addChild(new CharacterOptions(this.shirt, 0));
+      this.addChild(new CharacterOptions(this.pants, 10));
+      this.addChild(new CharacterOptions(this.shoes, 0));
+    } else {
+      let characterOptionsJSON = localStorage.getItem("chosenCharacterOptions");
+      let characterOptions = JSON.parse(characterOptionsJSON);
+      this.hair = Resources[characterOptions.hair];
+      this.skintone = Resources[characterOptions.skintone];
+      this.shirt = Resources[characterOptions.shirt];
+      this.pants = Resources[characterOptions.pants];
+      this.shoes = Resources[characterOptions.shoes];
+
+      console.log(this.hair);
+      this.chosenSkintone = this.addChild(
+        new CharacterOptions(this.skintone, 0),
+      );
+      this.chosenHair = this.addChild(new CharacterOptions(this.hair, 0));
+      this.chosenShirt = this.addChild(new CharacterOptions(this.shirt, 0));
+      this.chosenPants = this.addChild(new CharacterOptions(this.pants, 10));
+      this.chosenShoes = this.addChild(new CharacterOptions(this.shoes, 0));
+    }
     this.currentInteractable = null
   }
 
@@ -82,42 +98,35 @@ export class Player extends Actor {
 
 
   onPreUpdate(engine) {
-    this.graphics.use("idle");
-    if (!engine.mygamepad) { 
-      let xspeed = 0;
-      let yspeed = 0;
-      if (
-        engine.input.keyboard.isHeld(Keys.A) ||
-        engine.input.keyboard.isHeld(Keys.ArrowLeft)
-      ) {
-        this.graphics.use("walkingSide");
-        this.graphics.flipHorizontal = true;
+    let xspeed = 0;
+    let yspeed = 0;
+    this.children.forEach((c) => c.graphics.use("idle"));
+
+    if (this.inCutscene) {
+    } else {
+      if(!engine.mygamepad){
+      if (engine.input.keyboard.isHeld(Keys.A)) {
+        this.children.forEach((c) => c.graphics.use("walkingSide"));
+        this.children.forEach((c) => (c.graphics.flipHorizontal = true));
+
         xspeed = -300;
-      }
-      if (
-        engine.input.keyboard.isHeld(Keys.D) ||
-        engine.input.keyboard.isHeld(Keys.ArrowRight)
-      ) {
+      } 
+      if (engine.input.keyboard.isHeld(Keys.D)) {
+        this.children.forEach((c) => c.graphics.use("walkingSide"));
+        this.children.forEach((c) => (c.graphics.flipHorizontal = false));
         xspeed = 300;
-        this.graphics.use("walkingSide");
-        this.graphics.flipHorizontal = false;
       }
-      if (
-        engine.input.keyboard.isHeld(Keys.W) ||
-        engine.input.keyboard.isHeld(Keys.ArrowUp)
-      ) {
-        this.graphics.use("walkingBack");
+      if (engine.input.keyboard.isHeld(Keys.W)) {
+        this.children.forEach((c) => c.graphics.use("walkingBack"));
+        this.children.forEach((c) => (c.graphics.flipHorizontal = true));
         yspeed = -300;
       }
-      if (
-        engine.input.keyboard.isHeld(Keys.S) ||
-        engine.input.keyboard.isHeld(Keys.ArrowDown)
-      ) {
-        this.graphics.use("walkingFront");
+      if (engine.input.keyboard.isHeld(Keys.S)) {
+        this.children.forEach((c) => c.graphics.use("walkingFront"));
+        this.children.forEach((c) => (c.graphics.flipHorizontal = true));
         yspeed = 300;
       }
-      this.vel = new Vector(xspeed, yspeed);
-      if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable && this.currentInteractable.needsInteraction){
+      this.vel = new Vector(xspeed, yspeed);if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable && this.currentInteractable.needsInteraction){
         this.currentInteractable.interaction(engine)
       }
       if(this.currentInteractable && !this.currentInteractable.needsInteraction){
@@ -128,19 +137,21 @@ export class Player extends Actor {
       const yspeed = engine.mygamepad.getAxes(Axes.LeftStickY)
       this.vel = new Vector(xspeed * 300, yspeed * 300)
       if (xspeed < 0){
-        this.graphics.use("walkingSide");
-        this.graphics.flipHorizontal = true;
+        this.children.forEach((c) => c.graphics.use("walkingSide"));
+        this.children.forEach((c) => (c.graphics.flipHorizontal = true));
       } else if (xspeed > 0){
         this.graphics.use("walkingSide");
-        this.graphics.flipHorizontal = false;
+        this.children.forEach((c) => c.graphics.use("walkingSide"));
+        this.children.forEach((c) => (c.graphics.flipHorizontal = false));
       } else if (yspeed < 0){
-        this.graphics.use("walkingBack");
+        this.children.forEach((c) => c.graphics.use("walkingBack"));
       } else if (yspeed > 0){
-        this.graphics.use("walkingFront");
+        this.children.forEach((c) => c.graphics.use("walkingFront"));
       }
       if (engine.mygamepad.isButtonPressed(Buttons.Face3) && this.currentInteractable) {
         this.currentInteractable.interaction(engine)
       }
     }
+  }
   }
 }

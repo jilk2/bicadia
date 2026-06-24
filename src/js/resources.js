@@ -46,7 +46,33 @@ const Resources = {
   thinkBubble: new ImageSource("images/think-bubble.png"),
 
   //minigame objects
-  ConfidenceOrb: new ImageSource("images/confidence-orb.png")
+  ConfidenceOrb: new ImageSource("images/confidence-orb.png"),
+
+  //character costumization UI
+  ArrowLeft: new ImageSource("images/Chevron-Arrow-Left.png"),
+  ArrowRight: new ImageSource("images/Chevron-Arrow-Right.png"),
+
+
+
+  //character costumization
+  Bedroom: new ImageSource("images/BedRoomMC.png"),
+  skintoneOne: new ImageSource("images/skintoneone.png"),
+  ShirtRed: new ImageSource("images/shirt-red.png"),
+  PantsBlue: new ImageSource("images/pants-blue.png"),
+  PantsBlack: new ImageSource("images/pants-black.png"),
+  LongSleevedRed: new ImageSource("images/longsleeve-red.png"),
+  GreyShoesSheet: new ImageSource("images/shoes-grey.png"),
+  LongsleeveBlueSheet: new ImageSource("images/complete-longsleeve-blue.png"),
+  PantsBlueSheet: new ImageSource("images/complete-pants-blue.png"),
+  ShirtRedTwoSheet: new ImageSource("images/complete-shirt-red2.png"),
+  ShoesGreySheet: new ImageSource("images/complete-shoes-grey.png"),
+  ShortBlondHairSheet: new ImageSource("images/BlondShortHair.png"),
+  LongBlackHairSheet: new ImageSource("images/BlackLongHair.png"),
+  ShortBlackHairSheet: new ImageSource("images/BlackShortHair.png"),
+  SkintoneTwo: new ImageSource("images/skintonetwo.png"),
+  SkintoneThree: new ImageSource(
+    "images/CropedFullCompleteCharacterSprite2.png",
+  ),
 };
 
 const ResourceLoader = new Loader();
