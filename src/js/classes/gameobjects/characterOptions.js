@@ -22,7 +22,7 @@ export class CharacterOptions extends Actor {
       },
     });
 
-    const idle = characterOptionSheet.sprites[0];
+    const idle = characterOptionSheet.sprites[5];
     idle.anchor = new Vector(0.5, 0.5);
 
     const walkingSide = Animation.fromSpriteSheet(
