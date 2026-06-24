@@ -7,14 +7,13 @@ import { ArrowRight } from "../gameobjects/arrowRight.js";
 import { LocalStorageHandler } from "../../localstorageHandler.js";
 
 export class CharacterCreation extends Scene {
-
   hairOptions = { 0: "ShortBlackHairSheet", 1: "LongBlackHairSheet" };
   selectedHair = 0;
 
-  skintoneOptions = { 0: "SkintoneTwo", 1: "SkintoneTwo", 2: "skintoneOne" };
+  skintoneOptions = { 0: "SkintoneTwo", 1: "skintoneOne" };
   selectedSkintone = 0;
 
-  shirtOptions = { 0: "LongSleevedRed", 1: "" };
+  shirtOptions = { 0: "LongSleevedRed" };
   selectedShirt = 0;
 
   pantOptions = { 0: "PantsBlue", 1: "PantsBlack" };
@@ -50,33 +49,45 @@ export class CharacterCreation extends Scene {
 
   updateCharacter(options, direction) {
     if (options == 0) {
+      const hairLength = Object.keys(this.hairOptions).length;
       this.selectedHair = this.selectedHair += direction;
-      this.hairOptions[this.selectedHair];
-      console.log(this.hairOptions[this.selectedHair]);
+      if (this.selectedHair > hairLength - 1) this.selectedHair = 0;
+      if (this.selectedHair < 0) this.selectedHair = hairLength - 1;
       this.characterOptions.hair = this.hairOptions[this.selectedHair];
     }
 
     if (options == 1) {
+      const skinToneLength = Object.keys(this.skintoneOptions).length;
       this.selectedSkintone = this.selectedSkintone += direction;
+      if (this.selectedSkintone > skinToneLength - 1) this.selectedSkintone = 0;
+      if (this.selectedSkintone < 0) this.selectedSkintone = skinToneLength - 1;
       this.skintoneOptions[this.selectedSkintone];
-      console.log(this.skintoneOptions[this.selectedSkintone]);
       this.characterOptions.skintone =
         this.skintoneOptions[this.selectedSkintone];
     }
     if (options == 2) {
+      const shirtLength = Object.keys(this.shirtOptions).length;
       this.selectedShirt = this.selectedShirt += direction;
+      if (this.selectedShirt > shirtLength - 1) this.selectedShirt = 0;
+      if (this.selectedShirt < 0) this.selectedShirt = shirtLength - 1;
       this.shirtOptions[this.selectedShirt];
-      console.log(this.shirtOptions[this.selectedShirt]);
+
       this.characterOptions.shirt = this.shirtOptions[this.selectedShirt];
     }
     if (options == 3) {
+      const pantsLength = Object.keys(this.pantOptions).length;
       this.selectedPants = this.selectedPants += direction;
+      if (this.selectedPants > pantsLength - 1) this.selectedPants = 0;
+      if (this.selectedPants < 0) this.selectedPants = pantsLength - 1;
       this.pantOptions[this.selectedPants];
       console.log(this.pantOptions[this.selectedPants]);
       this.characterOptions.pants = this.pantOptions[this.selectedPants];
     }
     if (options == 4) {
+      const shoesLength = Object.keys(this.shoeOptions).length;
       this.selectedShoes = this.selectedShoes += direction;
+      if (this.selectedShoes > shoesLength - 1) this.selectedShoes = 0;
+      if (this.selectedShoes < 0) this.selectedShoes = shoesLength - 1;
       this.shoeOptions[this.selectedShoes];
       console.log(this.shoeOptions[this.selectedShoes]);
       this.characterOptions.shoes = this.shoeOptions[this.selectedShoes];
