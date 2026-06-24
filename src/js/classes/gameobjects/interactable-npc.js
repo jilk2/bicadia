@@ -22,6 +22,7 @@ export class InteractableNpc extends Actor{
         this.graphics.use(sprite)
         this.scale = new Vector(0.15, 0.15)
         this.interactable = true
+        this.needsInteraction = true
 
     }
 
