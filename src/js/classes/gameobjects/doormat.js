@@ -10,6 +10,7 @@ export class Doormat extends Actor {
         this.pos = new Vector(x, y)
         this.targetScene = targetScene;
         this.interactable = true;
+        this.needsInteraction = false
     }
 
     onInitialize(engine) {

@@ -11,6 +11,7 @@ export class Door extends Actor {
     }); // collision box!
     this.pos = new Vector(x, y);
     this.interactable = true;
+    this.needsInteraction = false
     this.targetScene = targetScene;
   }
 

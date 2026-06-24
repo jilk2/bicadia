@@ -117,7 +117,10 @@ export class Player extends Actor {
         yspeed = 300;
       }
       this.vel = new Vector(xspeed, yspeed);
-      if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable){
+      if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable && this.currentInteractable.needsInteraction){
+        this.currentInteractable.interaction(engine)
+      }
+      if(this.currentInteractable && !this.currentInteractable.needsInteraction){
         this.currentInteractable.interaction(engine)
       }
     } else {

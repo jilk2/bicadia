@@ -14,6 +14,7 @@ export class Backpack extends Actor {
     }); // collision box!
     this.pos = new Vector(x, y);
     this.interactable = true;
+    this.needsInteraction = true
   }
 
   onInitialize(engine) {

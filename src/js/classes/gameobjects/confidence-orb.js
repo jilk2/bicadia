@@ -11,6 +11,7 @@ export class ConfidenceOrb extends Actor {
     });
     this.pos = new Vector(x, y);
     this.interactable = true;
+    this.needsInteraction = false
   }
 
   onInitialize(engine) {

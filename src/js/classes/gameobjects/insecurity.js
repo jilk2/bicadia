@@ -32,9 +32,9 @@ export class Insecurity extends Actor {
       if (player) {
         let direction = player.pos.sub(this.pos).normalize()
         let distance = Vector.distance(player.pos, this.pos)
-        if (distance > 300){
+        if (distance > 200){
           this.vel = direction.scale(500)
-        } else if (distance <= 300){
+        } else if (distance <= 200){
           this.vel = direction.scale(200)
         }
       }
