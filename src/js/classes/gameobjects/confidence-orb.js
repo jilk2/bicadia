@@ -16,7 +16,7 @@ export class ConfidenceOrb extends Actor{
   onInitialize(engine) {
     this.graphics.use(Resources.ConfidenceOrb.toSprite());
     this.body.collisionType = CollisionType.Fixed;
-    this.scale = new Vector(0.125, 0.125);
+    this.scale = new Vector(2,2);
   }
 
   interaction(engine) {
