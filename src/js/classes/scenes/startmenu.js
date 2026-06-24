@@ -39,7 +39,7 @@ export class StartMenu extends Scene {
   gameStartClickHandler(engine) {
     this.dialogue = new Dialogue("bedroom_backpack_0");
     engine.addScene("dialogue", this.dialogue);
-    engine.goToScene("dialogue")
+    engine.goToScene("creation")
   }
   howToPlayClickHandler() {
     this.engine.goToScene("howtoplay");

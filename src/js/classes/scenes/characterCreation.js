@@ -5,6 +5,7 @@ import { Player } from "../gameobjects/player.js";
 import { ArrowLeft } from "../gameobjects/arrowLeft.js";
 import { ArrowRight } from "../gameobjects/arrowRight.js";
 import { LocalStorageHandler } from "../../localstorageHandler.js";
+import { Dialogue } from "./dialogue.js";
 
 export class CharacterCreation extends Scene {
   hairOptions = { 0: "ShortBlackHairSheet", 1: "LongBlackHairSheet" };
@@ -113,7 +114,9 @@ export class CharacterCreation extends Scene {
       LocalStorageHandler.saveChosenOptions(
         JSON.stringify(this.characterOptions),
       );
-      engine.goToScene("bedroom");
+      this.dialogue = new Dialogue("bedroom_backpack_0");
+      engine.addScene("dialogue", this.dialogue);
+      engine.goToScene("dialogue")
     }
   }
 }
