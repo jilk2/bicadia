@@ -13,6 +13,7 @@ const Resources = {
   Emiely: new ImageSource("images/emily.png"),
   Teacher: new ImageSource("images/Jürgen.png"),
   StartMenu: new ImageSource("images/background-menu.png"),
+  MiniGame: new ImageSource("images/background-minigame.png"),
 
   //classroom objects
 
@@ -42,7 +43,10 @@ const Resources = {
   //classroom objects
   ClassroomTable: new ImageSource("images/classroom-table.png"),
   ClassroomDesk: new ImageSource("images/classroom-desk.png"),
-  thinkBubble: new ImageSource("images/think-bubble.png")
+  thinkBubble: new ImageSource("images/think-bubble.png"),
+
+  //minigame objects
+  ConfidenceOrb: new ImageSource("images/confidence-orb.png")
 };
 
 const ResourceLoader = new Loader();
