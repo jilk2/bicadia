@@ -1,8 +1,8 @@
 import { Actor, CollisionType, Vector } from "excalibur";
 import { Resources } from "../../resources";
 
-export class ConfidenceOrb extends Actor{
-    constructor(x, y) {
+export class ConfidenceOrb extends Actor {
+  constructor(x, y) {
     super({
       x,
       y,
@@ -16,7 +16,7 @@ export class ConfidenceOrb extends Actor{
   onInitialize(engine) {
     this.graphics.use(Resources.ConfidenceOrb.toSprite());
     this.body.collisionType = CollisionType.Fixed;
-    this.scale = new Vector(2,2);
+    this.scale = new Vector(0.028, 0.028);
   }
 
   interaction(engine) {
