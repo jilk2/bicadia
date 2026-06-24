@@ -55,7 +55,6 @@ const Resources = {
 
 
   //character costumization
-  Bedroom: new ImageSource("images/BedRoomMC.png"),
   skintoneOne: new ImageSource("images/skintoneone.png"),
   ShirtRed: new ImageSource("images/shirt-red.png"),
   PantsBlue: new ImageSource("images/pants-blue.png"),
