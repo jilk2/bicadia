@@ -302,10 +302,10 @@
   {
     "id": "school_classroom_npc_0o",
     "question": "[You:] First day jitters... ?",
-    "targetConvo": "school_classroom_npc_0p"
+    "targetConvo": "school_classroom_npc_0q"
   },
   {
-    "id": "school_classroom_npc_0q",
+    "id": "school_classroom_npc_0p",
     "question": "[Emily/Emiel:] Wobbly legs, teeth clenching, avoiding the teachers gaze; really, really wanting to go home.",
     "targetConvo": "school_classroom_npc_0r"
   },

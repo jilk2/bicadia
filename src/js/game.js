@@ -15,6 +15,10 @@ export class Game extends Engine {
   pronounce;
   mygamepad;
 
+  //variables to check if certain taskes are done
+  pickedupBag = false;
+  talkedToEmiely = false;
+
   constructor() {
     super({
       width: 1280,

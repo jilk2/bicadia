@@ -10,6 +10,7 @@ import {
   Buttons,
 } from "excalibur";
 import { Resources } from "../../resources";
+import { Choices } from "../gameobjects/choices";
 import dialogueData from "../../data/dialogue.json";
 
 export class Dialogue extends Scene {
@@ -54,23 +55,35 @@ export class Dialogue extends Scene {
 
   showQuestion(id) {
     this.dialog = dialogueData.find((d) => d.id === id);
-    this.questionLabel.text = this.dialog.question;
-    //als je keuze vind ga naar de functie die de keuzes toevoegt aan de scene (vergeet niet er een event op te gooien)
-      
+        this.questionLabel.text = this.dialog.question;
+    this.removeChoices();
+    if (this.dialog.choices && this.dialog.choices.length > 0) {
+      this.activeChoices = new Choices(this.dialog.choices, (id) => {
+        this.removeChoices();
+        this.showQuestion(id);
+      });
+      this.add(this.activeChoices);
+    }
   }
 
+  removeChoices() {
+    if (this.activeChoices) {
+      this.remove(this.activeChoices);
+      this.activeChoices = null;
+    }
+  }
   onPreUpdate(engine) {
-    const spacePressed = engine.input.keyboard.wasPressed(Keys.Space)
-    const face3Pressed = engine.mygamepad?.isButtonPressed(Buttons.Face1)
+    const spacePressed = engine.input.keyboard.wasPressed(Keys.Space);
+    const face3Pressed = engine.mygamepad?.isButtonPressed(Buttons.Face1);
 
-    if (!spacePressed && !face3Pressed) return
+    if (!spacePressed && !face3Pressed) return;
 
     if (this.dialog.targetConvo != null) {
       this.showQuestion(this.dialog.targetConvo);
     } else {
       this._hasReachEnd = true;
     }
-    if (this.dialog.loadScene != null && this._hasReachEnd == true){
+    if (this.dialog.loadScene != null && this._hasReachEnd == true) {
       engine.goToScene(this.dialog.loadScene);
     }
   }
