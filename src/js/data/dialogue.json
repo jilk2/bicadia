@@ -1,6 +1,6 @@
 [
   {
-    "id": "bedroom_backpack_0",
+    "id": "bedroom_backpack_0a",
     "question": "[Inner:] There is just so much on my mind.",
     "targetConvo": "bedroom_backpack_0b"
   },
@@ -95,7 +95,7 @@
     "loadScene": "minigame"
   },
   {
-    "id": "minigame_succes_0",
+    "id": "minigame_succes_0a",
     "question": "[Inner:] I don't want a repeat of previous year...",
     "targetConvo": "minigame_succes_0b"
   },
@@ -110,7 +110,7 @@
     "loadScene": "classroom"
   },
   {
-    "id": "minigame_fail_0",
+    "id": "minigame_fail_0a",
     "question": "[Inner:] I can't do it...",
     "targetConvo": "minigame_fail_0b"
   },
@@ -125,12 +125,12 @@
     "loadScene": "startmenu"
   },
   {
-    "id": "school_classroom_inner_0",
+    "id": "school_classroom_inner_0a",
     "question": "[Inner:] My teacher looks friendly at least.",
     "loadScene": "classroom"
   },
   {
-    "id": "school_classroom_teacher_0",
+    "id": "school_classroom_teacher_0a",
     "question": "[Teacher]: Ah, welcome. You must be the transfer student I was informed about.",
     "targetConvo": "school_classroom_teacher_0b"
   },
@@ -197,181 +197,181 @@
   {
     "id": "school_classroom_at_desk_0d",
     "question": "[Inner:] The bus ride wasn't exactly relaxing.",
-    "targetConvo": "school_classroom_at_desk_0"
+    "targetConvo": "school_classroom_at_desk_0e"
   },
   {
-    "id": "school_classroom_at_desk_0",
+    "id": "school_classroom_at_desk_0e",
     "question": "[Inner:] And I feel all wobbly.",
-    "targetConvo": "school_classroom_at_desk_0"
+    "targetConvo": "school_classroom_at_desk_0f"
   },
   {
-    "id": "school_classroom_at_desk_0",
+    "id": "school_classroom_at_desk_0f",
     "question": "[Inner:] What did he say about the powerhouse of the cell again?",
-    "targetConvo": "school_classroom_at_desk_0"
+    "targetConvo": "school_classroom_at_desk_0g"
   },
   {
-    "id": "school_classroom_at_desk_0",
+    "id": "school_classroom_at_desk_0g",
     "question": "[Inner:] It's so hard to focus.",
-    "targetConvo": "school_classroom_at_desk_0"
+    "targetConvo": "school_classroom_at_desk_0h"
   },
   {
-    "id": "school_classroom_at_desk_0",
+    "id": "school_classroom_at_desk_0h",
     "question": "[Inner:] He's talking so fast.",
-    "targetConvo": "school_classroom_at_desk_0"
+    "targetConvo": "school_classroom_at_desk_0i"
   },
   {
-    "id": "school_classroom_at_desk_0",
+    "id": "school_classroom_at_desk_0i",
     "question": "[Inner:] My mind feels like it is racing from left to right and back.",
-    "targetConvo": "school_classroom_at_desk_0"
+    "targetConvo": "school_classroom_at_desk_0k"
   },
   {
-    "id": "school_classroom_at_desk_0",
+    "id": "school_classroom_at_desk_0k",
     "question": "[Inner:] Maybe this was a bad idea...",
-    "targetConvo": "school_classroom_at_desk_0"
+    "targetConvo": "school_classroom_at_desk_0l"
   },
   {
-    "id": "school_classroom_at_desk_0",
+    "id": "school_classroom_at_desk_0l",
     "question": "[Inner:] I should have stayed home.",
     "loadScene": "classroom"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0a",
     "question": "[Emily/Emiel:] Hey, are you okay?",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0b"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0b",
     "question": "[You:]Huh...sorry. Are you talking to me?",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0c"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0c",
     "question": "[Emily/Emiel:] Of course i'm talking to you, silly.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0d"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0d",
     "question": "[Emily/Emiel:] You are the only one on my right after all.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0e"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0e",
     "question": "[You:] That is...true. Yeah, you're right. That was a stupid question.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0f"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0f",
     "question": "[Emily/Emiel:] It's not a stupid question.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0g"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0g",
     "question": "[Emily/Emiel:] I can tell you are nervous.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0h"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0h",
     "question": "[Emily/Emiel:] I didn't call you silly because I think you are actually silly.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0i"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0i",
     "question": "[You:] Oh...",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0k"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_0k",
     "question": "[Emily/Emiel:] You are new here right?",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0l"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0l",
     "question": "[You:] Um...yeah. I just moved here.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0m"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0m",
     "question": "[Emily/Emiel:] No wonder you are nervous then.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0n"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0n",
     "question": "[Emily/Emiel:] That's the first day jitters talking inside your head.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0o"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0o",
     "question": "[You:] First day jitters... ?",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0p"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0q",
     "question": "[Emily/Emiel:] Wobbly legs, teeth clenching, avoiding the teachers gaze; really, really wanting to go home.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0r"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0r",
     "question": "[Emily/Emiel:] Am I close?",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0s"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0s",
     "question": "[Inner:] Is it that obvious...?",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_0t"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0t",
     "question": "[You:] Yeah..., yeah it is. How... could you tell?",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0v"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0v",
     "question": "[Emily/Emiel:] I recognized it from experience.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0w"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0w",
     "question": "[Emily/Emiel:] I remember first sitting down, and feeling like the classroom would cave in.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0x"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0x",
     "question": "[Emily/Emiel:] When Mr. Brigsby asked me a question about biology, I almost blurted out '24'.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0y"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0y",
     "question": "[Emily/Emiel:] And don't get me started when I had to talk to others.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0z"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0z",
     "question": "[Emily/Emiel:] I don't think I would have had the courage to talk to you, for example.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0za"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0za",
     "question": "[Emily/Emiel:] Listen, I know it feels like a lot right now.",
-    "targetConvo": "school_classroom_npc_0"
+    "targetConvo": "school_classroom_npc_0zb"
   },
   {
-    "id": "school_classroom_npc_0",
+    "id": "school_classroom_npc_0zb",
     "question": "[Emily/Emiel:] But it gets better. Don't worry.",
     "choices": [
       {
         "text": "[Inner:] Me? Someone needs courage to talk to *me*?!",
-        "link": "queer_conversation_0",
+        "link": "queer_conversation_0a",
         "PridePoints": 10
       },
       {
         "text": "[Inner:] Someone with this much confidence knows what it is like?",
-        "link": "confidence_conversation_0",
+        "link": "confidence_conversation_0a",
         "ConfidencePoints": 10
       }
     ]
   },
   {
-    "id": "queer_conversation_0",
+    "id": "queer_conversation_0a",
     "question": "[Inner:] Me? Someone needs courage to talk to *me*?!",
     "targetConvo": "queer_conversation_0b"
   },
@@ -391,7 +391,7 @@
     "targetConvo": "queer_conversation_0e"
   },
   {
-    "id": "queer_conversation_0",
+    "id": "queer_conversation_0e",
     "question": "[Emily/Emiel:] And like I said before, I used to be a nervous wreck.",
     "targetConvo": "queer_conversation_0f"
   },
@@ -403,383 +403,613 @@
   {
     "id": "queer_conversation_0g",
     "question": "[You:] Oh...um. Thank you... I needed that.",
-    "targetConvo": ""
+    "targetConvo": "school_classroom_npc_1a"
   },
   {
-    "id": "confidence_conversation_0",
+    "id": "confidence_conversation_0a",
     "question": "[Inner:] Someone this confident knows what it is like?",
-    "targetConvo": "confidence_conversation_0"
+    "targetConvo": "confidence_conversation_0b"
   },
   {
-    "id": "confidence_conversation_0",
+    "id": "confidence_conversation_0b",
     "question": "[Inner:] Guess I never really thought about if others felt like that too...",
-    "targetConvo": "confidence_conversation_0"
+    "targetConvo": "confidence_conversation_0c"
   },
   {
-    "id": "confidence_conversation_0",
+    "id": "confidence_conversation_0c",
     "question": "[Inner:] Even you? I find that hard to imagine to be honest.",
-    "targetConvo": "confidence_conversation_0"
+    "targetConvo": "confidence_conversation_0d"
   },
   {
-    "id": "confidence_conversation_0",
+    "id": "confidence_conversation_0d",
     "question": "[Emily/Emiel:] Even me! And a lot of other people too.",
-    "targetConvo": "confidence_conversation_0"
+    "targetConvo": "confidence_conversation_0e"
   },
   {
-    "id": "confidence_conversation_0",
+    "id": "confidence_conversation_0e",
     "question": "[Emily/Emiel:] School is a frightening place after all.",
-    "targetConvo": "confidence_conversation_0"
+    "targetConvo": "confidence_conversation_0f"
   },
   {
-    "id": "confidence_conversation_0",
+    "id": "confidence_conversation_0f",
     "question": "[Emily/Emiel:] But, don't let that define you.",
-    "targetConvo": "confidence_conversation_0"
+    "targetConvo": "confidence_conversation_0g"
   },
   {
-    "id": "confidence_conversation_0",
+    "id": "confidence_conversation_0g",
     "question": "[You:] I — Thank you... I needed that.",
-    "targetConvo": "confidence_conversation_0"
+    "targetConvo": "school_classroom_npc_1a"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_1a",
     "question": "[Emily/Emiel:] You're welcome. You feel a bit better?",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_1b"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_1b",
     "question": "[You:] A little, yeah.",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_1c"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_1c",
     "question": "[Inner:] I can think a bit more clearly now, at least.",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_1d"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_1d",
     "question": "[Inner:] I want to thank them, but my throat feels dry...",
     "loadScene": "minigame"
   },
   {
-    "id": "school_classroom_npc_1",
+    "id": "school_classroom_npc_1e",
     "question": "[Inner:] I want to thank them, but my throat feels dry...",
     "choices": [
       {
         "text": "[You:] Thank you, again. I'm glad you talked to someone like me.",
-        "link": "queer_conversation_1",
+        "link": "queer_conversation_1a",
         "PridePoints": 10
       },
       {
         "text": "[You:] Thank you, again. It feels reassuring to know that someone knows what it is like.",
-        "link": "confidence_conversation_1",
+        "link": "confidence_conversation_1a",
         "ConfidencePoints": 10
       }
     ]
   },
   {
-    "id": ,
+    "id": "queer_conversation_1a",
     "question": "[Emily/Emiel:] I'm glad you are feeling better.",
-    "targetConvo":
+    "targetConvo": "queer_conversation_1b"
   },
   {
-    "id": ,
+    "id": "queer_conversation_1b",
     "question": "[Emily/Emiel:] I always try to help out when I can.",
-    "targetConvo":
+    "targetConvo": "queer_conversation_1c"
   },
   {
-    "id": ,
+    "id": "queer_conversation_1c",
     "question": "[Emily/Emiel:] And know that it gets easier to connect to people.",
-    "targetConvo":
+    "targetConvo": "queer_conversation_1d"
   },
   {
-    "id": ,
+    "id": "queer_conversation_1d",
     "question": "[Emily/Emiel:] Just like how we are connecting right now, see? Easy, right?",
-    "targetConvo":
+    "targetConvo": "queer_conversation_1e"
   },
   {
-    "id": ,
+    "id": "queer_conversation_1e",
     "question": "[You:] I... I have a bit of trouble understanding it fully. But I think I get it.",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_2a"
   },
   {
-    "id": ,
+    "id": "confidence_conversation_1a",
     "question": "[Emily/Emiel:] I'm glad you are feeling better.",
-    "targetConvo":
+    "targetConvo": "confidence_conversation_1b"
   },
   {
-    "id": ,
+    "id": "confidence_conversation_1b",
     "question": "[Emily/Emiel:] Overthinking everything is why the first day of school seems so overwhelming.",
-    "targetConvo":
+    "targetConvo": "confidence_conversation_1c"
   },
   {
-    "id": ,
+    "id": "confidence_conversation_1c",
     "question": "[Emily/Emiel:] But really it goes by quite fast if you just keep your head cool.",
-    "targetConvo":
+    "targetConvo": "confidence_conversation_1d"
   },
   {
-    "id": ,
+    "id": "confidence_conversation_1d",
     "question": "[Emily/Emiel:] Doesn't your head feel lighter now that you can focus on this conversation?",
-    "targetConvo":
+    "targetConvo": "confidence_conversation_1e"
   },
   {
-    "id": ,
+    "id": "confidence_conversation_1g",
     "question": "[You:] A little bit, I think...",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_2a"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_2a",
     "question": "[Emily/Emiel:] Oh, seems Mr. Brigsby is about to go on a lecture again.",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_2b"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_2b",
     "question": "[Emily/Emiel:] Why don't we talk after class?",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_2c"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_2c",
     "question": "[You:] Okay... I think I can do that.",
-    "targetConvo":
+    "targetConvo": "school_classroom_npc_2d"
   },
   {
-    "id": ,
+    "id": "school_classroom_npc_2e",
     "question": "[Inner:] I hope I can at least.",
-    "targetConvo":
+    "loadScene": "classroom"
   },
   {
-    "id": ,
-    "question": "Hey... I'm glad you waited.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0a",
+    "question": "[You:] Hey... I'm glad you waited.",
+    "targetConvo": "school_classroom_after_class_0b"
   },
   {
-    "id": ,
-    "question": "Of course. I said I would, didn't I?",
-    "targetConvo":
+    "id": "school_classroom_after_class_0b",
+    "question": "[Emily/Emiel:] Of course. I said I would, didn't I?",
+    "targetConvo": "school_classroom_after_class_0c"
   },
   {
-    "id": ,
-    "question": "This is a lot harder than I thought... Take a deep breath. You can do this.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0c",
+    "question": "[Inner:] This is a lot harder than I thought... Take a deep breath. You can do this.",
+    "targetConvo": "school_classroom_after_class_0d"
   },
   {
-    "id": ,
-    "question": "How are you feeling?",
-    "targetConvo":
+    "id": "school_classroom_after_class_0d",
+    "question": "[Emily/Emiel:] How are you feeling?",
+    "targetConvo": "school_classroom_after_class_0e"
   },
   {
-    "id": ,
-    "question": "Still overwhelmed, but, not as much as I thought.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0f",
+    "question": "[You:] Still a little overwhelmed, but, not as much as I thought.",
+    "targetConvo": "school_classroom_after_class_0g"
   },
   {
-    "id": ,
-    "question": "Glad to hear it. Means I made the right choice.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0g",
+    "question": "[Emily/Emiel:] Glad to hear it. Means I made the right choice.",
+    "targetConvo": "school_classroom_after_class_0h"
   },
   {
-    "id": ,
-    "question": "For now. Take a deep breath in—",
-    "targetConvo":
+    "id": "school_classroom_after_class_0h",
+    "question": "[Emily/Emiel:] For now. Take a deep breath in—",
+    "targetConvo": "school_classroom_after_class_0i"
   },
   {
-    "id": ,
-    "question": "—And out.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0i",
+    "question": "[Emily/Emiel:] —And out.",
+    "targetConvo": "school_classroom_after_class_0j"
   },
   {
-    "id": ,
-    "question": "In—",
-    "targetConvo":
+    "id": "school_classroom_after_class_0j",
+    "question": "[Inner:] In—",
+    "targetConvo": "school_classroom_after_class_0k"
   },
   {
-    "id": ,
-    "question": "If you ever feel nervous again, focus on your breathing.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0k",
+    "question": "[Inner:] —And out.",
+    "targetConvo": "school_classroom_after_class_0l"
   },
   {
-    "id": ,
-    "question": "If that doesn't help, I am always nearby.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0l",
+    "question": "[Emily/Emiel:] If you ever feel nervous again, focus on your breathing.",
+    "targetConvo": "school_classroom_after_class_0m"
   },
   {
-    "id": ,
-    "question": "You'll be just fine, I know you will.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0m",
+    "question": "[Emily/Emiel:] If that doesn't help, I am always nearby.",
+    "targetConvo": "school_classroom_after_class_0n"
   },
   {
-    "id": ,
-    "question": "Deep breaths... and ask for help.",
-    "targetConvo":
+    "id": "school_classroom_after_class_0n",
+    "question": "[Emily/Emiel:] You'll be just fine, I know you will.",
+    "targetConvo": "school_classroom_after_class_0o"
   },
   {
-    "id": ,
-    "question": "I can do that. Breathing is easy at least... Right?",
-    "targetConvo":
+    "id": "school_classroom_after_class_0o",
+    "question": "[Inner:] Deep breaths... and ask for help.",
+    "targetConvo": "school_classroom_after_class_0p"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "school_classroom_after_class_0p",
+    "question": "[Inner:] I can do that. Breathing is easy at least... Right?",
+    "targetConvo": "school_classroom_after_class_0q"
   },
   {
-    "id": "school_classroom_npc_1",
+    "id": "school_classroom_after_class_0q",
+    "question": "[Inner:] Although I am still a little unsure of something...",
+    "targetConvo": "school_classroom_after_class_0r"
+  },
+  {
+    "id": "school_classroom_after_class_0r",
     "question": "[Inner:] I should ask them about it.",
     "choices": [
       {
         "text": "[You:] Um. I wanted to ask about a feeling I've been having.",
-        "link": "queer_conversation_1",
+        "link": "queer_conversation_2a",
         "PridePoints": 10
       },
       {
         "text": "[You:] Um. I wanted to ask about how to become more like you.",
-        "link": "confidence_conversation_1",
+        "link": "confidence_conversation_2a",
         "ConfidencePoints": 10
       }
     ]
   },
   {
-    "id": ,
+    "id": "queer_conversation_2a",
     "question": "Um. I wanted to ask about a feeling I've been having.",
-    "targetConvo":
+    "targetConvo": "queer_conversation_2b"
   },
   {
-    "id": ,
-    "question": "A feeling? What kind.",
-    "targetConvo":
+    "id": "queer_conversation_2b",
+    "question": "[Emily/Emiel:] A feeling? What kind.",
+    "targetConvo": "queer_conversation_2c"
   },
   {
-    "id": ,
+    "id": "queer_conversation_2c",
     "question": "You mentioned having had trouble talking to others.",
-    "targetConvo":
+    "targetConvo": "queer_conversation_2d"
   },
   {
-    "id": ,
+    "id": "queer_conversation_2d",
     "question": "After our talk during class I started thinking.",
-    "targetConvo":
+    "targetConvo": "queer_conversation_2e"
   },
   {
-    "id": ,
+    "id": "queer_conversation_2e",
     "question": "This is a bit awkward...",
-    "targetConvo":
+    "targetConvo": "queer_conversation_2f"
   },
   {
-    "id": ,
+    "id": "queer_conversation_2f",
     "question": "But, is it normal to feel *different* than others?",
-    "targetConvo":
+    "targetConvo": "queer_conversation_2g"
   },
   {
-    "id": ,
-    "question": "Ah-",
-    "targetConvo":
+    "id": "queer_conversation_2g",
+    "question": "[Emily/Emiel:] Ah-",
+    "targetConvo": "queer_conversation_2h"
   },
   {
-    "id": ,
-    "question": "I think I understand.",
-    "targetConvo":
+    "id": "queer_conversation_2h",
+    "question": "[Emily/Emiel:] I think I understand.",
+    "targetConvo": "queer_conversation_2h"
   },
   {
-    "id": ,
-    "question": "Of course it is.",
-    "targetConvo":
+    "id": "queer_conversation_2h",
+    "question": "[Emily/Emiel:] Of course it is.",
+    "targetConvo": "queer_conversation_2i"
   },
   {
-    "id": ,
-    "question": "Different isn't always bad, I'd even argue It's good. Usually, that is.",
-    "targetConvo":
+    "id": "queer_conversation_2i",
+    "question": "[Emily/Emiel:] Different isn't always bad, I'd even argue It's good. Usually, that is.",
+    "targetConvo": "queer_conversation_2j"
   },
   {
-    "id": ,
-    "question": "If everyone was the same or felt the same, things would be so boring.",
-    "targetConvo":
+    "id": "queer_conversation_2j",
+    "question": "[Emily/Emiel:] If everyone was the same or felt the same, things would be so boring.",
+    "targetConvo": "queer_conversation_2k"
   },
   {
-    "id": ,
-    "question": "Can you imagine a world full of Mr. Brigsby's? *Horrifying*, I know.",
-    "targetConvo":
+    "id": "queer_conversation_2k",
+    "question": "[Emily/Emiel:] Can you imagine a world full of Mr. Brigsby's? *Horrifying*, I know.",
+    "targetConvo": "queer_conversation_2l"
   },
   {
-    "id": ,
-    "question": "Jokes aside. I know what you mean.",
-    "targetConvo":
+    "id": "queer_conversation_2l",
+    "question": "[Emily/Emiel:] Jokes aside. I know what you mean.",
+    "targetConvo": "queer_conversation_2m"
   },
   {
-    "id": ,
-    "question": "I'm going to sound a little sappy with this, but—",
-    "targetConvo":
+    "id": "queer_conversation_2m",
+    "question": "[Emily/Emiel:] I'm going to sound a little sappy with this, but—",
+    "targetConvo": "queer_conversation_2n"
   },
   {
-    "id": ,
-    "question": "—You feeling different from others is totally normal and okay. A lot of people feel that way.",
-    "targetConvo":
+    "id": "queer_conversation_2n",
+    "question": "[Emily/Emiel:] — You feeling different from others is totally normal and okay. A lot of people feel that way.",
+    "targetConvo": "queer_conversation_2o"
   },
   {
-    "id": ,
-    "question": "But, I understand if that takes a bit to process. Think about, but, rest first. Okay?",
-    "targetConvo":
+    "id": "queer_conversation_2p",
+    "question": "[Emily/Emiel:] But, I understand if that takes a bit to process. Think about, but, rest first. Okay?",
+    "targetConvo": "queer_conversation_2q"
   },
   {
-    "id": ,
-    "question": "Yeah... that is a good idea.",
-    "targetConvo":
+    "id": "queer_conversation_2q",
+    "question": "[You:] Yeah... that is a good idea.",
+    "targetConvo": "queer_conversation_2r"
   },
   {
-    "id": ,
-    "question": "Thank you.",
-    "targetConvo":
+    "id": "queer_conversation_2r",
+    "question": "[You:] Thank you.",
+    "targetConvo": "school_classroom_after_class_1a"
   },
   {
-    "id": ,
-    "question": "Um. I wanted to ask about how to become more like you.",
-    "targetConvo":
+    "id": "confidence_conversation_2a",
+    "question": "[You:] Um. I wanted to ask about how to become more like you.",
+    "targetConvo": "confidence_conversation_2b"
   },
   {
-    "id": ,
-    "question": "Like me?",
-    "targetConvo":
+    "id": "confidence_conversation_2b",
+    "question": "[Emily/Emiel:] Like me?",
+    "targetConvo": "confidence_conversation_2c"
   },
   {
-    "id": ,
-    "question": "Ah.",
-    "targetConvo":
+    "id": "confidence_conversation_2c",
+    "question": "[Emily/Emiel:] Ah.",
+    "targetConvo": "confidence_conversation_2d"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "confidence_conversation_2e",
+    "question": "[Emily/Emiel:] Well, the short answer is..., you can't.",
+    "targetConvo": "confidence_conversation_2f"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "confidence_conversation_2f",
+    "question": "[Emily/Emiel:] Unless you find a machine to switch our bodies, I suppose.",
+    "targetConvo": "confidence_conversation_2g"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "confidence_conversation_2g",
+    "question": "[Emily/Emiel:] Jokes aside. I know what you mean.",
+    "targetConvo": "confidence_conversation_2h"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "confidence_conversation_2h",
+    "question": "[Emily/Emiel:] But, to avoid giving you a lecture like Mr. Brigsby—",
+    "targetConvo": "confidence_conversation_2i"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "confidence_conversation_2i",
+    "question": "[Emily/Emiel:] — You can learn from me, but, you should grow into your own person.",
+    "targetConvo": "confidence_conversation_2j"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "confidence_conversation_2j",
+    "question": "[Emily/Emiel:] It's a little bit sappy, I know, but, it is true.",
+    "targetConvo": "confidence_conversation_2k"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "confidence_conversation_2k",
+    "question": "[Emily/Emiel:] Just... Think about it for a while, okay? For now though, you should go rest.",
+    "targetConvo": "confidence_conversation_2l"
   },
   {
-    "id": ,
-    "question": ,
-    "targetConvo":
+    "id": "confidence_conversation_2l",
+    "question": "[You:] Thank you.",
+    "targetConvo": "school_classroom_after_class_1a"
   },
+  {
+    "id": "school_classroom_after_class_1a",
+    "question": "[Inner:] I'm glad I talked to them.",
+    "targetConvo": "school_classroom_after_class_1b"
+  },
+  {
+    "id": "school_classroom_after_class_1b",
+    "question": "[Inner:] But, now I really am exhausted.",
+    "targetConvo": "school_classroom_after_class_1c"
+  },
+  {
+    "id": "school_classroom_after_class_1c",
+    "question": "[Inner:] Let's go home.",
+    "loadScene": "classroom"
+  },
+  {
+    "id": "livingroom_after_school_0a",
+    "question": "[Inner:] They should really fix the chairs on the bus...",
+    "targetConvo": "livingroom_after_school_0b"
+  },
+  {
+    "id": "livingroom_after_school_0b",
+    "question": "[Inner:] At least I am home now.",
+    "targetConvo": "livingroom_after_school_0c"
+  },
+  {
+    "id": "livingroom_after_school_0c",
+    "question": "[Inner:] My whole body feels like jelly.",
+    "targetConvo": "livingroom_after_school_0e"
+  },
+  {
+    "id": "livingroom_after_school_0f",
+    "question": "[Inner:] I should put my bag away upstairs first...",
+    "loadScene": "livingroom"
+  },
+  {
+    "id": "bedroom_after_school_0a",
+    "question": "[Inner:] There...",
+    "targetConvo": "bedroom_after_school_0b"
+  },
+  {
+    "id": "bedroom_after_school_0b",
+    "question": "[Inner:] A lot happened today.",
+    "targetConvo": "bedroom_after_school_0c"
+  },
+  {
+    "id": "bedroom_after_school_0c",
+    "question": "[Inner:] Let's go lay down now...",
+    "loadScene": "bedroom"
+  },
+  {
+    "id": "queer_ending_0a",
+    "question": "[Inner:] School is finally over.",
+    "targetConvo": "queer_ending_0b"
+  },
+  {
+    "id": "queer_ending_0b",
+    "question": "[Inner:] It was a lot.",
+    "targetConvo": "queer_ending_0c"
+  },
+  {
+    "id": "queer_ending_0c",
+    "question": "[Inner:] Navigating the school.",
+    "targetConvo": "queer_ending_0d"
+  },
+  {
+    "id": "queer_ending_0d",
+    "question": "[Inner:] Meeting my teachers.",
+    "targetConvo": "queer_ending_0e"
+  },
+  {
+    "id": "queer_ending_0e",
+    "question": "[Inner:] Meeting other students.",
+    "targetConvo": "queer_ending_0f"
+  },
+  {
+    "id": "queer_ending_0f",
+    "question": "[Inner:] My heart is still pounding in my chest, but—",
+    "targetConvo": "queer_ending_0g"
+  },
+  {
+    "id": "queer_ending_0g",
+    "question": "[Inner:] — I almost feel relieved.",
+    "targetConvo": "queer_ending_0h"
+  },
+  {
+    "id": "queer_ending_0h",
+    "question": "[Inner:] This feeling it is... unfamiliar.",
+    "targetConvo": "queer_ending_0i"
+  },
+  {
+    "id": "queer_ending_0i",
+    "question": "[Inner:] Is it a crush? Do I, well, like Emily/Emiel?",
+    "targetConvo": "queer_ending_0j"
+  },
+  {
+    "id": "queer_ending_0j",
+    "question": "[Inner:] Or is it something else?",
+    "targetConvo": "queer_ending_0k"
+  },
+  {
+    "id": "queer_ending_0k",
+    "question": "[Inner:] There is just something about them.",
+    "targetConvo": "queer_ending_0l"
+  },
+  {
+    "id": "queer_ending_0l",
+    "question": "[Inner:] Like, what did that book I once read say... kindred spirits?",
+    "targetConvo": "queer_ending_0m"
+  },
+  {
+    "id": "queer_ending_0m",
+    "question": "[Inner:] I am not sure if it is 'love', I am not even sure what that really means.",
+    "targetConvo": "queer_ending_0n"
+  },
+  {
+    "id": "queer_ending_0n",
+    "question": "[Inner:] But I do truly admire them.",
+    "targetConvo": "queer_ending_0o"
+  },
+  {
+    "id": "queer_ending_0o",
+    "question": "[Inner:] My thoughts feel more clear.",
+    "targetConvo": "queer_ending_0p"
+  },
+  {
+    "id": "queer_ending_0p",
+    "question": "[Inner:] Like I just stepped out of quicksand.",
+    "targetConvo": "queer_ending_0q"
+  },
+  {
+    "id": "queer_ending_0q",
+    "question": "[Inner:] And for the first time I know where to go.",
+    "targetConvo": "queer_ending_0r"
+  },
+  {
+    "id": "queer_ending_0r",
+    "question": "[Inner:] All these feelings I have had for so long are starting to...",
+    "targetConvo": "queer_ending_0s"
+  },
+  {
+    "id": "queer_ending_0s",
+    "question": ".[Inner:] .. Make sense, slowly, but surely.",
+    "targetConvo": "queer_ending_0t"
+  },
+  {
+    "id": "queer_ending_0t",
+    "question": "[Inner:] I think I will be alright after all.",
+    "loadScene": "endingscreen"
+  },
+  {
+    "id": "confidence_ending_0a",
+    "question": "[Inner:] It was a lot.",
+    "targetConvo": "confidence_ending_0b"
+  },
+  {
+    "id": "confidence_ending_0b",
+    "question": "[Inner:] Navigating the school.",
+    "targetConvo": "confidence_ending_0c"
+  },
+  {
+    "id": "confidence_ending_0c",
+    "question": "[Inner:] Meeting my teachers.",
+    "targetConvo": "confidence_ending_0d"
+  },
+  {
+    "id": "confidence_ending_0d",
+    "question": "[Inner:] Meeting other students.",
+    "targetConvo": "confidence_ending_0e"
+  },
+  {
+    "id": "confidence_ending_0e",
+    "question": "[Inner:] My heart is still pounding in my chest, but—",
+    "targetConvo": "confidence_ending_0f"
+  },
+  {
+    "id": "confidence_ending_0f",
+    "question": "[Inner:] — I almost feel relieved.",
+    "targetConvo": "confidence_ending_0g"
+  },
+  {
+    "id": "confidence_ending_0g",
+    "question": "[Inner:] It is hard to describe.",
+    "targetConvo": "confidence_ending_0h"
+  },
+  {
+    "id": "confidence_ending_0h",
+    "question": "[Inner:] I guess talking to someone with similar experiences as you really does help.",
+    "targetConvo": "confidence_ending_0i"
+  },
+  {
+    "id": "confidence_ending_0i",
+    "question": "[Inner:] To think that someone as confident, kind and cheerful as Emily/Emiel could well—",
+    "targetConvo": "confidence_ending_0j"
+  },
+  {
+    "id": "confidence_ending_0j",
+    "question": "[Inner:] — Be like me… Or have been where I once stood.",
+    "targetConvo": "confidence_ending_0k"
+  },
+  {
+    "id": "confidence_ending_0k",
+    "question": "[Inner:] My head hurts a lot less and my legs aren't shaking anymore.",
+    "targetConvo": "confidence_ending_0l"
+  },
+  {
+    "id": "confidence_ending_0l",
+    "question": "[Inner:] Maybe their confidence rubbed off on me... ?",
+    "targetConvo": "confidence_ending_0m"
+  },
+  {
+    "id": "confidence_ending_0m",
+    "question": "[Inner:] Is that a thing?",
+    "targetConvo": "confidence_ending_0n"
+  },
+  {
+    "id": "confidence_ending_0n",
+    "question": "[Inner:] Whatever it is, I feel like I can face tomorrow now.",
+    "targetConvo": "confidence_ending_0o"
+  },
+  {
+    "id": "confidence_ending_0o",
+    "question": "[Inner:] Or at the very least, I don't feel as bad about it as before.",
+    "loadScene": "endingscreen"
+  }
 ]
