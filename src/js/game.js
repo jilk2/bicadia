@@ -12,7 +12,9 @@ import { CharacterCreation } from "./classes/scenes/characterCreation.js";
 
 export class Game extends Engine {
   bravePoints = 0;
+  pronounce;
   mygamepad;
+
   constructor() {
     super({
       width: 1280,
@@ -21,6 +23,7 @@ export class Game extends Engine {
       displayMode: DisplayMode.FitScreen,
     });
     this.start(ResourceLoader).then(() => this.startGame());
+    console.log(this.pronounce)
   }
 
   startGame() {
