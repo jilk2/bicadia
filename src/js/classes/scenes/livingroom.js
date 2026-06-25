@@ -47,6 +47,6 @@ export class Livingroom extends Scene {
     }
 
     onActivate() {
-        this.player.pos = new Vector(1155, 255)
+        this.player.pos = new Vector(1155, 285)
     }
 }

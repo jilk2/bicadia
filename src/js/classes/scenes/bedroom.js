@@ -40,7 +40,4 @@ export class Bedroom extends Scene {
     this.add(this.player)
 
   }
-  onActivate() {
-    this.player.pos = new Vector(470, 260)
-  }
 }
