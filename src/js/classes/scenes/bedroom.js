@@ -1,4 +1,4 @@
-import { Actor, Engine, Scene } from "excalibur";
+import { Actor, Engine, Scene, Vector } from "excalibur";
 import { Resources } from "../../resources.js";
 import { Background } from "../gameobjects/background.js";
 import { InvisibleWall } from "../gameobjects/invisible-wall.js"
@@ -39,5 +39,14 @@ export class Bedroom extends Scene {
     this.player = new Player(1000, 360, false)
     this.add(this.player)
 
+
+    
+    this.thinkBubble = new ThinkBubble();
+    this.add(this.thinkBubble);
+    this.thinkBubble.loadNextGoal("walk around using wasd");
+
+
   }
+
 }
+

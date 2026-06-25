@@ -10,7 +10,7 @@ export class Backpack extends Actor {
     super({
       x,
       y,
-      width: Resources.Backpack.width,
+      width: Resources.Backpack.width - 100,
       height: Resources.Backpack.height,
     }); // collision box!
     this.pos = new Vector(x, y);
@@ -20,7 +20,7 @@ export class Backpack extends Actor {
 
   onInitialize(engine) {
     this.graphics.use(Resources.Backpack.toSprite());
-    this.body.collisionType = CollisionType.Fixed;
+    this.body.collisionType = CollisionType.Active;
     this.scale = new Vector(0.125, 0.125);
   }
 

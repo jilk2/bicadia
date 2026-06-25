@@ -1,4 +1,4 @@
-import { Actor, Engine, Scene } from "excalibur";
+import { Actor, Engine, Scene, Vector } from "excalibur";
 import { Resources } from "../../resources.js";
 import { Background } from "../gameobjects/background.js";
 import { InvisibleWall } from "../gameobjects/invisible-wall.js"
@@ -19,7 +19,7 @@ export class Livingroom extends Scene {
 
         //borders
         this.add(new InvisibleWall(-40, 300, 100, 1000))         // links
-        this.add(new InvisibleWall(1300, 300, 100, 1000))      // rechts
+        this.add(new InvisibleWall(1330, 300, 100, 1000))      // rechts
         this.add(new InvisibleWall(1280, 210, 150, 100))      // boven (rechts van deur)
         this.add(new InvisibleWall(0, 210, 2187, 100))          // boven (links van deur)
         this.add(new InvisibleWall(800, 750, 1900, 100))      // onder
@@ -29,7 +29,7 @@ export class Livingroom extends Scene {
         this.add(new Door(1150, 180, "bedroom"))
         this.add(new TVKast(158, 250))
         this.add(new Bank(300, 467))
-        this.add(new Doormat(1200, 645, "classroom"))
+        this.add(new Doormat(1267, 645, "classroom"))
         this.add(new Klok(775, 90))
         this.add(new Lamp(1035, 205))
         this.add(new Mat(302, 600))
@@ -40,7 +40,13 @@ export class Livingroom extends Scene {
 
 
 
-        this.player = new Player(690, 360)
+        this.player = new Player(690, 380)
         this.add(this.player)
+
+
+    }
+
+    onActivate() {
+        this.player.pos = new Vector(1155, 285)
     }
 }

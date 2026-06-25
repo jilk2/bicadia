@@ -23,19 +23,19 @@ export class Player extends Actor {
   chosenPants;
   chosenShoes;
 
-  constructor(x,y, inCutscene) {
+  constructor(x, y, inCutscene) {
     super({
       x,
       y,
-      width: 16,
-      height: 10,
+      width: 83,
+      height: 80,
       collisionType: CollisionType.Active,
-      collider: Shape.Box(16, 10, new Vector(0.5, -0.45)),
+      collider: Shape.Box(83, 80, new Vector(0.5, 0.15)),
     });
     this.inCutscene = inCutscene;
   }
 
-  onInitialize(){
+  onInitialize() {
     if (localStorage.getItem("chosenCharacterOptions") == null) {
       let characterOptionsJSON = localStorage.getItem("characterOptions");
       let characterOptions = JSON.parse(characterOptionsJSON);
@@ -75,9 +75,9 @@ export class Player extends Actor {
   onCollisionStart(self, other) {
     console.log("collision")
     if (!other || !other.owner) {
-      return 
+      return
     }
-    
+
     console.log("collided with", other.owner)
 
     if (other.owner.interactable) {
@@ -104,54 +104,54 @@ export class Player extends Actor {
 
     if (this.inCutscene) {
     } else {
-      if(!engine.mygamepad){
-      if (engine.input.keyboard.isHeld(Keys.A)|| engine.input.keyboard.isHeld(Keys.ArrowLeft)) {
-        this.children.forEach((c) => c.graphics.use("walkingSide"));
-        this.children.forEach((c) => (c.graphics.flipHorizontal = true));
+      if (!engine.mygamepad) {
+        if (engine.input.keyboard.isHeld(Keys.A) || engine.input.keyboard.isHeld(Keys.ArrowLeft)) {
+          this.children.forEach((c) => c.graphics.use("walkingSide"));
+          this.children.forEach((c) => (c.graphics.flipHorizontal = true));
 
-        xspeed = -300;
-      } 
-      if (engine.input.keyboard.isHeld(Keys.D)|| engine.input.keyboard.isHeld(Keys.ArrowRight)) {
-        this.children.forEach((c) => c.graphics.use("walkingSide"));
-        this.children.forEach((c) => (c.graphics.flipHorizontal = false));
-        xspeed = 300;
-      }
-      if (engine.input.keyboard.isHeld(Keys.W) || engine.input.keyboard.isHeld(Keys.ArrowUp)) {
-        this.children.forEach((c) => c.graphics.use("walkingBack"));
-        this.children.forEach((c) => (c.graphics.flipHorizontal = true));
-        yspeed = -300;
-      }
-      if (engine.input.keyboard.isHeld(Keys.S) || engine.input.keyboard.isHeld(Keys.ArrowDown)) {
-        this.children.forEach((c) => c.graphics.use("walkingFront"));
-        this.children.forEach((c) => (c.graphics.flipHorizontal = true));
-        yspeed = 300;
-      }
-      this.vel = new Vector(xspeed, yspeed);if(engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable && this.currentInteractable.needsInteraction){
-        this.currentInteractable.interaction(engine)
-      }
-      if(this.currentInteractable && !this.currentInteractable.needsInteraction){
-        this.currentInteractable.interaction(engine)
-      }
-    } else {
-      const xspeed = engine.mygamepad.getAxes(Axes.LeftStickX)
-      const yspeed = engine.mygamepad.getAxes(Axes.LeftStickY)
-      this.vel = new Vector(xspeed * 300, yspeed * 300)
-      if (xspeed < 0){
-        this.children.forEach((c) => c.graphics.use("walkingSide"));
-        this.children.forEach((c) => (c.graphics.flipHorizontal = true));
-      } else if (xspeed > 0){
-        this.graphics.use("walkingSide");
-        this.children.forEach((c) => c.graphics.use("walkingSide"));
-        this.children.forEach((c) => (c.graphics.flipHorizontal = false));
-      } else if (yspeed < 0){
-        this.children.forEach((c) => c.graphics.use("walkingBack"));
-      } else if (yspeed > 0){
-        this.children.forEach((c) => c.graphics.use("walkingFront"));
-      }
-      if (engine.mygamepad.isButtonPressed(Buttons.Face3) && this.currentInteractable) {
-        this.currentInteractable.interaction(engine)
+          xspeed = -300;
+        }
+        if (engine.input.keyboard.isHeld(Keys.D) || engine.input.keyboard.isHeld(Keys.ArrowRight)) {
+          this.children.forEach((c) => c.graphics.use("walkingSide"));
+          this.children.forEach((c) => (c.graphics.flipHorizontal = false));
+          xspeed = 300;
+        }
+        if (engine.input.keyboard.isHeld(Keys.W) || engine.input.keyboard.isHeld(Keys.ArrowUp)) {
+          this.children.forEach((c) => c.graphics.use("walkingBack"));
+          this.children.forEach((c) => (c.graphics.flipHorizontal = true));
+          yspeed = -300;
+        }
+        if (engine.input.keyboard.isHeld(Keys.S) || engine.input.keyboard.isHeld(Keys.ArrowDown)) {
+          this.children.forEach((c) => c.graphics.use("walkingFront"));
+          this.children.forEach((c) => (c.graphics.flipHorizontal = true));
+          yspeed = 300;
+        }
+        this.vel = new Vector(xspeed, yspeed); if (engine.input.keyboard.wasPressed(Keys.E) && this.currentInteractable && this.currentInteractable.needsInteraction) {
+          this.currentInteractable.interaction(engine)
+        }
+        if (this.currentInteractable && !this.currentInteractable.needsInteraction) {
+          this.currentInteractable.interaction(engine)
+        }
+      } else {
+        const xspeed = engine.mygamepad.getAxes(Axes.LeftStickX)
+        const yspeed = engine.mygamepad.getAxes(Axes.LeftStickY)
+        this.vel = new Vector(xspeed * 300, yspeed * 300)
+        if (xspeed < 0) {
+          this.children.forEach((c) => c.graphics.use("walkingSide"));
+          this.children.forEach((c) => (c.graphics.flipHorizontal = true));
+        } else if (xspeed > 0) {
+          this.graphics.use("walkingSide");
+          this.children.forEach((c) => c.graphics.use("walkingSide"));
+          this.children.forEach((c) => (c.graphics.flipHorizontal = false));
+        } else if (yspeed < 0) {
+          this.children.forEach((c) => c.graphics.use("walkingBack"));
+        } else if (yspeed > 0) {
+          this.children.forEach((c) => c.graphics.use("walkingFront"));
+        }
+        if (engine.mygamepad.isButtonPressed(Buttons.Face3) && this.currentInteractable) {
+          this.currentInteractable.interaction(engine)
+        }
       }
     }
-  }
   }
 }
