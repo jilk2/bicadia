@@ -33,7 +33,7 @@ export class Pronounce extends Actor {
     });
     this.addChild(this.pronounceTwo);
     this.pronounceTwo.on("pointerdown", () => {
-      engine.Pronounce = "She";
+      engine.pronounce = "She";
       engine.pronounce;
       engine.goToScene("dialogue");
     });

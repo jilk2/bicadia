@@ -1,7 +1,7 @@
 import { Actor, CollisionType, Shape, Vector } from "excalibur";
 import { Resources } from "../../resources";
 
-export class Teacher extends Actor{
+export class Teacher extends Actor {
 
     constructor(x, y) {
 
@@ -23,7 +23,18 @@ export class Teacher extends Actor{
 
     }
 
-    interaction(engine){
+    interaction(engine) {
         //jurgen
+
+        // If player interacts with teacher play dialog
+        // Remove previous dialog
+        // Add new dialog
+        // Add dialog to scene
+        // Go to dialog scene
+        // Ensure player cannot talk to teacher again.
+        engine.remove("dialogue");
+        this.dialogue = new Dialogue("school_classroom_teacher_0a");
+        engine.addScene("dialogue", this.dialogue);
+        engine.goToScene("dialogue")
     }
 }

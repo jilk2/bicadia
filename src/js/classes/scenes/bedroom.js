@@ -1,4 +1,4 @@
-import { Actor, Engine, Scene } from "excalibur";
+import { Actor, Engine, Scene, Vector } from "excalibur";
 import { Resources } from "../../resources.js";
 import { Background } from "../gameobjects/background.js";
 import { InvisibleWall } from "../gameobjects/invisible-wall.js"
@@ -29,7 +29,7 @@ export class Bedroom extends Scene {
     this.add(new Wardrobe(1000, 200))
     this.add(new Bed(715, 300))
     this.add(new Backpack(500, 500))
-    this.add(new Door(470, 180, "livingroom"))
+    this.add(new Door(470, 180, "livingroom", "pickedupBag"))
     this.add(new Plant(1075, 120))
     this.add(new Desk(1230, 605))
     this.add(new Deskchair(1152, 630))
@@ -39,5 +39,14 @@ export class Bedroom extends Scene {
     this.player = new Player(1000, 360, false)
     this.add(this.player)
 
+
+    
+    this.thinkBubble = new ThinkBubble();
+    this.add(this.thinkBubble);
+    this.thinkBubble.loadNextGoal("walk around using wasd");
+
+
   }
+
 }
+
