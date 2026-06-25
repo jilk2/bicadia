@@ -1,4 +1,4 @@
-import { Actor, Engine, Scene } from "excalibur";
+import { Actor, Engine, Scene, Vector } from "excalibur";
 import { Resources } from "../../resources.js";
 import { Background } from "../gameobjects/background.js";
 import { InvisibleWall } from "../gameobjects/invisible-wall.js";
@@ -54,5 +54,10 @@ export class Classroom extends Scene {
         this.add(this.thinkBubble);
         this.thinkBubble.loadNextGoal("I need to ask someone for a pen");
 
+
+
+    }
+    onActivate() {
+        this.player.pos = new Vector(1155, 170)
     }
 }
