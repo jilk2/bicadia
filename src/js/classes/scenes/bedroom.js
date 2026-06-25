@@ -40,7 +40,7 @@ export class Bedroom extends Scene {
     this.add(this.player)
 
 
-
+    
     this.thinkBubble = new ThinkBubble();
     this.add(this.thinkBubble);
     this.thinkBubble.loadNextGoal("walk around using wasd");

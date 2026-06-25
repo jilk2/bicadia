@@ -52,7 +52,7 @@ export class Classroom extends Scene {
 
         this.thinkBubble = new ThinkBubble();
         this.add(this.thinkBubble);
-        this.thinkBubble.loadNextGoal("I need to ask someone for a pen");
+        this.thinkBubble.loadNextGoal("I need to ask for a pen");
 
 
 
