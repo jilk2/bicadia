@@ -12,13 +12,13 @@ export class Textbox extends Actor {
       x: -300,
       y: -50,
       text: initialText,
-      scale: new Vector(2,2),
+      scale: new Vector(2, 2),
     });
     this.addChild(this.textLabel);
 
     this.continueLabel = new Label({
       color: Color.Black,
-      text: `press space to continue`,
+      text: `press the spacebar or the "B" button to continue`,
       x: 150,
       y: 30,
       scale: new Vector(2, 2),
