@@ -1,4 +1,4 @@
-import { Actor, Engine, Label, Scene, Vector } from "excalibur";
+import { Actor, Buttons, Engine, Label, Scene, Vector } from "excalibur";
 import { Resources } from "../../resources.js";
 import { Background } from "../gameobjects/background.js";
 
@@ -17,5 +17,14 @@ export class HowToPlay extends Scene {
     }
     BackToMainClickHandler() {
         this.engine.goToScene("startmenu");
+    }
+
+    onPreUpdate(engine){
+        const mygamepad = engine.mygamepad
+        if (!mygamepad) return
+
+        if (mygamepad.isButtonPressed(Buttons.Face2)) {
+            this.engine.goToScene("startmenu")
+        }
     }
 }
