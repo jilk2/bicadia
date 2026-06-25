@@ -11,6 +11,7 @@ import {
 } from "excalibur";
 import { Resources } from "../../resources";
 import { Choices } from "../gameobjects/choices";
+import { Minigame } from "./minigame";
 import dialogueData from "../../data/dialogue.json";
 
 export class Dialogue extends Scene {
@@ -55,7 +56,7 @@ export class Dialogue extends Scene {
 
   showQuestion(id) {
     this.dialog = dialogueData.find((d) => d.id === id);
-        this.questionLabel.text = this.dialog.question;
+    this.questionLabel.text = this.dialog.question;
     this.removeChoices();
     if (this.dialog.choices && this.dialog.choices.length > 0) {
       this.activeChoices = new Choices(this.dialog.choices, (id) => {
@@ -72,7 +73,7 @@ export class Dialogue extends Scene {
       this.activeChoices = null;
     }
   }
-  onPreUpdate(engine) {
+    onPreUpdate(engine) {
     const spacePressed = engine.input.keyboard.wasPressed(Keys.Space);
     const face3Pressed = engine.mygamepad?.isButtonPressed(Buttons.Face1);
 
@@ -82,6 +83,13 @@ export class Dialogue extends Scene {
       this.showQuestion(this.dialog.targetConvo);
     } else {
       this._hasReachEnd = true;
+    }
+
+    if(this.dialog.loadScene == "minigame"){
+            engine.remove("minigame");
+      this.minigame = new Minigame(this.dialog.targetConvo);
+      engine.addScene("minigame", this.minigame);
+      engine.goToScene("minigame");
     }
     if (this.dialog.loadScene != null && this._hasReachEnd == true) {
       engine.goToScene(this.dialog.loadScene);

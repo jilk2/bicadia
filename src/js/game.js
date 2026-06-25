@@ -42,7 +42,6 @@ export class Game extends Engine {
     this.addScene("classroom", new Classroom());
     this.addScene("startmenu", new StartMenu());
     this.addScene("howtoplay", new HowToPlay());
-    this.addScene("minigame", new Minigame());
     this.addScene("creation", new CharacterCreation());
     // this.addScene("livingroom", new Livingroom());
     // this.addScene("classroom", new Classroom());

@@ -92,7 +92,8 @@
   {
     "id": "livingroom_doormat_0h",
     "question": "[Inner:] I don't want to go... I really don't want to go...",
-    "loadScene": "minigame"
+    "loadScene": "minigame",
+    "targetConvo": "minigame_succes_0a"
   },
   {
     "id": "minigame_succes_0a",

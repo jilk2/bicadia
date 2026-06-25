@@ -41,7 +41,7 @@ export class Classroom extends Scene {
             this.add(new Silhouette(x, y))
         }
 
-        this.add(new Door(1150, 85, "livingroom"))
+        this.add(new Door(1150, 85, "livingroom", "talkedToEmiely"))
 
         this.add(new InteractableNpc(800, 570))
 
