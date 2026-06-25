@@ -14,7 +14,6 @@ export class Classroom extends Scene {
     onInitialize(engine) {
         const background = new Background(Resources.Classroom);
         this.add(background);
-
         //borders
         this.add(new InvisibleWall(0, 300, 10, 1000)); // links
         this.add(new InvisibleWall(1280, 300, 10, 1000)); // rechts

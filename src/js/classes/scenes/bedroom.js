@@ -17,7 +17,7 @@ export class Bedroom extends Scene {
   onInitialize(engine) {
     const background = new Background(Resources.Bedroom);
     this.add(background);
-
+    console.log(engine.pronounce)
     //borders
     this.add(new InvisibleWall(0, 300, 30, 1000))         // links
     this.add(new InvisibleWall(1280, 300, 30, 1000))      // rechts

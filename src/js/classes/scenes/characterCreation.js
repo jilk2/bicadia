@@ -6,12 +6,13 @@ import { ArrowLeft } from "../gameobjects/arrowLeft.js";
 import { ArrowRight } from "../gameobjects/arrowRight.js";
 import { LocalStorageHandler } from "../../localstorageHandler.js";
 import { Dialogue } from "./dialogue.js";
+import { Pronounce } from "../gameobjects/pronounceChoice.js";
 
 export class CharacterCreation extends Scene {
   hairOptions = { 0: "ShortBlackHairSheet", 1: "LongBlackHairSheet" };
   selectedHair = 0;
 
-  skintoneOptions = { 0: "SkintoneTwo", 1: "skintoneOne" };
+  skintoneOptions = { 0: "skintoneOne", 1: "skintoneTwo", 2: "skintoneThree" };
   selectedSkintone = 0;
 
   shirtOptions = { 0: "LongSleevedRed" };
@@ -46,6 +47,12 @@ export class CharacterCreation extends Scene {
 
     this.player = new Player(690, 360, true);
     this.add(this.player);
+
+    this.PronounceOne = new Pronounce(engine);
+    this.add(this.PronounceOne);
+
+    // this.PronounceTwo = new Pronounce();
+    // this.add(this.PronounceTwo);
   }
 
   updateCharacter(options, direction) {
@@ -107,16 +114,5 @@ export class CharacterCreation extends Scene {
     this.player = new Player(690, 360, true);
     this.remove(this.player);
     this.add(this.player);
-  }
-
-  onPreUpdate(engine) {
-    if (engine.input.keyboard.isHeld(Keys.Space)) {
-      LocalStorageHandler.saveChosenOptions(
-        JSON.stringify(this.characterOptions),
-      );
-      this.dialogue = new Dialogue("bedroom_backpack_0");
-      engine.addScene("dialogue", this.dialogue);
-      engine.goToScene("dialogue")
-    }
   }
 }
