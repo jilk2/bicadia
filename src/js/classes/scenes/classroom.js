@@ -47,7 +47,7 @@ export class Classroom extends Scene {
 
         this.add(new Teacher(500, 150))
 
-        this.player = new Player(1150, 100)
+        this.player = new Player(1150, 200)
         this.add(this.player)
 
         this.thinkBubble = new ThinkBubble();

@@ -22,5 +22,6 @@ export class ConfidenceOrb extends Actor {
 
   interaction(engine) {
     this.kill();
+    engine.currentScene.updateScore(engine);
   }
 }

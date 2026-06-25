@@ -24,22 +24,29 @@ export class Insecurity extends Actor {
     this.scale = new Vector (6,6)
     this.interactable = false
 
-    // this.events.on("collisionStart", this.defeat())
+    this.on('collisionstart', (event) => this.defeat(event))
   }
 
-    onPreUpdate(engine){
-      const player = engine.currentScene.player
-      if (player) {
-        let direction = player.pos.sub(this.pos).normalize()
-        let distance = Vector.distance(player.pos, this.pos)
-        if (distance > 200){
-          this.vel = direction.scale(500)
-        } else if (distance <= 200){
-          this.vel = direction.scale(200)
-        }
-      }
-      
+  defeat(event){
+    if (event.other.owner instanceof Player) {
+      event.other.owner.kill()
+      this.scene.player = null;
+      this.scene?.engine.goToScene("bedroom")
     }
+  }
 
- 
+  onPreUpdate(engine){
+    const player = this.scene?.player
+    if (player) {
+      let direction = player.pos.sub(this.pos).normalize()
+      let distance = Vector.distance(player.pos, this.pos)
+      if (distance > 200){
+        this.vel = direction.scale(500)
+      } else if (distance <= 200){
+        this.vel = direction.scale(200)
+      }
+    }
+      
+  }
+  
 }
