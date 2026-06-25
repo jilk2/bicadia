@@ -1,4 +1,5 @@
 import { ImageSource, Sound, Resource, Loader } from "excalibur";
+import { HowToPlay } from "./classes/scenes/howtoplay";
 
 // voeg hier jouw eigen resources toe
 const Resources = {
@@ -13,6 +14,7 @@ const Resources = {
   Teacher: new ImageSource("images/Jürgen.png"),
   StartMenu: new ImageSource("images/background-menu.png"),
   MiniGame: new ImageSource("images/background-minigame.png"),
+  HowToPlay: new ImageSource("images/background-howtoplay.png"),
 
   //classroom objects
 
