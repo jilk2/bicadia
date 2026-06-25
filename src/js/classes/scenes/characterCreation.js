@@ -115,12 +115,4 @@ export class CharacterCreation extends Scene {
     this.remove(this.player);
     this.add(this.player);
   }
-
-  onPreUpdate(engine) {
-    if (engine.input.keyboard.isHeld(Keys.Space)) {
-      LocalStorageHandler.saveChosenOptions(
-        JSON.stringify(this.characterOptions),
-      );
-    }
-  }
 }

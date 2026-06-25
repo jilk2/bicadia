@@ -7,7 +7,7 @@ export class Pronounce extends Actor {
     super({ x: 800, y: 650 });
     // this.sprite = Resources.Textbox.toSprite();
     // this.graphics.use(this.sprite);
-    this.dialogue = new Dialogue("bedroom_backpack_0");
+    this.dialogue = new Dialogue("bedroom_backpack_0a");
     engine.addScene("dialogue", this.dialogue);
     this.pronounceOne = new Label({
       color: Color.Black,
