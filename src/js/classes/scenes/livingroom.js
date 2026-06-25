@@ -1,4 +1,4 @@
-import { Actor, Engine, Scene } from "excalibur";
+import { Actor, Engine, Scene, Vector } from "excalibur";
 import { Resources } from "../../resources.js";
 import { Background } from "../gameobjects/background.js";
 import { InvisibleWall } from "../gameobjects/invisible-wall.js"
@@ -42,5 +42,11 @@ export class Livingroom extends Scene {
 
         this.player = new Player(690, 360)
         this.add(this.player)
+
+
+    }
+
+    onActivate() {
+        this.player.pos = new Vector(1155, 255)
     }
 }
