@@ -62,7 +62,7 @@ const Resources = {
   PantsBlack: new ImageSource("images/pants-black.png"),
   LongSleevedRed: new ImageSource("images/longsleeve-red.png"),
   GreyShoesSheet: new ImageSource("images/shoes-grey.png"),
-  LongsleeveBlueSheet: new ImageSource("images/complete-longsleeve-blue.png"),
+  LongsleeveBlueSheet: new ImageSource("images/longsleeve-blue.png"),
   PantsBlueSheet: new ImageSource("images/complete-pants-blue.png"),
   ShirtRedTwoSheet: new ImageSource("images/complete-shirt-red2.png"),
   ShoesGreySheet: new ImageSource("images/complete-shoes-grey.png"),
