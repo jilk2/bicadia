@@ -1,4 +1,4 @@
-import { Actor, Engine, Scene, ScreenElement, Vector, Keys } from "excalibur";
+import { Actor, Engine, Scene, ScreenElement, Vector, Keys, Label, Color, Buttons, Axes } from "excalibur";
 import { Resources } from "../../resources.js";
 import { Background } from "../gameobjects/background.js";
 import { Player } from "../gameobjects/player.js";
@@ -33,6 +33,44 @@ export class CharacterCreation extends Scene {
   };
 
   onInitialize(engine) {
+    this.selectedRow = 0
+
+    this.rows = [
+      { label: "Hair", y: 120, type: "character" },
+      { label: "Skin", y: 200, type: "character" },
+      { label: "Shirt", y: 280, type: "character" },
+      { label: "Pants", y: 360, type: "character" },
+      { label: "Shoes", y: 440, type: "character" },
+      { label: "Pronouns", y: 520, type: "pronoun" },
+    ]
+
+    this.pronounOptions = ["He/Him", "She/Her", "They/Them"]
+    this.selectedPronoun = 0
+    this.pronounce = this.pronounOptions[this.selectedPronoun]
+
+    this.rowLabels = []
+
+    for (const row of this.rows) {
+      const label = new Label({
+        color: Color.Black,
+        text: row.label,
+        x: 250,
+        y: row.y,
+        scale: new Vector(2.2, 2.2),
+      });
+      this.add(label);
+      this.rowLabels.push(label);
+    }
+
+    this.cursor = new Label({
+      color: Color.Black,
+      text: ">",
+      x: 210,
+      y: this.rows[0].y,
+      scale: new Vector(2.2, 2.2),
+    });
+    this.add(this.cursor);
+
     for (let i = 0; i < 5; i++) {
       this.add(new ArrowLeft(i));
     }
@@ -115,4 +153,66 @@ export class CharacterCreation extends Scene {
     this.remove(this.player);
     this.add(this.player);
   }
+
+  onPreUpdate(engine){
+    const mygamepad = engine.mygamepad
+    if (!mygamepad) return
+
+    const y = mygamepad.getAxes(Axes.LeftStickY)
+    const x = mygamepad.getAxes(Axes.LeftStickX)
+
+    if (Math.abs(y) < 0.3) {
+      this.moveLocked = false
+    }
+    if (Math.abs(x) < 0.3) {
+      this.xLocked = false
+    }
+
+    if(!this.moveLocked){
+      if (y < -0.5) {
+        this.selectedRow = Math.max(0, this.selectedRow - 1)
+        this.moveLocked = true
+      }
+
+      if (y > 0.5) {
+        this.selectedRow = Math.min(this.rows.length - 1, this.selectedRow + 1)
+        this.moveLocked = true
+      }
+    }
+
+    if (!this.xLocked) {
+      if (this.selectedRow < 5) {
+        if (x < -0.5) {
+          this.updateCharacter(this.selectedRow, -1)
+          this.xLocked = true
+        }
+
+        if (x > 0.5) {
+          this.updateCharacter(this.selectedRow, 1)
+          this.xLocked = true
+        }
+      }
+
+      if (this.selectedRow === 5) {
+        if (x < -0.5) {
+          this.selectedPronoun = Math.max(0, this.selectedPronoun - 1)
+          this.xLocked = true
+        }
+
+        if (x > 0.5) {
+          this.selectedPronoun = Math.min(this.pronounOptions.length - 1, this.selectedPronoun + 1)
+          this.xLocked = true
+        }
+
+        this.pronounce = this.pronounOptions[this.selectedPronoun]
+      }
+    }
+
+    if (mygamepad.isButtonPressed(Buttons.Face1)) {
+      this.updateCharacter(this.selectedRow, 1)
+    }
+
+    this.cursor.pos = new Vector(210, this.rows[this.selectedRow].y)
+  }
+  
 }
