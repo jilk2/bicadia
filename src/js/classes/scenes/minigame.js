@@ -43,8 +43,8 @@ export class Minigame extends Scene {
     }
 
     spawnOrbs() {
-        for (let i = 0; i < 50; i++) {
-            const orb = new ConfidenceOrb(Math.random() * 1220 + 20,Math.random() * 540 + 150)
+        for (let i = 0; i < 40; i++) {
+            const orb = new ConfidenceOrb(Math.random() * 1220 + 20, Math.random() * 540 + 150)
             this.orbs.push(orb)
             this.add(orb)
         }
@@ -69,9 +69,9 @@ export class Minigame extends Scene {
         }
 
         this.insecurity.pos = new Vector(0, 360)
-        }
+    }
 
-        updateScore(engine) {
+    updateScore(engine) {
         this.score++
         this.scoreLabel.text = `Confidence: ${this.score}/20`
 

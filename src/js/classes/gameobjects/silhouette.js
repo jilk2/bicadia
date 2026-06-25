@@ -1,15 +1,15 @@
 import { Actor, CollisionType, Shape, Vector } from "excalibur";
 import { Resources } from "../../resources";
 
-export class Silhouette extends Actor{
+export class Silhouette extends Actor {
 
     constructor(x, y) {
 
-        super({ 
-            x, 
+        super({
+            x,
             y,
             collisionType: CollisionType.Fixed,
-            collider: Shape.Box(16, 15, new Vector(0.5, 0,15))
+            collider: Shape.Box(10, 12, new Vector(0.5, 0, 15))
         })
 
         this.graphics.use(Resources.Silhouette.toSprite());
