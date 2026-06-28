@@ -111,21 +111,6 @@
     "loadScene": "classroom"
   },
   {
-    "id": "minigame_fail_0a",
-    "question": "[Inner:] I can't do it...",
-    "targetConvo": "minigame_fail_0b"
-  },
-  {
-    "id": "minigame_fail_0b",
-    "question": "[Inner:] My head hurts and my heart feels like it is going to jump out of my chest.",
-    "targetConvo": "minigame_fail_0c"
-  },
-  {
-    "id": "minigame_fail_0c",
-    "question": "[Inner:] I'll stay home today...I just hope mom understands.",
-    "loadScene": "startmenu"
-  },
-  {
     "id": "school_classroom_inner_0a",
     "question": "[Inner:] My teacher looks friendly at least.",
     "loadScene": "classroom"
@@ -459,7 +444,8 @@
   {
     "id": "school_classroom_npc_1d",
     "question": "[Inner:] I want to thank them, but my throat feels dry...",
-    "loadScene": "minigame"
+    "loadScene": "minigame",
+    "targetConvo":"school_classroom_npc_1e"
   },
   {
     "id": "school_classroom_npc_1e",
@@ -520,7 +506,7 @@
   {
     "id": "confidence_conversation_1d",
     "question": "[Emily/Emiel:] Doesn't your head feel lighter now that you can focus on this conversation?",
-    "targetConvo": "confidence_conversation_1e"
+    "targetConvo": "confidence_conversation_1g"
   },
   {
     "id": "confidence_conversation_1g",

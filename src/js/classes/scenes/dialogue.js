@@ -73,7 +73,7 @@ export class Dialogue extends Scene {
       this.activeChoices = null;
     }
   }
-    onPreUpdate(engine) {
+  onPreUpdate(engine) {
     const spacePressed = engine.input.keyboard.wasPressed(Keys.Space);
     const face3Pressed = engine.mygamepad?.isButtonPressed(Buttons.Face1);
 
@@ -85,8 +85,8 @@ export class Dialogue extends Scene {
       this._hasReachEnd = true;
     }
 
-    if(this.dialog.loadScene == "minigame"){
-            engine.remove("minigame");
+    if (this.dialog.loadScene == "minigame") {
+      engine.removeScene("minigame");
       this.minigame = new Minigame(this.dialog.targetConvo);
       engine.addScene("minigame", this.minigame);
       engine.goToScene("minigame");
