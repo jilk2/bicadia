@@ -531,7 +531,7 @@
   {
     "id": "school_classroom_npc_2d",
     "question": "[Inner:] I hope I can at least.",
-    "loadScene": "classroom"
+    "loadScene": "classroom_after_class"
   },
   {
     "id": "school_classroom_after_class_0a",
