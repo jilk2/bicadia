@@ -13,8 +13,7 @@ import { Mat } from "../gameobjects/mat.js";
 import { Sidebank } from "../gameobjects/sidebank.js";
 import { ThinkBubble } from "../gameobjects/think-bubble.js";
 
-
-export class Livingroom extends Scene {
+export class LivingroomEnding extends Scene {
     onInitialize(engine) {
         const background = new Background(Resources.Livingroom);
         this.add(background);
@@ -28,10 +27,10 @@ export class Livingroom extends Scene {
 
 
 
-        this.add(new Door(1150, 180, "bedroom"))
+        this.add(new Door(1150, 180, "bedroom_ending"))
         this.add(new TVKast(158, 250))
         this.add(new Bank(300, 467))
-        this.add(new Doormat(1267, 645, "classroom"))
+        this.add(new Doormat(1267, 645,))
         this.add(new Klok(775, 90))
         this.add(new Lamp(1035, 205))
         this.add(new Mat(302, 600))
@@ -45,6 +44,9 @@ export class Livingroom extends Scene {
         this.player = new Player(690, 380)
         this.add(this.player)
 
+        this.thinkBubble = new ThinkBubble();
+        this.add(this.thinkBubble);
+        this.thinkBubble.loadNextGoal("I should put my bag away upstairs...");
 
     }
 
