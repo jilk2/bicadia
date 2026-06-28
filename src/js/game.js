@@ -11,13 +11,15 @@ import { Minigame } from "./classes/scenes/minigame.js";
 import { CharacterCreation } from "./classes/scenes/characterCreation.js";
 
 export class Game extends Engine {
-  bravePoints = 0;
+  pridePoints = 0;
+  confidencePoints = 0;
   pronounce;
   mygamepad;
 
   //variables to check if certain taskes are done
   pickedupBag = false;
   talkedToEmiely = false;
+  talkToTeacher = false
 
   constructor() {
     super({
@@ -47,6 +49,13 @@ export class Game extends Engine {
     // this.addScene("classroom", new Classroom());
     // this.goToScene("bedroom");
     this.goToScene("startmenu");
+  }
+
+  onPreUpdate(engine){
+        if (engine.input.keyboard.wasPressed(Keys.P)) {
+      console.log(this.pridePoints)
+      console.log(this.confidencePoints)
+    }
   }
 }
 

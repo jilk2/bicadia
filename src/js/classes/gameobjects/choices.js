@@ -1,36 +1,50 @@
-import { Actor, Color, Label, Vector } from "excalibur";
+import { Actor, Color, Label, Vector, Engine } from "excalibur";
 
 export class Choices extends Actor {
-  constructor(choices, onChoiceSelected) {
-    super({ width: 1000, height: 120 });
+  constructor(choices, onChoiceSelected, engine) {
+    super({
+      width: 1000,
+      height: 120,
+    });
+
+    this.engine = engine;
     this.choices = choices;
     this.onChoiceSelected = onChoiceSelected;
 
     this.option1Label = new Label({
+      text: choices[0].text,
       color: Color.Black,
       x: -150,
       y: 30,
       maxWidth: 200,
-      text: choices[0].text,
       scale: new Vector(2, 2),
     });
 
     this.option2Label = new Label({
+      text: choices[1].text,
       color: Color.Black,
       x: 250,
       y: 30,
       maxWidth: 200,
-      text: choices[1].text,
       scale: new Vector(2, 2),
     });
 
     this.addChild(this.option1Label);
     this.addChild(this.option2Label);
-    this.on("pointerdown", (event) => this.choiceClickHandler(event));
+
+    this.option1Label.on("pointerdown", () => this.choiceClickHandler(0));
+    this.option2Label.on("pointerdown", () => this.choiceClickHandler(1));
   }
 
-  choiceClickHandler(event) {
-    this.onChoiceSelected(this.choices[0].link);
-    this.onChoiceSelected(this.choices[1].link);
+choiceClickHandler(index, engine) {
+  const choice = this.choices[index];
+
+  if (index === 0) {
+    this.engine.pridePoints += choice.PridePoints;
+  } else {
+    this.engine.confidencePoints += choice.ConfidencePoints;
   }
+
+  this.onChoiceSelected(choice.link);
+}
 }

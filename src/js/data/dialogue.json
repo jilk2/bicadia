@@ -445,7 +445,7 @@
     "id": "school_classroom_npc_1d",
     "question": "[Inner:] I want to thank them, but my throat feels dry...",
     "loadScene": "minigame",
-    "targetConvo":"school_classroom_npc_1e"
+    "targetConvo": "school_classroom_npc_1e"
   },
   {
     "id": "school_classroom_npc_1e",
