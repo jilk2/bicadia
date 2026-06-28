@@ -23,7 +23,8 @@ export class Game extends Engine {
   //variables to check if certain taskes are done
   pickedupBag = false;
   talkedToEmiely = false;
-  talkToTeacher = false
+  talkToTeacher = false;
+  firstimeTalking = false;
 
   constructor() {
     super({
@@ -33,7 +34,7 @@ export class Game extends Engine {
       displayMode: DisplayMode.FitScreen,
     });
     this.start(ResourceLoader).then(() => this.startGame());
-    console.log(this.pronounce)
+    console.log(this.pronounce);
   }
 
   startGame() {
@@ -57,10 +58,10 @@ export class Game extends Engine {
     this.goToScene("startmenu");
   }
 
-  onPreUpdate(engine){
-        if (engine.input.keyboard.wasPressed(Keys.P)) {
-      console.log(this.pridePoints)
-      console.log(this.confidencePoints)
+  onPreUpdate(engine) {
+    if (engine.input.keyboard.wasPressed(Keys.P)) {
+      console.log(this.pridePoints);
+      console.log(this.confidencePoints);
     }
   }
 }

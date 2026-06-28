@@ -24,9 +24,17 @@ export class InteractableNpc extends Actor {
   }
 
   interaction(engine) {
-    engine.remove("dialogue");
-    this.dialogue = new Dialogue("school_classroom_npc_0a");
-    engine.addScene("dialogue", this.dialogue);
-    engine.goToScene("dialogue");
+    if (engine.firstimeTalking == false) {
+      engine.remove("dialogue");
+      this.dialogue = new Dialogue("school_classroom_npc_0a");
+      engine.addScene("dialogue", this.dialogue);
+      engine.goToScene("dialogue");
+      engine.firstimeTalking = true;
+    } else {
+      engine.remove("dialogue");
+      this.dialogue = new Dialogue("school_classroom_after_class_0a");
+      engine.addScene("dialogue", this.dialogue);
+      engine.goToScene("dialogue");
+    }
   }
 }
