@@ -21,10 +21,10 @@ export class Doormat extends Actor {
 
     interaction(engine) {
         engine.goToScene(engine.goToScene(this.targetScene));
-            engine.remove("dialogue");
-            this.dialogue = new Dialogue("livingroom_doormat_0");
-            engine.addScene("dialogue", this.dialogue);
-            engine.goToScene("dialogue")
+        engine.remove("dialogue");
+        this.dialogue = new Dialogue("livingroom_doormat_0a");
+        engine.addScene("dialogue", this.dialogue);
+        engine.goToScene("dialogue")
     }
-    
+
 }

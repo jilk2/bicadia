@@ -40,7 +40,7 @@
     "loadScene": "bedroom"
   },
   {
-    "id": "bedroom_backpack_1",
+    "id": "bedroom_backpack_1a",
     "question": "[Inner:] It's heavier than I remember...",
     "targetConvo": "bedroom_backpack_1b"
   },
@@ -55,7 +55,7 @@
     "loadScene": "bedroom"
   },
   {
-    "id": "livingroom_doormat_0",
+    "id": "livingroom_doormat_0a",
     "question": "[Inner:] We've been here a few days now, and I still miss our old home.",
     "targetConvo": "livingroom_doormat_0b"
   },
@@ -166,7 +166,7 @@
     "loadScene": "classroom"
   },
   {
-    "id": "school_classroom_at_desk_0",
+    "id": "school_classroom_at_desk_0a",
     "question": "[Inner:] I can barely see the board... good.",
     "targetConvo": "school_classroom_at_desk_0b"
   },
@@ -506,10 +506,10 @@
   {
     "id": "confidence_conversation_1d",
     "question": "[Emily/Emiel:] Doesn't your head feel lighter now that you can focus on this conversation?",
-    "targetConvo": "confidence_conversation_1g"
+    "targetConvo": "confidence_conversation_1e"
   },
   {
-    "id": "confidence_conversation_1g",
+    "id": "confidence_conversation_1e",
     "question": "[You:] A little bit, I think...",
     "targetConvo": "school_classroom_npc_2a"
   },
@@ -529,7 +529,7 @@
     "targetConvo": "school_classroom_npc_2d"
   },
   {
-    "id": "school_classroom_npc_2e",
+    "id": "school_classroom_npc_2d",
     "question": "[Inner:] I hope I can at least.",
     "loadScene": "classroom"
   },
@@ -554,7 +554,7 @@
     "targetConvo": "school_classroom_after_class_0e"
   },
   {
-    "id": "school_classroom_after_class_0f",
+    "id": "school_classroom_after_class_0e",
     "question": "[You:] Still a little overwhelmed, but, not as much as I thought.",
     "targetConvo": "school_classroom_after_class_0g"
   },
@@ -702,7 +702,7 @@
   {
     "id": "queer_conversation_2n",
     "question": "[Emily/Emiel:] — You feeling different from others is totally normal and okay. A lot of people feel that way.",
-    "targetConvo": "queer_conversation_2o"
+    "targetConvo": "queer_conversation_2p"
   },
   {
     "id": "queer_conversation_2p",
@@ -735,7 +735,7 @@
     "targetConvo": "confidence_conversation_2d"
   },
   {
-    "id": "confidence_conversation_2e",
+    "id": "confidence_conversation_2d",
     "question": "[Emily/Emiel:] Well, the short answer is..., you can't.",
     "targetConvo": "confidence_conversation_2f"
   },
@@ -802,10 +802,10 @@
   {
     "id": "livingroom_after_school_0c",
     "question": "[Inner:] My whole body feels like jelly.",
-    "targetConvo": "livingroom_after_school_0e"
+    "targetConvo": "livingroom_after_school_0d"
   },
   {
-    "id": "livingroom_after_school_0f",
+    "id": "livingroom_after_school_0d",
     "question": "[Inner:] I should put my bag away upstairs first...",
     "loadScene": "livingroom"
   },
