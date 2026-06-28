@@ -5,7 +5,7 @@ import { Player } from "./player";
 
 export class Insecurity extends Actor {
 
-  constructor(x, y) {
+  constructor(x, y, targetScene) {
 
     const sprite = Resources.Silhouette.toSprite()
 
@@ -31,7 +31,7 @@ export class Insecurity extends Actor {
     if (event.other.owner instanceof Player) {
       event.other.owner.kill()
       this.scene.player = null;
-      this.scene?.engine.goToScene("bedroom")
+      this.scene?.engine.goToScene(targetScene)
     }
   }
 

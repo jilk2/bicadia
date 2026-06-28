@@ -62,7 +62,7 @@ export class Dialogue extends Scene {
       this.activeChoices = new Choices(this.dialog.choices, (id) => {
         this.removeChoices();
         this.showQuestion(id);
-      });
+      }, this.engine);
       this.add(this.activeChoices);
     }
   }
@@ -86,6 +86,7 @@ export class Dialogue extends Scene {
     }
 
     if (this.dialog.loadScene == "minigame") {
+      console.log(engine.pridePoints)
       engine.removeScene("minigame");
       this.minigame = new Minigame(this.dialog.targetConvo);
       engine.addScene("minigame", this.minigame);

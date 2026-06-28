@@ -8,8 +8,9 @@ import { ConfidenceOrb } from "../gameobjects/confidence-orb.js";
 import { Dialogue } from "./dialogue.js";
 
 export class Minigame extends Scene {
-  constructor(targetConvo) {
+  constructor(targetConvo, loseScene) {
     super();
+    this.loseScene = loseScene
     this.targetConvo = targetConvo;
     this.createScene();
   }
@@ -43,7 +44,7 @@ export class Minigame extends Scene {
     this.player = new Player(690, 360);
     this.add(this.player);
 
-    this.insecurity = new Insecurity(0, 360);
+    this.insecurity = new Insecurity(0, 360, this.loseScene);
     this.add(this.insecurity);
   }
 

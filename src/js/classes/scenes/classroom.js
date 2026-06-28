@@ -58,6 +58,6 @@ export class Classroom extends Scene {
 
     }
     onActivate() {
-        this.player.pos = new Vector(1155, 190)
+        // this.player.pos = new Vector(1155, 190)
     }
 }

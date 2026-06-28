@@ -15,13 +15,15 @@ import { ClassroomAfterClass } from "./classes/scenes/classroomAfterClass.js";
 import { BedroomEnding } from "./classes/scenes/bedroomEnding.js";
 
 export class Game extends Engine {
-  bravePoints = 0;
+  pridePoints = 0;
+  confidencePoints = 0;
   pronounce;
   mygamepad;
 
   //variables to check if certain taskes are done
   pickedupBag = false;
   talkedToEmiely = false;
+  talkToTeacher = false
 
   constructor() {
     super({
@@ -53,6 +55,13 @@ export class Game extends Engine {
     this.addScene("bedroom_ending", new BedroomEnding());
     this.goToScene("bedroom");
     this.goToScene("startmenu");
+  }
+
+  onPreUpdate(engine){
+        if (engine.input.keyboard.wasPressed(Keys.P)) {
+      console.log(this.pridePoints)
+      console.log(this.confidencePoints)
+    }
   }
 }
 
