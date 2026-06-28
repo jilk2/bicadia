@@ -108,7 +108,7 @@
   {
     "id": "minigame_succes_0c",
     "question": "[Inner:] I can hear the bus in the distance. Let's just go before I start overthinking",
-    "loadScene": "classroom"
+    "targetConvo": "school_classroom_inner_0a"
   },
   {
     "id": "school_classroom_inner_0a",
