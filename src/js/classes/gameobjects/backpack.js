@@ -30,7 +30,7 @@ export class Backpack extends Actor {
     console.log(engine.pickedupBag)
     console.log(engine.pronounce)
     engine.remove("dialogue");
-    this.dialogue = new Dialogue("bedroom_backpack_1");
+    this.dialogue = new Dialogue("bedroom_backpack_1a");
     engine.addScene("dialogue", this.dialogue);
     engine.goToScene("dialogue")
   }
