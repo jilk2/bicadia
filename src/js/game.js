@@ -9,6 +9,7 @@ import { StartMenu } from "./classes/scenes/startmenu.js";
 import { HowToPlay } from "./classes/scenes/howtoplay.js";
 import { Minigame } from "./classes/scenes/minigame.js";
 import { CharacterCreation } from "./classes/scenes/characterCreation.js";
+import { EndingScreen } from "./classes/scenes/endingscreen.js";
 
 export class Game extends Engine {
   bravePoints = 0;
@@ -43,6 +44,7 @@ export class Game extends Engine {
     this.addScene("startmenu", new StartMenu());
     this.addScene("howtoplay", new HowToPlay());
     this.addScene("creation", new CharacterCreation());
+    this.addScene("endingscreen", new EndingScreen());
     // this.addScene("livingroom", new Livingroom());
     // this.addScene("classroom", new Classroom());
     // this.goToScene("bedroom");

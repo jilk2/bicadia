@@ -15,6 +15,7 @@ const Resources = {
   StartMenu: new ImageSource("images/background-menu.png"),
   MiniGame: new ImageSource("images/background-minigame.png"),
   HowToPlay: new ImageSource("images/background-howtoplay.png"),
+  endScreen: new ImageSource("images/endscreen.png"),
 
   //classroom objects
 

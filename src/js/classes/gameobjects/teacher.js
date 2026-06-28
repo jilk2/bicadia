@@ -1,5 +1,7 @@
 import { Actor, CollisionType, Shape, Vector } from "excalibur";
 import { Resources } from "../../resources";
+import { Player } from "./player";
+import { Dialogue } from "../scenes/dialogue";
 
 export class Teacher extends Actor {
 
