@@ -25,4 +25,18 @@ export class DoorEnding extends Actor {
     this.body.collisionType = CollisionType.Fixed;
     this.scale = new Vector(3.6, 3.6);
   }
+
+  interaction(engine) {
+    if (engine.pridePoints > engine.confidencePoints) {
+      engine.remove("dialogue");
+      this.dialogue = new Dialogue("queer_ending_0a");
+      engine.addScene("dialogue", this.dialogue);
+      engine.goToScene("dialogue");
+    } else {
+      engine.remove("dialogue");
+      this.dialogue = new Dialogue("confidence_ending_0a");
+      engine.addScene("dialogue", this.dialogue);
+      engine.goToScene("dialogue");
+    }
+  }
 }
