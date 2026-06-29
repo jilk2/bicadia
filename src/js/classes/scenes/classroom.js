@@ -50,9 +50,17 @@ export class Classroom extends Scene {
         this.player = new Player(1150, 200)
         this.add(this.player)
 
-        this.thinkBubble = new ThinkBubble();
-        this.add(this.thinkBubble);
-        this.thinkBubble.loadNextGoal("My teacher looks friendly at least...");
+        if (!engine.talkToTeacher) {
+            this.thinkBubble = new ThinkBubble();
+            this.add(this.thinkBubble);
+            this.thinkBubble.loadNextGoal("My teacher looks friendly at least...");
+        } else {
+            this.remove(this.thinkBubble)
+            this.thinkBubble = new ThinkBubble();
+            this.add(this.thinkBubble);
+            this.thinkBubble.loadNextGoal("Find a seat...well, there is only one. Luckily it is at the back of the class");
+        }
+
 
 
 

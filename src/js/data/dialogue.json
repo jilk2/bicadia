@@ -93,7 +93,15 @@
     "id": "livingroom_doormat_0h",
     "question": "[Inner:] I don't want to go... I really don't want to go...",
     "loadScene": "minigame",
-    "targetConvo": "minigame_succes_0a"
+    "targetSucceed": "minigame_succes_0a",
+    "targetLose": "minigame_failure_0a"
+  },
+  {
+    "id": "minigame_failure_0a",
+    "question": "[Inner:] This is a lot harder than I thought... Take a deep breath. You can do this.",
+    "targetSucceed": "minigame_succes_0a",
+    "targetLose": "minigame_failure_0a",
+    "loadScene": "minigame"
   },
   {
     "id": "minigame_succes_0a",
@@ -108,6 +116,11 @@
   {
     "id": "minigame_succes_0c",
     "question": "[Inner:] I can hear the bus in the distance. Let's just go before I start overthinking",
+    "targetConvo": "minigame_succes_0d"
+  },
+  {
+    "id": "minigame_succes_0d",
+    "question": "After some time you arrive at school and go to your class.",
     "loadScene": "classroom"
   },
   {
@@ -450,7 +463,15 @@
     "id": "school_classroom_npc_1d",
     "question": "[Inner:] I want to thank them, but my throat feels dry...",
     "loadScene": "minigame",
-    "targetConvo": "school_classroom_npc_1e"
+    "targetSucceed": "school_classroom_npc_1e",
+    "targetLose": "minigame_failure_1a"
+  },
+  {
+    "id": "minigame_failure_1a",
+    "question": "[Inner:] This is a lot harder than I thought... Take a deep breath. You can do this.",
+    "targetSucceed": "school_classroom_npc_1e",
+    "targetLose": "minigame_failure_1a",
+    "loadScene": "minigame"
   },
   {
     "id": "school_classroom_npc_1e",
