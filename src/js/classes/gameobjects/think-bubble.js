@@ -11,9 +11,10 @@ export class ThinkBubble extends Actor {
 
     this.textLabel = new Label({
       color: Color.Black,
-      x: -480,
-      y: -15,
-      scale: new Vector(7, 7)
+      x: -600,
+      y: -100,
+      scale: new Vector(7, 7),
+      maxWidth: 120
       // scale: new Vector(-5, -5),
     });
     this.addChild(this.textLabel);
