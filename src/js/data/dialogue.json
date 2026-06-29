@@ -192,31 +192,36 @@
   },
   {
     "id": "school_classroom_at_desk_0f",
-    "question": "[Inner:] What did he say about the powerhouse of the cell again?",
+    "question": "An hour goes by, but you find yourself unable to concentrate on the lesson.",
     "targetConvo": "school_classroom_at_desk_0g"
   },
   {
     "id": "school_classroom_at_desk_0g",
-    "question": "[Inner:] It's so hard to focus.",
+    "question": "[Inner:] What did he say about the powerhouse of the cell again?",
     "targetConvo": "school_classroom_at_desk_0h"
   },
   {
     "id": "school_classroom_at_desk_0h",
-    "question": "[Inner:] He's talking so fast.",
+    "question": "[Inner:] It's so hard to focus.",
     "targetConvo": "school_classroom_at_desk_0i"
   },
   {
     "id": "school_classroom_at_desk_0i",
-    "question": "[Inner:] My mind feels like it is racing from left to right and back.",
+    "question": "[Inner:] He's talking so fast.",
     "targetConvo": "school_classroom_at_desk_0k"
   },
   {
     "id": "school_classroom_at_desk_0k",
-    "question": "[Inner:] Maybe this was a bad idea...",
+    "question": "[Inner:] My mind feels like it is racing from left to right and back.",
     "targetConvo": "school_classroom_at_desk_0l"
   },
   {
     "id": "school_classroom_at_desk_0l",
+    "question": "[Inner:] Maybe this was a bad idea...",
+    "targetConvo": "school_classroom_at_desk_0m"
+  },
+  {
+    "id": "school_classroom_at_desk_0m",
     "question": "[Inner:] I should have stayed home.",
     "loadScene": "classroom"
   },
@@ -449,7 +454,7 @@
   },
   {
     "id": "school_classroom_npc_1e",
-    "question": "[Inner:] I want to thank them, but my throat feels dry...",
+    "question": "[Inner:] You can do this... Just thank them.",
     "choices": [
       {
         "text": "[You:] Thank you, again. I'm glad you talked to someone like me.",
@@ -531,6 +536,11 @@
   {
     "id": "school_classroom_npc_2d",
     "question": "[Inner:] I hope I can at least.",
+    "targetConvo": "school_classroom_npc_2e"
+  },
+  {
+    "id": "school_classroom_npc_2e",
+    "question": "A few hours pass by and the class finally ends.",
     "loadScene": "classroom_after_class"
   },
   {
