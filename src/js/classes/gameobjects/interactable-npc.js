@@ -48,7 +48,7 @@ export class InteractableNpc extends Actor {
   interaction(engine) {
     if (engine.firstimeTalking == false && engine.talkToTeacher == true) {
       engine.remove("dialogue");
-      this.dialogue = new Dialogue("school_classroom_npc_0a");
+      this.dialogue = new Dialogue("school_classroom_at_desk_0a");
       engine.addScene("dialogue", this.dialogue);// hoort in game.js
       engine.firstimeTalking = true;
       engine.goToScene("dialogue");

@@ -48,7 +48,7 @@ export class Livingroom extends Scene {
 
         this.thinkBubble = new ThinkBubble();
         this.add(this.thinkBubble);
-        this.thinkBubble.loadNextGoal("I don't want to go outside, but I can hear the bus in the distance");
+        this.thinkBubble.loadNextGoal("I don't want to go outside, but I can hear the bus in t-he distance");
     }
 
     onActivate() {
