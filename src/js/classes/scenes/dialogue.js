@@ -19,6 +19,7 @@ export class Dialogue extends Scene {
   _hasReachEnd = false;
   constructor(scene) {
     super();
+    this.backgroundColor = Color.Black
     this._hasReachEnd = false;
     this.questionLabel = new Label({
       color: Color.Black,

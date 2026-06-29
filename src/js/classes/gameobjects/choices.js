@@ -13,7 +13,7 @@ export class Choices extends Actor {
 
     this.option1Label = new Label({
       text: choices[0].text,
-      color: Color.Black,
+      color: Color.White,
       x: 350,
       y: 200,
       maxWidth: 300,
@@ -22,7 +22,7 @@ export class Choices extends Actor {
 
     this.option2Label = new Label({
       text: choices[1].text,
-      color: Color.Black,
+      color: Color.White,
       x: 350,
       y: 250,
       maxWidth: 300,
