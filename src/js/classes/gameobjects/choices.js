@@ -14,19 +14,20 @@ export class Choices extends Actor {
     this.option1Label = new Label({
       text: choices[0].text,
       color: Color.Black,
-      x: -150,
-      y: 30,
-      maxWidth: 200,
+      x: 350,
+      y: 200,
+      maxWidth: 300,
       scale: new Vector(2, 2),
     });
 
     this.option2Label = new Label({
       text: choices[1].text,
       color: Color.Black,
-      x: 250,
-      y: 30,
-      maxWidth: 200,
+      x: 350,
+      y: 250,
+      maxWidth: 300,
       scale: new Vector(2, 2),
+
     });
 
     this.addChild(this.option1Label);
@@ -36,15 +37,15 @@ export class Choices extends Actor {
     this.option2Label.on("pointerdown", () => this.choiceClickHandler(1));
   }
 
-choiceClickHandler(index, engine) {
-  const choice = this.choices[index];
+  choiceClickHandler(index, engine) {
+    const choice = this.choices[index];
 
-  if (index === 0) {
-    this.engine.pridePoints += choice.PridePoints;
-  } else {
-    this.engine.confidencePoints += choice.ConfidencePoints;
+    if (index === 0) {
+      this.engine.pridePoints += choice.PridePoints;
+    } else {
+      this.engine.confidencePoints += choice.ConfidencePoints;
+    }
+
+    this.onChoiceSelected(choice.link);
   }
-
-  this.onChoiceSelected(choice.link);
-}
 }
