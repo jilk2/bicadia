@@ -38,10 +38,16 @@ export class ClassroomAfterClass extends Scene {
         this.player = new Player(1150, 200)
         this.add(this.player)
 
-        this.thinkBubble = new ThinkBubble();
-        this.add(this.thinkBubble);
-        this.thinkBubble.loadNextGoal("I feel nervous... but I shou-ld talk to Emily/Emiel.");
-
+        if (!engine.talkedToEmiely) {
+            this.thinkBubble = new ThinkBubble();
+            this.add(this.thinkBubble);
+            this.thinkBubble.loadNextGoal("I feel nervous... but I shou-ld talk to Emily/Emiel.");
+        } else {
+            this.remove(this.thinkBubble)
+            this.thinkBubble = new ThinkBubble();
+            this.add(this.thinkBubble);
+            this.thinkBubble.loadNextGoal("I'm exhausted... I should go home.");
+        }
 
 
     }
