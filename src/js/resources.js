@@ -10,7 +10,8 @@ const Resources = {
   InvisibleWall: new ImageSource("images/invis.png"),
   Classroom: new ImageSource("images/background-classroomsprites.png"),
   Silhouette: new ImageSource("images/silhouet.png"),
-  Emiely: new ImageSource("images/emily.png"),
+  Emily: new ImageSource("images/emily.png"),
+  Emiel: new ImageSource("images/emiel.png"),
   Teacher: new ImageSource("images/Jürgen.png"),
   StartMenu: new ImageSource("images/background-menu.png"),
   MiniGame: new ImageSource("images/background-minigame.png"),
@@ -18,7 +19,6 @@ const Resources = {
   endScreen: new ImageSource("images/endscreen.png"),
 
   //classroom objects
-
 
   //livingroom objects
   Door: new ImageSource("images/Door.png"),
@@ -54,8 +54,6 @@ const Resources = {
   ArrowLeft: new ImageSource("images/Chevron-Arrow-Left.png"),
   ArrowRight: new ImageSource("images/Chevron-Arrow-Right.png"),
 
-
-
   //character costumization
   skintoneOne: new ImageSource("images/skintoneone.png"),
   ShirtRed: new ImageSource("images/shirt-red.png"),
@@ -72,9 +70,7 @@ const Resources = {
   LongBlackHairSheet: new ImageSource("images/BlackLongHair.png"),
   ShortBlackHairSheet: new ImageSource("images/BlackShortHair.png"),
   skintoneTwo: new ImageSource("images/skintonetwo.png"),
-  skintoneThree: new ImageSource(
-    "images/skintonethree.png",
-  ),
+  skintoneThree: new ImageSource("images/skintonethree.png"),
 };
 
 const ResourceLoader = new Loader();

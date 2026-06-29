@@ -43,7 +43,7 @@ export class Classroom extends Scene {
 
         this.add(new Door(1150, 85, "livingroom", "talkedToEmiely"))
 
-        this.add(new InteractableNpc(800, 570))
+        this.add(new InteractableNpc(800, 570, engine))
 
         this.add(new Teacher(500, 150))
 
