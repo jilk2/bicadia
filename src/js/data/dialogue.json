@@ -140,7 +140,7 @@
   },
   {
     "id": "school_classroom_teacher_0c",
-    "question": "[Teacher]: Excellent. We are glad to have you. You can call me Mr Brigsby.",
+    "question": "[Teacher]: Excellent. We are glad to have you. You can call me Mr Jürgen.",
     "targetConvo": "school_classroom_teacher_0d"
   },
   {
@@ -185,7 +185,7 @@
   },
   {
     "id": "school_classroom_at_desk_0b",
-    "question": "[Inner:] That means Mr Brigsby is less likely to ask me a question.",
+    "question": "[Inner:] That means Mr Jürgen is less likely to ask me a question.",
     "targetConvo": "school_classroom_at_desk_0c"
   },
   {
@@ -240,7 +240,7 @@
   },
   {
     "id": "school_classroom_npc_0a",
-    "question": "[Emily/Emiel:] Hey, are you okay?",
+    "question": "[Student:] Hey, are you okay?",
     "targetConvo": "school_classroom_npc_0b"
   },
   {
@@ -250,12 +250,12 @@
   },
   {
     "id": "school_classroom_npc_0c",
-    "question": "[Emily/Emiel:] Of course i'm talking to you, silly.",
+    "question": "[Student:] Of course i'm talking to you, silly.",
     "targetConvo": "school_classroom_npc_0d"
   },
   {
     "id": "school_classroom_npc_0d",
-    "question": "[Emily/Emiel:] You are the only one on my right after all.",
+    "question": "[Student:] You are the only one on my right after all.",
     "targetConvo": "school_classroom_npc_0e"
   },
   {
@@ -265,17 +265,17 @@
   },
   {
     "id": "school_classroom_npc_0f",
-    "question": "[Emily/Emiel:] It's not a stupid question.",
+    "question": "[Student:] It's not a stupid question.",
     "targetConvo": "school_classroom_npc_0g"
   },
   {
     "id": "school_classroom_npc_0g",
-    "question": "[Emily/Emiel:] I can tell you are nervous.",
+    "question": "[Student:] I can tell you are nervous.",
     "targetConvo": "school_classroom_npc_0h"
   },
   {
     "id": "school_classroom_npc_0h",
-    "question": "[Emily/Emiel:] I didn't call you silly because I think you are actually silly.",
+    "question": "[Student:] I didn't call you silly because I think you are actually silly.",
     "targetConvo": "school_classroom_npc_0i"
   },
   {
@@ -285,7 +285,7 @@
   },
   {
     "id": "school_classroom_npc_0k",
-    "question": "[Emily/Emiel:] You are new here right?",
+    "question": "[Student:] You are new here right?",
     "targetConvo": "school_classroom_npc_0l"
   },
   {
@@ -295,12 +295,12 @@
   },
   {
     "id": "school_classroom_npc_0m",
-    "question": "[Emily/Emiel:] No wonder you are nervous then.",
+    "question": "[Student:] No wonder you are nervous then.",
     "targetConvo": "school_classroom_npc_0n"
   },
   {
     "id": "school_classroom_npc_0n",
-    "question": "[Emily/Emiel:] That's the first day jitters talking inside your head.",
+    "question": "[Student:] That's the first day jitters talking inside your head.",
     "targetConvo": "school_classroom_npc_0o"
   },
   {
@@ -310,12 +310,12 @@
   },
   {
     "id": "school_classroom_npc_0p",
-    "question": "[Emily/Emiel:] Wobbly legs, teeth clenching, avoiding the teachers gaze; really, really wanting to go home.",
+    "question": "[Student:] Wobbly legs, teeth clenching, avoiding the teachers gaze; really, really wanting to go home.",
     "targetConvo": "school_classroom_npc_0r"
   },
   {
     "id": "school_classroom_npc_0r",
-    "question": "[Emily/Emiel:] Am I close?",
+    "question": "[Student:] Am I close?",
     "targetConvo": "school_classroom_npc_0s"
   },
   {
@@ -330,37 +330,37 @@
   },
   {
     "id": "school_classroom_npc_0v",
-    "question": "[Emily/Emiel:] I recognized it from experience.",
+    "question": "[Student:] I recognized it from experience.",
     "targetConvo": "school_classroom_npc_0w"
   },
   {
     "id": "school_classroom_npc_0w",
-    "question": "[Emily/Emiel:] I remember first sitting down, and feeling like the classroom would cave in.",
+    "question": "[Student:] I remember first sitting down, and feeling like the classroom would cave in.",
     "targetConvo": "school_classroom_npc_0x"
   },
   {
     "id": "school_classroom_npc_0x",
-    "question": "[Emily/Emiel:] When Mr. Brigsby asked me a question about biology, I almost blurted out '24'.",
+    "question": "[Student:] When Mr. Jürgen asked me a question about biology, I almost blurted out '24'.",
     "targetConvo": "school_classroom_npc_0y"
   },
   {
     "id": "school_classroom_npc_0y",
-    "question": "[Emily/Emiel:] And don't get me started when I had to talk to others.",
+    "question": "[Student:] And don't get me started when I had to talk to others.",
     "targetConvo": "school_classroom_npc_0z"
   },
   {
     "id": "school_classroom_npc_0z",
-    "question": "[Emily/Emiel:] I don't think I would have had the courage to talk to you, for example.",
+    "question": "[Student:] I don't think I would have had the courage to talk to you, for example.",
     "targetConvo": "school_classroom_npc_0za"
   },
   {
     "id": "school_classroom_npc_0za",
-    "question": "[Emily/Emiel:] Listen, I know it feels like a lot right now.",
+    "question": "[Student:] Listen, I know it feels like a lot right now.",
     "targetConvo": "school_classroom_npc_0zb"
   },
   {
     "id": "school_classroom_npc_0zb",
-    "question": "[Emily/Emiel:] But it gets better. Don't worry.",
+    "question": "[Student:] But it gets better. Don't worry.",
     "choices": [
       {
         "text": "[Inner:] Me? Someone needs courage to talk to *me*?!",
@@ -391,17 +391,17 @@
   },
   {
     "id": "queer_conversation_0d",
-    "question": "[Emily/Emiel:] Well, you are kind of cute. ",
+    "question": "[Student:] Well, you are kind of cute. ",
     "targetConvo": "queer_conversation_0e"
   },
   {
     "id": "queer_conversation_0e",
-    "question": "[Emily/Emiel:] And like I said before, I used to be a nervous wreck.",
+    "question": "[Student:] And like I said before, I used to be a nervous wreck.",
     "targetConvo": "queer_conversation_0f"
   },
   {
     "id": "queer_conversation_0f",
-    "question": "[Emily/Emiel:] Point is, I've been in your shoes at one point too.",
+    "question": "[Student:] Point is, I've been in your shoes at one point too.",
     "targetConvo": "queer_conversation_0g"
   },
   {
@@ -426,17 +426,17 @@
   },
   {
     "id": "confidence_conversation_0d",
-    "question": "[Emily/Emiel:] Even me! And a lot of other people too.",
+    "question": "[Student:] Even me! And a lot of other people too.",
     "targetConvo": "confidence_conversation_0e"
   },
   {
     "id": "confidence_conversation_0e",
-    "question": "[Emily/Emiel:] School is a frightening place after all.",
+    "question": "[Student:] School is a frightening place after all.",
     "targetConvo": "confidence_conversation_0f"
   },
   {
     "id": "confidence_conversation_0f",
-    "question": "[Emily/Emiel:] But, don't let that define you.",
+    "question": "[Student:] But, don't let that define you.",
     "targetConvo": "confidence_conversation_0g"
   },
   {
@@ -446,7 +446,7 @@
   },
   {
     "id": "school_classroom_npc_1a",
-    "question": "[Emily/Emiel:] You're welcome. You feel a bit better?",
+    "question": "[Student:] You're welcome. You feel a bit better?",
     "targetConvo": "school_classroom_npc_1b"
   },
   {
@@ -491,22 +491,22 @@
   },
   {
     "id": "queer_conversation_1a",
-    "question": "[Emily/Emiel:] I'm glad you are feeling better.",
+    "question": "[Student:] I'm glad you are feeling better.",
     "targetConvo": "queer_conversation_1b"
   },
   {
     "id": "queer_conversation_1b",
-    "question": "[Emily/Emiel:] I always try to help out when I can.",
+    "question": "[Student:] I always try to help out when I can.",
     "targetConvo": "queer_conversation_1c"
   },
   {
     "id": "queer_conversation_1c",
-    "question": "[Emily/Emiel:] And know that it gets easier to connect to people.",
+    "question": "[Student:] And know that it gets easier to connect to people.",
     "targetConvo": "queer_conversation_1d"
   },
   {
     "id": "queer_conversation_1d",
-    "question": "[Emily/Emiel:] Just like how we are connecting right now, see? Easy, right?",
+    "question": "[Student:] Just like how we are connecting right now, see? Easy, right?",
     "targetConvo": "queer_conversation_1e"
   },
   {
@@ -516,22 +516,22 @@
   },
   {
     "id": "confidence_conversation_1a",
-    "question": "[Emily/Emiel:] I'm glad you are feeling better.",
+    "question": "[Student:] I'm glad you are feeling better.",
     "targetConvo": "confidence_conversation_1b"
   },
   {
     "id": "confidence_conversation_1b",
-    "question": "[Emily/Emiel:] Overthinking everything is why the first day of school seems so overwhelming.",
+    "question": "[Student:] Overthinking everything is why the first day of school seems so overwhelming.",
     "targetConvo": "confidence_conversation_1c"
   },
   {
     "id": "confidence_conversation_1c",
-    "question": "[Emily/Emiel:] But really it goes by quite fast if you just keep your head cool.",
+    "question": "[Student:] But really it goes by quite fast if you just keep your head cool.",
     "targetConvo": "confidence_conversation_1d"
   },
   {
     "id": "confidence_conversation_1d",
-    "question": "[Emily/Emiel:] Doesn't your head feel lighter now that you can focus on this conversation?",
+    "question": "[Student:] Doesn't your head feel lighter now that you can focus on this conversation?",
     "targetConvo": "confidence_conversation_1e"
   },
   {
@@ -541,12 +541,12 @@
   },
   {
     "id": "school_classroom_npc_2a",
-    "question": "[Emily/Emiel:] Oh, seems Mr. Brigsby is about to go on a lecture again.",
+    "question": "[Student:] Oh, seems Mr. Jürgen is about to go on a lecture again.",
     "targetConvo": "school_classroom_npc_2b"
   },
   {
     "id": "school_classroom_npc_2b",
-    "question": "[Emily/Emiel:] Why don't we talk after class?",
+    "question": "[Student:] Why don't we talk after class?",
     "targetConvo": "school_classroom_npc_2c"
   },
   {
@@ -571,7 +571,7 @@
   },
   {
     "id": "school_classroom_after_class_0b",
-    "question": "[Emily/Emiel:] Of course. I said I would, didn't I?",
+    "question": "[Student:] Of course. I said I would, didn't I?",
     "targetConvo": "school_classroom_after_class_0c"
   },
   {
@@ -581,7 +581,7 @@
   },
   {
     "id": "school_classroom_after_class_0d",
-    "question": "[Emily/Emiel:] How are you feeling?",
+    "question": "[Student:] How are you feeling?",
     "targetConvo": "school_classroom_after_class_0e"
   },
   {
@@ -591,17 +591,17 @@
   },
   {
     "id": "school_classroom_after_class_0g",
-    "question": "[Emily/Emiel:] Glad to hear it. Means I made the right choice.",
+    "question": "[Student:] Glad to hear it. Means I made the right choice.",
     "targetConvo": "school_classroom_after_class_0h"
   },
   {
     "id": "school_classroom_after_class_0h",
-    "question": "[Emily/Emiel:] For now. Take a deep breath in—",
+    "question": "[Student:] For now. Take a deep breath in—",
     "targetConvo": "school_classroom_after_class_0i"
   },
   {
     "id": "school_classroom_after_class_0i",
-    "question": "[Emily/Emiel:] —And out.",
+    "question": "[Student:] —And out.",
     "targetConvo": "school_classroom_after_class_0j"
   },
   {
@@ -616,17 +616,17 @@
   },
   {
     "id": "school_classroom_after_class_0l",
-    "question": "[Emily/Emiel:] If you ever feel nervous again, focus on your breathing.",
+    "question": "[Student:] If you ever feel nervous again, focus on your breathing.",
     "targetConvo": "school_classroom_after_class_0m"
   },
   {
     "id": "school_classroom_after_class_0m",
-    "question": "[Emily/Emiel:] If that doesn't help, I am always nearby.",
+    "question": "[Student:] If that doesn't help, I am always nearby.",
     "targetConvo": "school_classroom_after_class_0n"
   },
   {
     "id": "school_classroom_after_class_0n",
-    "question": "[Emily/Emiel:] You'll be just fine, I know you will.",
+    "question": "[Student:] You'll be just fine, I know you will.",
     "targetConvo": "school_classroom_after_class_0o"
   },
   {
@@ -667,7 +667,7 @@
   },
   {
     "id": "queer_conversation_2b",
-    "question": "[Emily/Emiel:] A feeling? What kind.",
+    "question": "[Student:] A feeling? What kind.",
     "targetConvo": "queer_conversation_2c"
   },
   {
@@ -692,52 +692,52 @@
   },
   {
     "id": "queer_conversation_2g",
-    "question": "[Emily/Emiel:] Ah-",
+    "question": "[Student:] Ah-",
     "targetConvo": "queer_conversation_2h"
   },
   {
     "id": "queer_conversation_2h",
-    "question": "[Emily/Emiel:] I think I understand.",
+    "question": "[Student:] I think I understand.",
     "targetConvo": "queer_conversation_2hh"
   },
   {
     "id": "queer_conversation_2hh",
-    "question": "[Emily/Emiel:] Of course it is.",
+    "question": "[Student:] Of course it is.",
     "targetConvo": "queer_conversation_2i"
   },
   {
     "id": "queer_conversation_2i",
-    "question": "[Emily/Emiel:] Different isn't always bad, I'd even argue It's good. Usually, that is.",
+    "question": "[Student:] Different isn't always bad, I'd even argue It's good. Usually, that is.",
     "targetConvo": "queer_conversation_2j"
   },
   {
     "id": "queer_conversation_2j",
-    "question": "[Emily/Emiel:] If everyone was the same or felt the same, things would be so boring.",
+    "question": "[Student:] If everyone was the same or felt the same, things would be so boring.",
     "targetConvo": "queer_conversation_2k"
   },
   {
     "id": "queer_conversation_2k",
-    "question": "[Emily/Emiel:] Can you imagine a world full of Mr. Brigsby's? *Horrifying*, I know.",
+    "question": "[Student:] Can you imagine a world full of Mr. Jürgen's? *Horrifying*, I know.",
     "targetConvo": "queer_conversation_2l"
   },
   {
     "id": "queer_conversation_2l",
-    "question": "[Emily/Emiel:] Jokes aside. I know what you mean.",
+    "question": "[Student:] Jokes aside. I know what you mean.",
     "targetConvo": "queer_conversation_2m"
   },
   {
     "id": "queer_conversation_2m",
-    "question": "[Emily/Emiel:] I'm going to sound a little sappy with this, but—",
+    "question": "[Student:] I'm going to sound a little sappy with this, but—",
     "targetConvo": "queer_conversation_2n"
   },
   {
     "id": "queer_conversation_2n",
-    "question": "[Emily/Emiel:] — You feeling different from others is totally normal and okay. A lot of people feel that way.",
+    "question": "[Student:] — You feeling different from others is totally normal and okay. A lot of people feel that way.",
     "targetConvo": "queer_conversation_2p"
   },
   {
     "id": "queer_conversation_2p",
-    "question": "[Emily/Emiel:] But, I understand if that takes a bit to process. Think about, but, rest first. Okay?",
+    "question": "[Student:] But, I understand if that takes a bit to process. Think about, but, rest first. Okay?",
     "targetConvo": "queer_conversation_2q"
   },
   {
@@ -757,47 +757,47 @@
   },
   {
     "id": "confidence_conversation_2b",
-    "question": "[Emily/Emiel:] Like me?",
+    "question": "[Student:] Like me?",
     "targetConvo": "confidence_conversation_2c"
   },
   {
     "id": "confidence_conversation_2c",
-    "question": "[Emily/Emiel:] Ah.",
+    "question": "[Student:] Ah.",
     "targetConvo": "confidence_conversation_2d"
   },
   {
     "id": "confidence_conversation_2d",
-    "question": "[Emily/Emiel:] Well, the short answer is..., you can't.",
+    "question": "[Student:] Well, the short answer is..., you can't.",
     "targetConvo": "confidence_conversation_2f"
   },
   {
     "id": "confidence_conversation_2f",
-    "question": "[Emily/Emiel:] Unless you find a machine to switch our bodies, I suppose.",
+    "question": "[Student:] Unless you find a machine to switch our bodies, I suppose.",
     "targetConvo": "confidence_conversation_2g"
   },
   {
     "id": "confidence_conversation_2g",
-    "question": "[Emily/Emiel:] Jokes aside. I know what you mean.",
+    "question": "[Student:] Jokes aside. I know what you mean.",
     "targetConvo": "confidence_conversation_2h"
   },
   {
     "id": "confidence_conversation_2h",
-    "question": "[Emily/Emiel:] But, to avoid giving you a lecture like Mr. Brigsby—",
+    "question": "[Student:] But, to avoid giving you a lecture like Mr. Jürgen—",
     "targetConvo": "confidence_conversation_2i"
   },
   {
     "id": "confidence_conversation_2i",
-    "question": "[Emily/Emiel:] — You can learn from me, but, you should grow into your own person.",
+    "question": "[Student:] — You can learn from me, but, you should grow into your own person.",
     "targetConvo": "confidence_conversation_2j"
   },
   {
     "id": "confidence_conversation_2j",
-    "question": "[Emily/Emiel:] It's a little bit sappy, I know, but, it is true.",
+    "question": "[Student:] It's a little bit sappy, I know, but, it is true.",
     "targetConvo": "confidence_conversation_2k"
   },
   {
     "id": "confidence_conversation_2k",
-    "question": "[Emily/Emiel:] Just... Think about it for a while, okay? For now though, you should go rest.",
+    "question": "[Student:] Just... Think about it for a while, okay? For now though, you should go rest.",
     "targetConvo": "confidence_conversation_2l"
   },
   {
@@ -897,7 +897,7 @@
   },
   {
     "id": "queer_ending_0i",
-    "question": "[Inner:] Is it a crush? Do I, well, like Emily/Emiel?",
+    "question": "[Inner:] Is it a crush? Do I, well, like Student?",
     "targetConvo": "queer_ending_0j"
   },
   {
@@ -997,7 +997,7 @@
   },
   {
     "id": "confidence_ending_0i",
-    "question": "[Inner:] To think that someone as confident, kind and cheerful as Emily/Emiel could well—",
+    "question": "[Inner:] To think that someone as confident, kind and cheerful as Student could well—",
     "targetConvo": "confidence_ending_0j"
   },
   {
