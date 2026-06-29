@@ -23,7 +23,8 @@ export class Minigame extends Scene {
         this.score = 0;
     this.scoreLabel.text = `Confidence: ${this.score}/20`;
 
-    for (const orb of this.orbs) {
+    let deleteOrbs = this.actors.filter(act => act instanceof ConfidenceOrb)
+    for (const orb of deleteOrbs) {
       orb.kill();
     }
     this.orbs = [];
