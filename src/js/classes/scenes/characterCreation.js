@@ -33,6 +33,9 @@ export class CharacterCreation extends Scene {
   };
 
   onInitialize(engine) {
+    const background = new Background(Resources.CharacterCreation);
+    this.add(background);
+
     this.selectedRow = 0
 
     this.rows = [

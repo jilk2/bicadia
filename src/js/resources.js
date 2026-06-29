@@ -5,6 +5,7 @@ import { HowToPlay } from "./classes/scenes/howtoplay";
 const Resources = {
   Bedroom: new ImageSource("images/background-bedroom.png"),
   Livingroom: new ImageSource("images/background-livingroom.png"),
+  CharacterCreation: new ImageSource("images/background-customize.png"),
   PlayerSheet: new ImageSource("images/playersheet.png"),
   Textbox: new ImageSource("images/textbox.png"),
   InvisibleWall: new ImageSource("images/invis.png"),
@@ -17,6 +18,7 @@ const Resources = {
   MiniGame: new ImageSource("images/background-minigame.png"),
   HowToPlay: new ImageSource("images/background-howtoplay.png"),
   endScreen: new ImageSource("images/endscreen.png"),
+
 
   //classroom objects
 

@@ -10,7 +10,7 @@ export class Pronounce extends Actor {
     this.dialogue = new Dialogue("bedroom_backpack_0a");
     engine.addScene("dialogue", this.dialogue);
     this.pronounceOne = new Label({
-      color: Color.Black,
+      color: Color.White,
       x: -300,
       y: -50,
       text: "He/Him",
@@ -25,7 +25,7 @@ export class Pronounce extends Actor {
     });
 
     this.pronounceTwo = new Label({
-      color: Color.Black,
+      color: Color.White,
       x: -150,
       y: -50,
       text: "She/Her",
@@ -39,7 +39,7 @@ export class Pronounce extends Actor {
     });
 
     this.pronounceThree = new Label({
-      color: Color.Black,
+      color: Color.White,
       x: 0,
       y: -50,
       text: "They/Them",
@@ -53,9 +53,9 @@ export class Pronounce extends Actor {
     });
   }
   updatePronounColor(selectedPronoun) {
-    this.pronounceOne.color = Color.Black;
-    this.pronounceTwo.color = Color.Black;
-    this.pronounceThree.color = Color.Black;
+    this.pronounceOne.color = Color.White;
+    this.pronounceTwo.color = Color.White;
+    this.pronounceThree.color = Color.White;
 
     if (selectedPronoun === 0) {
       this.pronounceOne.color = Color.White;
