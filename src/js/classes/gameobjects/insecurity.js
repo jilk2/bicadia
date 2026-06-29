@@ -31,12 +31,12 @@ export class Insecurity extends Actor {
     if (event.other.owner instanceof Player) {
       event.other.owner.kill()
       this.scene.player = null;
-      this.scene?.engine.goToScene(targetScene)
+      this.scene.engine.goToScene(targetScene)
     }
   }
 
   onPreUpdate(engine) {
-    const player = this.scene?.player
+    const player = this.scene.player
     if (player) {
       let direction = player.pos.sub(this.pos).normalize()
       let distance = Vector.distance(player.pos, this.pos)
