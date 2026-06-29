@@ -52,4 +52,22 @@ export class Pronounce extends Actor {
       engine.goToScene("dialogue");
     });
   }
+  updatePronounColor(selectedPronoun) {
+    this.pronounceOne.color = Color.Black;
+    this.pronounceTwo.color = Color.Black;
+    this.pronounceThree.color = Color.Black;
+
+    if (selectedPronoun === 0) {
+      this.pronounceOne.color = Color.White;
+    }
+
+    if (selectedPronoun === 1) {
+      this.pronounceTwo.color = Color.White;
+    }
+
+    if (selectedPronoun === 2) {
+      this.pronounceThree.color = Color.White;
+    }
+  }
+
 }

@@ -154,7 +154,8 @@ export class CharacterCreation extends Scene {
     this.add(this.player);
   }
 
-  onPreUpdate(engine){
+  onPreUpdate(engine) {
+    this.selectedPronoun
     const mygamepad = engine.mygamepad
     if (!mygamepad) return
 
@@ -168,7 +169,7 @@ export class CharacterCreation extends Scene {
       this.xLocked = false
     }
 
-    if(!this.moveLocked){
+    if (!this.moveLocked) {
       if (y < -0.5) {
         this.selectedRow = Math.max(0, this.selectedRow - 1)
         this.moveLocked = true
@@ -213,6 +214,7 @@ export class CharacterCreation extends Scene {
     }
 
     this.cursor.pos = new Vector(210, this.rows[this.selectedRow].y)
+    this.PronounceOne.updatePronounColor(this.selectedPronoun);
   }
-  
+
 }
