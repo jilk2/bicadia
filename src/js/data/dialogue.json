@@ -838,7 +838,7 @@
   {
     "id": "livingroom_after_school_0d",
     "question": "[Inner:] I should put my bag away upstairs first...",
-    "loadScene": "livingroom"
+    "loadScene": "livingroom_ending"
   },
   {
     "id": "bedroom_after_school_0a",
