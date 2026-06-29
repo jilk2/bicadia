@@ -140,7 +140,7 @@
   },
   {
     "id": "school_classroom_teacher_0c",
-    "question": "[Teacher]: Excellent. We are glad to have you. You can call me Mr Jürgen.",
+    "question": "[Teacher]: Excellent. We are glad to have you. You can call me Mr Brigsby.",
     "targetConvo": "school_classroom_teacher_0d"
   },
   {
@@ -185,7 +185,7 @@
   },
   {
     "id": "school_classroom_at_desk_0b",
-    "question": "[Inner:] That means Mr Jürgen is less likely to ask me a question.",
+    "question": "[Inner:] That means Mr Brigsby is less likely to ask me a question.",
     "targetConvo": "school_classroom_at_desk_0c"
   },
   {
@@ -236,7 +236,7 @@
   {
     "id": "school_classroom_at_desk_0m",
     "question": "[Inner:] I should have stayed home.",
-    "loadScene": "classroom"
+    "targetConvo": "school_classroom_npc_0a"
   },
   {
     "id": "school_classroom_npc_0a",
@@ -340,7 +340,7 @@
   },
   {
     "id": "school_classroom_npc_0x",
-    "question": "[Student:] When Mr. Jürgen asked me a question about biology, I almost blurted out '24'.",
+    "question": "[Student:] When Mr. Brigsby asked me a question about biology, I almost blurted out '24'.",
     "targetConvo": "school_classroom_npc_0y"
   },
   {
@@ -541,7 +541,7 @@
   },
   {
     "id": "school_classroom_npc_2a",
-    "question": "[Student:] Oh, seems Mr. Jürgen is about to go on a lecture again.",
+    "question": "[Student:] Oh, seems Mr. Brigsby is about to go on a lecture again.",
     "targetConvo": "school_classroom_npc_2b"
   },
   {
@@ -717,7 +717,7 @@
   },
   {
     "id": "queer_conversation_2k",
-    "question": "[Student:] Can you imagine a world full of Mr. Jürgen's? *Horrifying*, I know.",
+    "question": "[Student:] Can you imagine a world full of Mr. Brigsby's? *Horrifying*, I know.",
     "targetConvo": "queer_conversation_2l"
   },
   {
@@ -782,7 +782,7 @@
   },
   {
     "id": "confidence_conversation_2h",
-    "question": "[Student:] But, to avoid giving you a lecture like Mr. Jürgen—",
+    "question": "[Student:] But, to avoid giving you a lecture like Mr. Brigsby—",
     "targetConvo": "confidence_conversation_2i"
   },
   {
@@ -897,7 +897,7 @@
   },
   {
     "id": "queer_ending_0i",
-    "question": "[Inner:] Is it a crush? Do I, well, like Student?",
+    "question": "[Inner:] Is it a crush? Do I, well, like that student that talked to me?",
     "targetConvo": "queer_ending_0j"
   },
   {

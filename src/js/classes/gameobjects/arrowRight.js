@@ -6,7 +6,10 @@ export class ArrowRight extends Actor {
     index
 
     constructor(i) {
-        super()
+        super({
+            width: Resources.ArrowRight.width * 2,
+            height: Resources.ArrowRight.height * 2, 
+        })
         this.index = i
         this.graphics.use(Resources.ArrowRight.toSprite())
         //  this.on("pointerdown", (event) => this.CharacterShirtAddIdHandler(event))

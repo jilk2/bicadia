@@ -40,20 +40,24 @@ export class Bedroom extends Scene {
     this.add(this.player)
 
 
-    if (!engine.pickedupBag) {
+
+
+
+
+
+  }
+
+  onActivate() {
+    if (!this.engine.pickedupBag) {
       this.thinkBubble = new ThinkBubble();
       this.add(this.thinkBubble);
       this.thinkBubble.loadNextGoal("Where did I put my bag a-gain...?");
-    } else if (engine.pickedupBag == true) {
+    } else {
       this.remove(this.thinkBubble)
       this.thinkBubble = new ThinkBubble();
       this.add(this.thinkBubble);
       this.thinkBubble.loadNextGoal("My legs feel so heavy. I wish I didn't have to go downstairs.");
     }
-
-
-
-
 
   }
 
