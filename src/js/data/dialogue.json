@@ -797,7 +797,7 @@
   {
     "id": "school_classroom_after_class_1c",
     "question": "[Inner:] Let's go home.",
-    "loadScene": "classroom"
+    "loadScene": "classroom_after_class"
   },
   {
     "id": "livingroom_after_school_0a",

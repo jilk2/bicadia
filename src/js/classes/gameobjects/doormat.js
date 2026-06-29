@@ -27,4 +27,4 @@ export class Doormat extends Actor {
         engine.goToScene("dialogue")
     }
 
-}
+} 
