@@ -35,22 +35,21 @@ export class LivingroomEnding extends Scene {
     this.add(new Mat(302, 600));
     this.add(new Sidebank(145, 600));
 
-    this.player = new Player(1155, 680);
+    this.player = new Player(1155, 480);
     this.add(this.player);
 
     this.thinkBubble = new ThinkBubble();
     this.add(this.thinkBubble);
     this.thinkBubble.loadNextGoal("I should put my bag away upstairs...");
-  }
-
-  onActivate(engine) {
-      this.player.pos = new Vector(1155, 680);
     if (!engine.enteredFinalLivingroom) {
-      engine.enteredFinalLivingroom = true;
       this.engine.remove("dialogue");
       this.dialogue = new Dialogue("livingroom_after_school_0a");
       this.engine.addScene("dialogue", this.dialogue);
       this.engine.goToScene("dialogue");
     }
+  }
+
+  onActivate(engine) {
+    this.player.pos = new Vector(1055, 480);
   }
 }
