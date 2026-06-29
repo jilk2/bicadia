@@ -90,7 +90,7 @@ export class Dialogue extends Scene {
     if (this.dialog.loadScene == "minigame") {
       console.log(engine.pridePoints)
       engine.removeScene("minigame");
-      this.minigame = new Minigame(this.dialog.targetConvo);
+      this.minigame = new Minigame(this.dialog.targetSucceed, this.dialog.targetLose);
       engine.addScene("minigame", this.minigame);
       engine.goToScene("minigame");
     }
