@@ -20,7 +20,24 @@ export class Minigame extends Scene {
   }
 
   onActivate(engine) {
-    this.resetScene();
+        this.score = 0;
+    this.scoreLabel.text = `Confidence: ${this.score}/20`;
+
+    for (const orb of this.orbs) {
+      orb.kill();
+    }
+    this.orbs = [];
+    this.spawnOrbs();
+
+    if (!this.player) {
+      this.player = new Player(690, 360);
+      this.add(this.player);
+    } else {
+      this.player.pos = new Vector(690, 360);
+      this.player.vel = new Vector(0, 0);
+    }
+
+    this.insecurity.pos = new Vector(0, 360);
   }
 
   createScene() {
