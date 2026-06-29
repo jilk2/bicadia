@@ -12,6 +12,9 @@ import { Dialogue } from "../scenes/dialogue";
 import { ThinkBubble } from "./think-bubble";
 
 export class InteractableNpc extends Actor {
+
+  dialogue
+
   constructor(x, y, engine) {
     let sprite;
     if (engine.pronounce == "He") {
@@ -46,15 +49,15 @@ export class InteractableNpc extends Actor {
     if (engine.firstimeTalking == false && engine.talkToTeacher == true) {
       engine.remove("dialogue");
       this.dialogue = new Dialogue("school_classroom_npc_0a");
-      engine.addScene("dialogue", this.dialogue);
-      engine.goToScene("dialogue");
+      engine.addScene("dialogue", this.dialogue);// hoort in game.js
       engine.firstimeTalking = true;
-    } else if (engine.firstimeTalking == true && engine.talkedToEmiely == false) {
+      engine.goToScene("dialogue");
+    } else if (engine.firstimeTalking == true && engine.talkedToEmielyAfterClass == false) {
       engine.remove("dialogue");
       this.dialogue = new Dialogue("school_classroom_after_class_0a");
-      engine.addScene("dialogue", this.dialogue);
+      engine.addScene("dialogue", this.dialogue); // hoort in game.js
+      engine.talkedToEmielyAfterClass = true
       engine.goToScene("dialogue");
-      engine.talkedToEmiely = true
     }
   }
 }

@@ -38,8 +38,9 @@ export class Teacher extends Actor {
             engine.remove("dialogue");
             this.dialogue = new Dialogue("school_classroom_teacher_0a");
             engine.addScene("dialogue", this.dialogue);
-            engine.goToScene("dialogue")
             engine.talkToTeacher = true
+            console.log(`set ${engine.talkToTeacher}`)
+            engine.goToScene("dialogue")
         }
     }
 }

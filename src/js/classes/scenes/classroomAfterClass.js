@@ -33,25 +33,26 @@ export class ClassroomAfterClass extends Scene {
 
         this.add(new Door(1150, 85, "livingroom_ending", "talkedToEmiely"))
 
-        this.add(new InteractableNpc(800, 570,engine))
+        this.add(new InteractableNpc(800, 570, engine))
 
         this.player = new Player(1150, 200)
         this.add(this.player)
 
-        if (!engine.talkedToEmiely) {
+
+    }
+
+    onActivate(engine) {
+        this.player.pos = new Vector(1155, 190)
+
+        if (!engine.talkedToEmielyAfterClass) {
             this.thinkBubble = new ThinkBubble();
             this.add(this.thinkBubble);
             this.thinkBubble.loadNextGoal("I feel nervous... but I shou-ld talk to Emily/Emiel.");
         } else {
-            this.remove(this.thinkBubble)
+            this.remove(this.thinkBubble);
             this.thinkBubble = new ThinkBubble();
             this.add(this.thinkBubble);
             this.thinkBubble.loadNextGoal("I'm exhausted... I should go home.");
         }
-
-
-    }
-    onActivate() {
-        this.player.pos = new Vector(1155, 190)
     }
 }
