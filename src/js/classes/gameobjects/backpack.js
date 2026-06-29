@@ -20,7 +20,7 @@ export class Backpack extends Actor {
 
   onInitialize(engine) {
     this.graphics.use(Resources.Backpack.toSprite());
-    this.body.collisionType = CollisionType.Active;
+    this.body.collisionType = CollisionType.Fixed;
     this.scale = new Vector(0.125, 0.125);
   }
 
