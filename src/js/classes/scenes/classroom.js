@@ -65,7 +65,7 @@ export class Classroom extends Scene {
             this.remove(this.thinkBubble)
             this.thinkBubble = new ThinkBubble();
             this.add(this.thinkBubble);
-            this.thinkBubble.loadNextGoal("Find a seat...well, there is only one. Luckily it is at the back of the class (talk to npc)");
+            this.thinkBubble.loadNextGoal("Find a seat...well, there is only one. Luckily it is at the back of the class (talk to red shirt npc)");
         }
 
 
