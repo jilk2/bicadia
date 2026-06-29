@@ -897,7 +897,7 @@
   },
   {
     "id": "queer_ending_0i",
-    "question": "[Inner:] Is it a crush? Do I, well, like Student?",
+    "question": "[Inner:] Is it a crush? Do I, well, like that student that talked to me?",
     "targetConvo": "queer_ending_0j"
   },
   {
