@@ -9,16 +9,16 @@ import { Dialogue } from "./dialogue.js";
 import { Pronounce } from "../gameobjects/pronounceChoice.js";
 
 export class CharacterCreation extends Scene {
-  hairOptions = { 0: "ShortBlackHairSheet", 1: "LongBlackHairSheet" };
+  hairOptions = { 0: "ShortBlackHairSheet", 1: "LongBlackHairSheet", 2: "LongBlondHairSheet", 3: "ShortBlondHairSheet" };
   selectedHair = 0;
 
   skintoneOptions = { 0: "skintoneOne", 1: "skintoneTwo", 2: "skintoneThree" };
   selectedSkintone = 0;
 
-  shirtOptions = { 0: "LongSleevedRed" };
+  shirtOptions = { 0: "LongSleevedRed", 1: "LongSleevedBlue" };
   selectedShirt = 0;
 
-  pantOptions = { 0: "PantsBlue", 1: "PantsBlack" };
+  pantOptions = { 0: "PantsBlue", 1: "PantsBlack", 2: "PinkSkirt" };
   selectedPants = 0;
 
   shoeOptions = { 0: "GreyShoesSheet" };

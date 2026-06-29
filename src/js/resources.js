@@ -1,4 +1,4 @@
-import { ImageSource, Sound, Resource, Loader } from "excalibur";
+import { ImageSource, Sound, Resource, Loader, ImageSourceAttributeConstants } from "excalibur";
 import { HowToPlay } from "./classes/scenes/howtoplay";
 
 // voeg hier jouw eigen resources toe
@@ -62,6 +62,7 @@ const Resources = {
   PantsBlue: new ImageSource("images/pants-blue.png"),
   PantsBlack: new ImageSource("images/pants-black.png"),
   LongSleevedRed: new ImageSource("images/longsleeve-red.png"),
+  LongSleevedBlue: new ImageSource("images/longsleeve-blue.png"),
   GreyShoesSheet: new ImageSource("images/shoes-grey.png"),
   LongsleeveBlueSheet: new ImageSource("images/longsleeve-blue.png"),
   PantsBlueSheet: new ImageSource("images/complete-pants-blue.png"),
@@ -73,6 +74,7 @@ const Resources = {
   ShortBlackHairSheet: new ImageSource("images/BlackShortHair.png"),
   skintoneTwo: new ImageSource("images/skintonetwo.png"),
   skintoneThree: new ImageSource("images/skintonethree.png"),
+  PinkSkirt: new ImageSource("images/pink-skirt.png")
 };
 
 const ResourceLoader = new Loader();
