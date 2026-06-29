@@ -108,6 +108,11 @@
   {
     "id": "minigame_succes_0c",
     "question": "[Inner:] I can hear the bus in the distance. Let's just go before I start overthinking",
+    "targetConvo": "minigame_succes_0d"
+  },
+  {
+    "id": "minigame_succes_0d",
+    "question": "After some time you arrive at school and go to your class.",
     "loadScene": "classroom"
   },
   {

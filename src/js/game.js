@@ -24,7 +24,7 @@ export class Game extends Engine {
   pickedupBag = false;
   talkedToEmiely = false;
   talkToTeacher = false;
-  firstimeTalking = true;
+  firstimeTalking = false;
 
   constructor() {
     super({
