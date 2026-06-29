@@ -25,6 +25,7 @@ export class Dialogue extends Scene {
       x: 350,
       y: 600,
       scale: new Vector(2.5, 2.5),
+      maxWidth: 260,
     });
 
     this.continueLabel = new Label({
