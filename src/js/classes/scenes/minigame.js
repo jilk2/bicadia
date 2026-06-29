@@ -10,11 +10,13 @@ import { Dialogue } from "./dialogue.js";
 export class Minigame extends Scene {
   constructor(targetConvo, loseScene) {
     super();
-    this.loseScene = loseScene
+    this.player = new Player(690, 360);
+    this.add(this.player);
+    this.loseScene = loseScene;
     this.targetConvo = targetConvo;
-    this.createScene();
   }
   onInitialize(engine) {
+    this.createScene();
   }
 
   onActivate(engine) {
@@ -41,10 +43,8 @@ export class Minigame extends Scene {
     this.orbs = [];
     this.spawnOrbs();
 
-    this.player = new Player(690, 360);
-    this.add(this.player);
-
-    this.insecurity = new Insecurity(0, 360, this.loseScene);
+    console.log(this.loseScene);
+    this.insecurity = new Insecurity(0, 360, this.loseScene, this.engine);
     this.add(this.insecurity);
   }
 
@@ -83,12 +83,11 @@ export class Minigame extends Scene {
   updateScore(engine) {
     this.score++;
     this.scoreLabel.text = `Confidence: ${this.score}/20`;
-    console.log(this.targetConvo)
     if (this.score >= 20) {
-        engine.remove("dialogue");
-        this.dialogue = new Dialogue(this.targetConvo);
-        engine.addScene("dialogue", this.dialogue);
-        engine.goToScene("dialogue");
+      engine.remove("dialogue");
+      this.dialogue = new Dialogue(this.targetConvo);
+      engine.addScene("dialogue", this.dialogue);
+      engine.goToScene("dialogue");
     }
   }
 }
