@@ -1,11 +1,30 @@
-import { Actor, CollisionType, Shape, SpriteSheet, Vector } from "excalibur";
+import {
+  Actor,
+  CollisionType,
+  Shape,
+  SpriteSheet,
+  Vector,
+  Engine,
+  randomInRange,
+} from "excalibur";
 import { Resources } from "../../resources";
 import { Dialogue } from "../scenes/dialogue";
 import { ThinkBubble } from "./think-bubble";
 
 export class InteractableNpc extends Actor {
-  constructor(x, y) {
-    const sprite = Resources.Emiely.toSprite();
+  constructor(x, y, engine) {
+    let sprite;
+    if (engine.pronounce == "He") {
+      sprite = Resources.Emiel.toSprite();
+    } else if (engine.pronounce == "She") {
+      sprite = Resources.Emily.toSprite();
+    } else {
+      if (randomInRange(0, 1) <= 0.5) {
+        sprite = Resources.Emiel.toSprite();
+      } else {
+        sprite = Resources.Emily.toSprite();
+      }
+    }
 
     super({
       x,

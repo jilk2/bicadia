@@ -28,9 +28,9 @@ export class Player extends Actor {
       x,
       y,
       width: 83,
-      height: 80,
+      height: 50,
       collisionType: CollisionType.Active,
-      collider: Shape.Box(83, 80, new Vector(0.5, 0.15)),
+      collider: Shape.Box(83, 50, new Vector(0.5, -0.3)),
     });
     this.inCutscene = inCutscene;
   }
