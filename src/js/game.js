@@ -25,6 +25,7 @@ export class Game extends Engine {
   talkedToEmiely = false;
   talkToTeacher = false;
   firstimeTalking = false;
+  talkedToEmielyAfterClass = false;
 
   constructor() {
     super({
@@ -54,7 +55,9 @@ export class Game extends Engine {
     this.addScene("livingroom_ending", new LivingroomEnding());
     this.addScene("classroom_after_class", new ClassroomAfterClass());
     this.addScene("bedroom_ending", new BedroomEnding());
-    this.goToScene("bedroom");
+    // this.goToScene("bedroom");
+
+
     this.goToScene("startmenu");
   }
 

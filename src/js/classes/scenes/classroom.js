@@ -50,7 +50,14 @@ export class Classroom extends Scene {
         this.player = new Player(1150, 200)
         this.add(this.player)
 
-        if (!engine.talkToTeacher) {
+    }
+    onActivate() {
+
+        console.log(`read ${this.engine.talkToTeacher}`)
+
+
+        if (!this.engine.talkToTeacher) {
+
             this.thinkBubble = new ThinkBubble();
             this.add(this.thinkBubble);
             this.thinkBubble.loadNextGoal("My teacher looks friendly at least...");
@@ -63,9 +70,6 @@ export class Classroom extends Scene {
 
 
 
-
-    }
-    onActivate() {
         // this.player.pos = new Vector(1155, 190)
     }
 }
