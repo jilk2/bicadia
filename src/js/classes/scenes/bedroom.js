@@ -43,7 +43,7 @@ export class Bedroom extends Scene {
 
     this.thinkBubble = new ThinkBubble();
     this.add(this.thinkBubble);
-    this.thinkBubble.loadNextGoal("Where did I put my bag again...?");
+    this.thinkBubble.loadNextGoal("Where did I put my bag a-gain...?");
 
 
   }

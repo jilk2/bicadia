@@ -108,7 +108,7 @@
   {
     "id": "minigame_succes_0c",
     "question": "[Inner:] I can hear the bus in the distance. Let's just go before I start overthinking",
-    "targetConvo": "school_classroom_inner_0a"
+    "loadScene": "classroom"
   },
   {
     "id": "school_classroom_inner_0a",
@@ -172,7 +172,7 @@
   },
   {
     "id": "school_classroom_at_desk_0b",
-    "question": "[Inner:] That means Mr Brigsby is less likely to ask me questions.",
+    "question": "[Inner:] That means Mr Brigsby is less likely to ask me a question.",
     "targetConvo": "school_classroom_at_desk_0c"
   },
   {

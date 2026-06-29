@@ -31,7 +31,7 @@ export class ClassroomAfterClass extends Scene {
             this.add(new ClassroomTable(x, y))
         }
 
-        this.add(new Door(1150, 85, "livingroom", "talkedToEmiely"))
+        this.add(new Door(1150, 85, "livingroom_ending", "talkedToEmiely"))
 
         this.add(new InteractableNpc(800, 570))
 
@@ -40,7 +40,7 @@ export class ClassroomAfterClass extends Scene {
 
         this.thinkBubble = new ThinkBubble();
         this.add(this.thinkBubble);
-        this.thinkBubble.loadNextGoal("I feel nervous... but I should talk to Emily/Emiel.");
+        this.thinkBubble.loadNextGoal("I feel nervous... but I shou-ld talk to Emily/Emiel.");
 
 
 
